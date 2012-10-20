@@ -1,0 +1,175 @@
+html, body {
+  height: 100%;
+}
+
+#main_wr {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  min-width: 980px;
+  height: 100%;
+  min-height: 650px;
+  margin: 0 auto;
+  background-color: #eee;
+}
+#main_wr #main_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 30px;
+  background-color: #ddd;
+}
+#main_wr #main_header #main_logo_wr {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  background-color: #000000;
+}
+#main_wr #main_header #main_logo_wr a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+}
+#main_wr #main_header #main_lang_selector {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  text-align: right;
+  background-color: #999;
+  list-style-type: none;
+}
+#main_wr #main_header #main_lang_selector li {
+  display: inline-block;
+  vertical-align: top;
+}
+#main_wr #main_header #main_lang_selector li:first-child {
+  border-right: 1px #000 solid;
+}
+.lt-ie9.lt-ie8 #main_wr #main_header #main_lang_selector li {
+  display: inline;
+}
+#main_wr #main_header #main_lang_selector li a {
+  display: block;
+  padding: 0 5px;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 12px;
+}
+#main_wr #main_header #main_lang_selector li a:hover {
+  color: #000;
+}
+#main_wr #main_body_wr {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  background-color: #ccc;
+}
+#main_wr #main_body_wr #main_nav_wr {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 230px;
+  background-color: #bbb;
+}
+#main_wr #main_body_wr #main_nav_wr ul {
+  list-style: none;
+  margin: 110px 0 0 20px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 12px;
+}
+#main_wr #main_body_wr #main_nav_wr ul li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#main_wr #main_body_wr #main_nav_wr ul li a {
+  text-decoration: none;
+  color: #666;
+}
+#main_wr #main_body_wr #main_nav_wr ul li a:hover {
+  color: #000;
+}
+#main_wr #main_body_wr #main_nav_wr ul li ul {
+  display: none;
+  margin: 0 0 0 20px;
+}
+#main_wr #main_body_wr #main_nav_wr ul li ul li ul {
+  border-left: 1px solid #ddd;
+  left: 80px;
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  top: -12px;
+  width: 80px;
+  z-index: 1;
+}
+#main_wr #main_body_wr #main_nav_wr ul li ul li ul:before {
+  border-color: transparent #ddd transparent transparent;
+  border-style: solid;
+  border-width: 7px;
+  content: "";
+  height: 0;
+  left: -15px;
+  position: absolute;
+  top: 8px;
+  width: 0;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current a {
+  color: #000;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul {
+  display: block;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li a {
+  color: #666;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li a:hover {
+  color: #000;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li ul {
+  display: none;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current a {
+  color: #000;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul {
+  display: block;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li a {
+  color: #666;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li a:hover {
+  color: #000;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li.current a {
+  color: #000;
+}
+#main_wr #main_body_wr #main_content_wr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 230px;
+  background-color: #aaa;
+  background-image: url("../img/zoom_image.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
