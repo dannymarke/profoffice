@@ -103,7 +103,7 @@
                     </ul>
                 </nav>
 
-                <section id="main_content_wr"></section>
+                <section id="main_content_wr" class="bg_zoom dyn_bg_wr"><img src="img/zoom_image.jpg" alt="image name" id="image name" class="img_seo_placeholder"></section>
             </div>
         </div>
 
@@ -121,32 +121,3 @@
         </script>
     </body>
 </html>
-
-<!--
-AZIENDA
-    PROFILO
-    CERTIFICAZIONI
-    AMBIENTE
-    CONSULENZA
-    DESIGN
-    SHOWROOM
-    VIDEO
-PRODOTTI
-    WORKING SYSTEM
-    EXECUTIVE COLLECTION
-        Spider
-        Block
-        Slim
-        Plano
-        Light
-    RECEPTION
-    STORAGE
-    WALL
-    CLASSICAL
-NEWS
-GALLERY
-REFERENZE
-CONTATTI
-LOGIN/REGISTRATI
-AREA RISERVATA
--->
