@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^([A-Za-z0-9\-]+)$ /$1.php [L]
+RewriteRule ^([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1-$2.php [L]
+RewriteRule ^([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1-$2-$3.php [L]

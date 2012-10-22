@@ -69,7 +69,7 @@ html, body {
   line-height: 12px;
 }
 #main_wr #main_header #main_lang_selector li a:hover {
-  color: #000;
+  color: black;
 }
 #main_wr #main_body_wr {
   position: absolute;
@@ -101,10 +101,11 @@ html, body {
 }
 #main_wr #main_body_wr #main_nav_wr ul li a {
   text-decoration: none;
-  color: #666;
+  color: #666666;
+  color: #666666;
 }
 #main_wr #main_body_wr #main_nav_wr ul li a:hover {
-  color: #000;
+  color: black;
 }
 #main_wr #main_body_wr #main_nav_wr ul li ul {
   display: none;
@@ -131,35 +132,46 @@ html, body {
   top: 8px;
   width: 0;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current a {
-  color: #000;
+#main_wr #main_body_wr #main_nav_wr ul li.current a, #main_wr #main_body_wr #main_nav_wr ul li.opened a {
+  color: black;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul {
+#main_wr #main_body_wr #main_nav_wr ul li.current ul, #main_wr #main_body_wr #main_nav_wr ul li.opened ul {
   display: block;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul li a {
-  color: #666;
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li a {
+  color: #666666;
+  color: #666666;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul li a:hover {
-  color: #000;
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li a:hover, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li a:hover {
+  color: black;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul li ul {
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li ul, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li ul {
   display: none;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current a {
-  color: #000;
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current a, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.opened a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.current a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.opened a {
+  color: black;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul {
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.opened ul, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.current ul, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.opened ul {
   display: block;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li a {
-  color: #666;
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li a, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.opened ul li a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.current ul li a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.opened ul li a {
+  color: #666666;
+  color: #666666;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li a:hover {
-  color: #000;
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li a:hover, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.opened ul li a:hover, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.current ul li a:hover, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.opened ul li a:hover {
+  color: black;
 }
-#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li.current a {
-  color: #000;
+#main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li.current a, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li.opened a, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.opened ul li.current a, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.opened ul li.opened a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.current ul li.current a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.current ul li.opened a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.opened ul li.current a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.opened ul li.opened a {
+  color: black;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.highlighted a {
+  color: black;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.highlighted ul li.highlighted a {
+  color: black;
+}
+#main_wr #main_body_wr #main_nav_wr ul li.highlighted ul li.highlighted ul li.highlighted a {
+  color: black;
 }
 #main_wr #main_body_wr #main_content_wr {
   position: absolute;

@@ -3,6 +3,11 @@
 // sass --watch --debug-info scss:css --style expanded
 // sass --watch scss:css --style expanded
 
+// variables
+
+$link-out-color: #666666;
+$link-hover-color: #000000;
+
 html, body {
 	height: 100%;
 }
@@ -69,7 +74,7 @@ html, body {
 					font-size: 12px;
 					line-height: 12px;
 					&:hover {
-						color: #000;
+						color: $link-hover-color;
 					}
 				}
 			}
@@ -101,9 +106,10 @@ html, body {
 					padding: 0;
 					a {
 						text-decoration: none;
-						color: #666;
+						color: $link-out-color;
+						color: $link-out-color;
 						&:hover {
-							color: #000;
+							color: $link-hover-color;
 						}
 					}
 					ul {
@@ -134,41 +140,61 @@ html, body {
 							}
 						}
 					}
-					&.current {
+					&.current, &.opened {
 						a {
-							color: #000;
+							color: $link-hover-color;
 						}
 						ul {
 							display: block;
 							li {
 								a {
-									color: #666;
+									color: $link-out-color;
+									color: $link-out-color;
 									&:hover {
-										color: #000;
+										color: $link-hover-color;
 									}
 								}
 								ul {
 									display: none;
 								}
-								&.current {
+								&.current, &.opened {
 									a {
-										color: #000;
+										color: $link-hover-color;
 									}
 									ul {
 										display: block;
 										li {
 											a {
-												color: #666;
+												color: $link-out-color;
+												color: $link-out-color;
 												&:hover {
-													color: #000;
+													color: $link-hover-color;
 												}
 											}
-											&.current {
+											&.current, &.opened {
 												a {
-													color: #000;
+													color: $link-hover-color;
 												}
 											}
-
+										}
+									}
+								}
+							}
+						}
+					}
+					&.highlighted {
+						a {
+							color: $link-hover-color;
+						}
+						ul {
+							li.highlighted {
+								a {
+									color: $link-hover-color;
+								}
+								ul {
+									li.highlighted {
+										a {
+											color: $link-hover-color;
 										}
 									}
 								}
