@@ -7,10 +7,17 @@
 
 $link-out-color: #666666;
 $link-hover-color: #000000;
+$font-size: 12px;
+$line-height-multiplier: 1.4;
+$small-text-multiplier: 0.8;
+$header-height: 30px;
+$sidebar_width: 230px;
 
 html, body {
 	height: 100%;
+	font-size: $font-size;
 }
+
 
 #main_wr {
 	position: relative;
@@ -27,12 +34,12 @@ html, body {
 		right:0;
 		left:0;
 		z-index:1;
-		height: 30px;
+		height: $header-height;
 		background-color: #ddd;
 		#main_logo_wr {
 			position: absolute;
 			left: 0;
-			top: 30px;
+			top: $header-height;
 			width: 100px;
 			height: 100px;
 			margin: 0;
@@ -82,7 +89,7 @@ html, body {
 	}
 	#main_body_wr {
 		position: absolute;
-		top: 30px;
+		top: $header-height;
 		left: 0;
 		bottom:30px;
 		right: 0;
@@ -92,7 +99,7 @@ html, body {
 			top: 0;
 			bottom: 0;
 			left: 0;
-			width: 230px;
+			width: $sidebar_width;
 			background-color: #bbb;
 			ul {
 				list-style: none;
@@ -204,12 +211,62 @@ html, body {
 				}
 			}
 		}
+
+		#main_contact_wr {
+			position: absolute;
+			right: 30px;
+			bottom: 30px;
+			left: 20px;
+			#main_social_links_wr {
+				margin: 0 0 10px;
+				font-size: 0;
+				li {
+					display: inline-block;
+					vertical-align: center;
+					margin: 0;
+					&:first-child {
+						margin: 0 4px 0 0;
+					}
+					.lt-ie8 & {
+						display: inline;
+					}
+					a {
+						display: block;
+						width: 20px;
+						height: 20px;
+						overflow: hidden;
+						margin: 0;
+						padding: 0;
+						font-size: 0;
+						line-height: 0;
+						background-image: url("main_social_spr.png");
+						background-repeat: no-repeat;
+						background-color: #000;
+						background-attachment: scroll;
+						.fb {
+							background-position: left top;
+						}
+						.tw {
+							background-position: right top;
+						}
+					}
+				}
+			}
+			address {
+				font-size: $font-size * $small-text-multiplier;
+				line-height: $font-size * $small-text-multiplier * $line-height-multiplier;
+				span {
+					display: block;
+				}
+			}
+		}
+
 		#main_content_wr {
 			position: absolute;
 			top: 0;
 			right:0;
 			bottom: 0;
-			left: 230px;
+			left: $sidebar_width;
 			background-color: #aaa;
 			background-repeat: no-repeat;
 			background-position: center center;

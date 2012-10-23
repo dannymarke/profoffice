@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  font-size: 12px;
 }
 
 #main_wr {
@@ -172,6 +173,54 @@ html, body {
 }
 #main_wr #main_body_wr #main_nav_wr ul li.highlighted ul li.highlighted ul li.highlighted a {
   color: black;
+}
+#main_wr #main_body_wr #main_contact_wr {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  left: 20px;
+}
+#main_wr #main_body_wr #main_contact_wr #main_social_links_wr {
+  margin: 0 0 10px;
+  font-size: 0;
+}
+#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li {
+  display: inline-block;
+  vertical-align: center;
+  margin: 0;
+}
+#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li:first-child {
+  margin: 0 4px 0 0;
+}
+.lt-ie8 #main_wr #main_body_wr #main_contact_wr #main_social_links_wr li {
+  display: inline;
+}
+#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  background-image: url("main_social_spr.png");
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-attachment: scroll;
+}
+#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li a .fb {
+  background-position: left top;
+}
+#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li a .tw {
+  background-position: right top;
+}
+#main_wr #main_body_wr #main_contact_wr address {
+  font-size: 9.6px;
+  line-height: 13.44px;
+}
+#main_wr #main_body_wr #main_contact_wr address span {
+  display: block;
 }
 #main_wr #main_body_wr #main_content_wr {
   position: absolute;
