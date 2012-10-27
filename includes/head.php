@@ -7,6 +7,9 @@
 
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="/css/main.css">
+
+        <link type="text/css" href="/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
         <link rel="stylesheet" href="/css/style.css">
         <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 

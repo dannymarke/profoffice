@@ -10,12 +10,15 @@ $link-hover-color: #000000;
 $font-size: 12px;
 $line-height-multiplier: 1.4;
 $small-text-multiplier: 0.8;
+$big-text-multiplier: 1.2;
+$giant-text-multiplier: 2.5;
 $header-height: 30px;
 $sidebar_width: 230px;
 
 html, body {
 	height: 100%;
 	font-size: $font-size;
+	line-height: $font-size * $line-height-multiplier;
 }
 
 
@@ -271,6 +274,77 @@ html, body {
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: cover;
+			.content_wr {
+				position: absolute;
+				right: 50px;
+				top: 50px;
+				width: 350px;
+				height: 350px;
+				.content_title {
+					font-size: $font-size * $big-text-multiplier;
+					font-weight: normal;
+					text-decoration: underline;
+				}
+				.content_text {
+					position: relative;
+					height: 300px;
+					font-size: $font-size;
+					p {
+						margin: 10px 10px 10px 0;
+				  		// color: #fff;
+				  		.inner_title {
+				  			display: block;
+				  		}
+					}
+				}
+			}
+			.product_description_wr {
+				position: absolute;
+				left: 50%;
+				bottom: 30px;
+				width: auto;
+				height: 50px;
+				color: #ffffff;
+				.product_name {
+					display: inline-block;
+					margin: 0;
+					padding: 0;
+					font-weight: normal;
+					vertical-align: bottom;
+					font-size: $font-size * $giant-text-multiplier;
+					line-height: $font-size;
+					.lt-ie9.lt-ie8 & {
+						display: inline;
+						line-height: 30px;
+					}
+				}
+				.product_description_separator {
+					display: inline-block;
+					margin: 0;
+					padding: 0;
+					font-weight: normal;
+					vertical-align: bottom;
+					font-size: $font-size * $giant-text-multiplier * $line-height-multiplier;
+					line-height: $font-size;
+					.lt-ie9.lt-ie8 & {
+						display: inline;
+						line-height: 40px;
+					}
+				}
+				.collection_name {
+					display: inline-block;
+					margin: 0;
+					padding: 0;
+					font-weight: normal;
+					vertical-align: bottom;
+					text-decoration: underline;
+					line-height: $font-size / 2;
+					.lt-ie9.lt-ie8 & {
+						display: inline;
+						line-height: 20px;
+					}
+				}
+			}
 		}
 	}
 }

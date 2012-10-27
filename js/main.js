@@ -80,6 +80,11 @@ po.functions.manage_menu = function(){
   });
 };
 
+po.functions.set_custom_scroll_pane = function(){
+  jQuery('.scroll-pane').jScrollPane({
+    hideFocus: true
+  });
+};
 
 jQuery(document).bind('ready',function(){
   jQuery.each(po.functions, function(){

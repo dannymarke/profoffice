@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   font-size: 12px;
+  line-height: 16.8px;
 }
 
 #main_wr {
@@ -232,4 +233,74 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+#main_wr #main_body_wr #main_content_wr .content_wr {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  width: 350px;
+  height: 350px;
+}
+#main_wr #main_body_wr #main_content_wr .content_wr .content_title {
+  font-size: 14.4px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+#main_wr #main_body_wr #main_content_wr .content_wr .content_text {
+  position: relative;
+  height: 300px;
+  font-size: 12px;
+}
+#main_wr #main_body_wr #main_content_wr .content_wr .content_text p {
+  margin: 10px 10px 10px 0;
+}
+#main_wr #main_body_wr #main_content_wr .content_wr .content_text p .inner_title {
+  display: block;
+}
+#main_wr #main_body_wr #main_content_wr .product_description_wr {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: auto;
+  height: 50px;
+  color: #ffffff;
+}
+#main_wr #main_body_wr #main_content_wr .product_description_wr .product_name {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  vertical-align: bottom;
+  font-size: 30px;
+  line-height: 12px;
+}
+.lt-ie9.lt-ie8 #main_wr #main_body_wr #main_content_wr .product_description_wr .product_name {
+  display: inline;
+  line-height: 30px;
+}
+#main_wr #main_body_wr #main_content_wr .product_description_wr .product_description_separator {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  vertical-align: bottom;
+  font-size: 42px;
+  line-height: 12px;
+}
+.lt-ie9.lt-ie8 #main_wr #main_body_wr #main_content_wr .product_description_wr .product_description_separator {
+  display: inline;
+  line-height: 40px;
+}
+#main_wr #main_body_wr #main_content_wr .product_description_wr .collection_name {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  vertical-align: bottom;
+  text-decoration: underline;
+  line-height: 6px;
+}
+.lt-ie9.lt-ie8 #main_wr #main_body_wr #main_content_wr .product_description_wr .collection_name {
+  display: inline;
+  line-height: 20px;
 }
