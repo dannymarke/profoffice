@@ -1,4 +1,14 @@
 <?php include_once "includes/conditional-init.php"; ?>
+<?php
+$conn = mysql_pconnect(HOSTNAME, USERNAME, PASSWORD);
+mysql_select_db(DATABASE);
+
+$sQuery = "SELECT * "
+."FROM  azienda ";
+
+$risultato = mysql_query($sQuery);
+$testo = mysql_result($risultato, 0, "testo_".$lingua);
+?>
     <head>
         <?php include_once "includes/head.php"; ?>
 
@@ -22,29 +32,12 @@
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <img src="/img/main_azienda_profilo.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
+                    <img src="/img/profFactory.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
                     <article class="content_wr">
-                        <h2 class="content_title">Profilo</h2>
+                        <h2 class="content_title"><?php echo(strtoupper(PROFILO));?></h2>
                         <div class="content_text scroll-pane">
                             <p>
-                                <strong class="inner_title">1</strong>
-                                Dall’esperienza nel settore del mobile, nel 1995 nasce Prof come azienda che produce sistemi d’arredo per ufficio. Partendo dalle collezioni operative, negli anni sviluppa sistemi direzionali, soluzioni per la reception e le sale riunioni, fino alle pareti divisorie e attrezzate.<br/>
-                                Dal mercato nazionale, Prof si è affacciata a quello internazionale, con la capacità di proporre soluzioni di arredo complete per tutti gli ambienti di lavoro e con la flessibilità di realizzare progetti su misura personalizzati. Azienda giovane e dinamica, oggi Prof decide di orientare i nuovi prodotti al design internazionale, con un occhio sempre attento alla funzionalità e alla cura del dettaglio.
-                            </p>
-                            <p>
-                                <strong class="inner_title">2</strong>
-                                Dall’esperienza nel settore del mobile, nel 1995 nasce Prof come azienda che produce sistemi d’arredo per ufficio. Partendo dalle collezioni operative, negli anni sviluppa sistemi direzionali, soluzioni per la reception e le sale riunioni, fino alle pareti divisorie e attrezzate.<br/>
-                                Dal mercato nazionale, Prof si è affacciata a quello internazionale, con la capacità di proporre soluzioni di arredo complete per tutti gli ambienti di lavoro e con la flessibilità di realizzare progetti su misura personalizzati. Azienda giovane e dinamica, oggi Prof decide di orientare i nuovi prodotti al design internazionale, con un occhio sempre attento alla funzionalità e alla cura del dettaglio.
-                            </p>
-                            <p>
-                                <strong class="inner_title">3</strong>
-                                Dall’esperienza nel settore del mobile, nel 1995 nasce Prof come azienda che produce sistemi d’arredo per ufficio. Partendo dalle collezioni operative, negli anni sviluppa sistemi direzionali, soluzioni per la reception e le sale riunioni, fino alle pareti divisorie e attrezzate.<br/>
-                                Dal mercato nazionale, Prof si è affacciata a quello internazionale, con la capacità di proporre soluzioni di arredo complete per tutti gli ambienti di lavoro e con la flessibilità di realizzare progetti su misura personalizzati. Azienda giovane e dinamica, oggi Prof decide di orientare i nuovi prodotti al design internazionale, con un occhio sempre attento alla funzionalità e alla cura del dettaglio.
-                            </p>
-                            <p>
-                                <strong class="inner_title">4</strong>
-                                Dall’esperienza nel settore del mobile, nel 1995 nasce Prof come azienda che produce sistemi d’arredo per ufficio. Partendo dalle collezioni operative, negli anni sviluppa sistemi direzionali, soluzioni per la reception e le sale riunioni, fino alle pareti divisorie e attrezzate.<br/>
-                                Dal mercato nazionale, Prof si è affacciata a quello internazionale, con la capacità di proporre soluzioni di arredo complete per tutti gli ambienti di lavoro e con la flessibilità di realizzare progetti su misura personalizzati. Azienda giovane e dinamica, oggi Prof decide di orientare i nuovi prodotti al design internazionale, con un occhio sempre attento alla funzionalità e alla cura del dettaglio.
+                                <?php echo(utf8_encode($testo)); ?>
                             </p>
                         </div>
                     </article>
