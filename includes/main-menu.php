@@ -18,7 +18,7 @@
                                 <li>
                                     <a href="/prodotti/working"><?php echo(strtoupper(WORKING));?></a>
                                     <ul>
-                                        <li><a href="/prodotti?id=5">Zero</a></li>
+                                        <li><a href="/prodotti?categiria=working&id=5">Zero</a></li>
                                         <li><a href="/prodotti/working/uno">Uno</a></li>
                                         <li><a href="/prodotti/working/dieci">Dieci</a></li>
                                         <li><a href="/prodotti/working/openspace">Openspace</a></li>
