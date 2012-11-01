@@ -12,7 +12,6 @@ html, body {
   height: 100%;
   min-height: 650px;
   margin: 0 auto;
-  background-color: #eee;
 }
 #main_wr #main_header {
   position: absolute;
@@ -21,7 +20,6 @@ html, body {
   left: 0;
   z-index: 1;
   height: 30px;
-  background-color: #ddd;
 }
 #main_wr #main_header #main_logo_wr {
   position: absolute;
@@ -49,7 +47,6 @@ html, body {
   font-size: 0;
   line-height: 0;
   text-align: right;
-  background-color: #999;
   list-style-type: none;
 }
 #main_wr #main_header #main_lang_selector li {
@@ -79,7 +76,6 @@ html, body {
   left: 0;
   bottom: 30px;
   right: 0;
-  background-color: #ccc;
 }
 #main_wr #main_body_wr #main_nav_wr {
   position: absolute;
@@ -87,7 +83,6 @@ html, body {
   bottom: 0;
   left: 0;
   width: 230px;
-  background-color: #bbb;
 }
 #main_wr #main_body_wr #main_nav_wr ul {
   list-style: none;
@@ -114,7 +109,7 @@ html, body {
   margin: 0 0 0 20px;
 }
 #main_wr #main_body_wr #main_nav_wr ul li ul li ul {
-  background-color: #bbbbbb;
+  background-color: rgba(255, 255, 255, 0.75);
   border-left: 1px solid #ddd;
   left: 160px;
   margin: 0;
@@ -230,7 +225,6 @@ html, body {
   right: 0;
   bottom: 0;
   left: 230px;
-  background-color: #aaa;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
