@@ -114,8 +114,9 @@ html, body {
   margin: 0 0 0 20px;
 }
 #main_wr #main_body_wr #main_nav_wr ul li ul li ul {
+  background-color: #bbbbbb;
   border-left: 1px solid #ddd;
-  left: 80px;
+  left: 160px;
   margin: 0;
   padding: 10px;
   position: absolute;
@@ -131,7 +132,7 @@ html, body {
   height: 0;
   left: -15px;
   position: absolute;
-  top: 8px;
+  top: 10px;
   width: 0;
 }
 #main_wr #main_body_wr #main_nav_wr ul li.current a, #main_wr #main_body_wr #main_nav_wr ul li.opened a {
