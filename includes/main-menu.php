@@ -18,7 +18,7 @@
                                 <li>
                                     <a href="/prodotti/working"><?php echo(strtoupper(WORKING));?></a>
                                     <ul>
-                                        <li><a href="/prodotti?categiria=working&id=5">Zero</a></li>
+                                        <li><a href="/prodotti/working/zero">Zero</a></li>
                                         <li><a href="/prodotti/working/uno">Uno</a></li>
                                         <li><a href="/prodotti/working/dieci">Dieci</a></li>
                                         <li><a href="/prodotti/working/openspace">Openspace</a></li>
@@ -35,7 +35,7 @@
                                     <ul>
                                         <li><a href="/prodotti/executive/block">Block</a></li>
                                         <li><a href="/prodotti/executive/plano">Plano</a></li>
-                                        <li><a href="/prodotti/executive/plano">Light</a></li>
+                                        <li><a href="/prodotti/executive/light">Light</a></li>
                                         <li><a href="/prodotti/executive/spider">Spider</a></li>
                                         <li><a href="/prodotti/executive/slim">Slim</a></li>
                                     </ul>
