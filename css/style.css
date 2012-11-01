@@ -18,6 +18,7 @@ html, body {
   height: 100%;
   font-size: 12px;
   line-height: 16.8px;
+  color: #808284;
 }
 
 body {
@@ -118,8 +119,8 @@ body {
 }
 #main_wr #main_body_wr #main_nav_wr ul li a {
   text-decoration: none;
-  color: #666666;
-  color: #666666;
+  color: #808284;
+  color: #808284;
 }
 #main_wr #main_body_wr #main_nav_wr ul li a:hover {
   color: black;
@@ -157,8 +158,8 @@ body {
   display: block;
 }
 #main_wr #main_body_wr #main_nav_wr ul li.current ul li a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li a {
-  color: #666666;
-  color: #666666;
+  color: #808284;
+  color: #808284;
 }
 #main_wr #main_body_wr #main_nav_wr ul li.current ul li a:hover, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li a:hover {
   color: black;
@@ -173,8 +174,8 @@ body {
   display: block;
 }
 #main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li a, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.opened ul li a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.current ul li a, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.opened ul li a {
-  color: #666666;
-  color: #666666;
+  color: #808284;
+  color: #808284;
 }
 #main_wr #main_body_wr #main_nav_wr ul li.current ul li.current ul li a:hover, #main_wr #main_body_wr #main_nav_wr ul li.current ul li.opened ul li a:hover, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.current ul li a:hover, #main_wr #main_body_wr #main_nav_wr ul li.opened ul li.opened ul li a:hover {
   color: black;

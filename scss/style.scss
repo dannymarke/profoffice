@@ -4,25 +4,19 @@
 // sass --watch scss:css --style expanded
 
 
+@import "variables.scss";
+
 @import "fonts.scss";
 
-// variables
 
-$link-out-color: #666666;
-$link-hover-color: #000000;
-$font-size: 12px;
-$line-height-multiplier: 1.4;
-$small-text-multiplier: 0.8;
-$big-text-multiplier: 1.2;
-$giant-text-multiplier: 2.5;
-$header-height: 30px;
-$sidebar_width: 230px;
-$product_sidebar_width: 240px;
+
+
 
 html, body {
 	height: 100%;
 	font-size: $font-size;
 	line-height: $font-size * $line-height-multiplier;
+	color: $text_color;
 }
 
 body {
@@ -358,7 +352,7 @@ body {
 				top: 0;
 				bottom: 0;
 				left: 0;
-				width: 250px;
+				width: $product_sidebar_width;
 				margin: 0;
 				padding: 0;
 				#text_wr {
@@ -382,7 +376,7 @@ body {
 				top: 0;
 				right: 0;
 				bottom: 0;
-				left: 250px;
+				left: $product_sidebar_width;
 				margin: 0;
 				padding: 0;
 				background-size: cover;

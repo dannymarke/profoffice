@@ -1,6 +1,4 @@
-// variables
-$font_source_url: '/font';
-
+@import "variables.scss";
 
 @font-face {
     font-family: 'liberation_sans_regular';
@@ -13,9 +11,6 @@ $font_source_url: '/font';
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'liberation_sans_bold';
