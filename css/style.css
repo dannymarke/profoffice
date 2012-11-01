@@ -27,10 +27,10 @@ html, body {
   position: absolute;
   left: 0;
   top: 30px;
-  width: 100px;
-  height: 100px;
+  width: 72px;
+  height: 65px;
   margin: 0;
-  background-color: #000000;
+  background: url("../img/prof_logo.gif") no-repeat center center transparent;
 }
 #main_wr #main_header #main_logo_wr a {
   display: block;
@@ -199,22 +199,22 @@ html, body {
 }
 #main_wr #main_body_wr #main_contact_wr #main_social_links_wr li a {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   overflow: hidden;
   margin: 0;
   padding: 0;
   font-size: 0;
   line-height: 0;
-  background-image: url("main_social_spr.png");
+  background-image: url("../img/main_social_spr.gif");
   background-repeat: no-repeat;
-  background-color: #000;
+  background-color: transparent;
   background-attachment: scroll;
 }
-#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li a .fb {
+#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li a.fb {
   background-position: left top;
 }
-#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li a .tw {
+#main_wr #main_body_wr #main_contact_wr #main_social_links_wr li a.tw {
   background-position: right top;
 }
 #main_wr #main_body_wr #main_contact_wr address {
