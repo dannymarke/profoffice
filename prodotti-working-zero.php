@@ -22,10 +22,26 @@
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <img src="/img/main_prodotti_executive_block.jpg" alt="image name" id="image name" class="img_seo_placeholder">
-                    <article class="product_description_wr">
-                        <h2 class="product_name">block</h2><span class="product_description_separator" >\</span><h3 class="collection_name">executive collection</h3>
-                    </article>
+                    <div id="left_wr">
+                        <div id="text_wr">
+                            <h2 id="product_name">Zero</h2>
+                            <article id="product_description_wr">
+                                <p id="intro_text">
+                                    Lorem ipsum veniam veniam aute pariatur exercitation dolor adipisicing ut occaecat veniam nisi in eu enim irure anim sit est amet pariatur nulla ea officia incididunt adipisicing magna.<br/>
+                                    Aute pariatur exercitation dolor laborum non culpa officia quis et enim deserunt fugiat cillum laboris reprehenderit Ut et labore et.
+                                </p>
+                                <ul id="resources_list">
+                                    <li><a href="#">download CATALOGO</a></li>
+                                    <li><a href="#">download SCHEDE TECNICHE</a></li>
+                                    <li><a href="#">download LOREM</a></li>
+                                    <li><a href="#">download IPSUM DOLOR</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                    <div id="right_wr" class="dyn_bg_wr">
+                        <img src="/img/zero_cover.jpg" alt="Zero" id="Zero" class="img_seo_placeholder">
+                    </div>
                 </section>
             </div>
         </div>
