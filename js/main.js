@@ -35,14 +35,14 @@ po.functions.prepare_menu = function(){
     var _path = base_url[1].split('/'),
         size = _path.length;
 
-    jQuery('li[rel="/'+_path[0]+'"]').addClass('current');
+    jQuery('li[rel="/'+_path[0]+'"]').addClass('breadcrumb');
 
     if(size > 1){
-      jQuery('li[rel="/'+_path[0]+'/'+_path[1]+'"]').addClass('current');
+      jQuery('li[rel="/'+_path[0]+'/'+_path[1]+'"]').addClass('breadcrumb');
     }
 
     if(size > 2){
-      jQuery('li[rel="/'+_path[0]+'/'+_path[1]+'/'+_path[2]+'"]').addClass('current');
+      jQuery('li[rel="/'+_path[0]+'/'+_path[1]+'/'+_path[2]+'"]').addClass('breadcrumb');
     }
 
   } else {
@@ -61,19 +61,33 @@ po.functions.manage_menu = function(){
         _deep = $parents.size()-1,
         _has_sub = $parent.hasClass('has_sub');
 
+    $this.blur();
+
     if(_has_sub){
-      jQuery('.current').removeClass('current').addClass('highlighted');
-      jQuery('.opened').removeClass('opened');
-      $parents.addClass('opened');
+      // jQuery('.breadcrumb').removeClass('breadcrumb').addClass('highlighted');
+      // jQuery('.clicked').removeClass('clicked');
+      // $parents.addClass('clicked');
+      // console.log('deep: ' + _deep);
       switch(_deep){
         case 0:
           e.preventDefault();
+          $parent.toggleClass('clicked');
+          // console.log('main');
         break;
         case 1:
           e.preventDefault();
+          // console.log('sub');
+          if ($parent.hasClass('clicked')) {
+            $parent.removeClass('clicked');
+          } else {
+            $parent.siblings().removeClass('clicked');
+            $parent.addClass('clicked');
+          };
+          // $parent.toggleClass('breadcrumb');
         break;
         case 2:
-          // e.preventDefault();
+          e.preventDefault();
+          console.log('sub sub');
         break;
       }
     }
