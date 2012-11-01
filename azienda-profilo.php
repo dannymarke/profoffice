@@ -33,7 +33,7 @@ $testo = mysql_result($risultato, 0, "testo_".$lingua);
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
                     <img src="/img/profFactory.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
-                    <article class="content_wr">
+                    <article class="content_wr" style="right: 50px; top: 50px; color: #000000">
                         <h2 class="content_title"><?php echo(strtoupper(PROFILO));?></h2>
                         <div class="content_text scroll-pane">
                             <p>
