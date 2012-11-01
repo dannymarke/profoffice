@@ -1,0 +1,30 @@
+// variables
+$font_source_url: '/font';
+
+
+@font-face {
+    font-family: 'liberation_sans_regular';
+    src: url('#{$font_source_url}/liberationsans-regular-webfont.eot');
+    src: url('#{$font_source_url}/liberationsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$font_source_url}/liberationsans-regular-webfont.woff') format('woff'),
+         url('#{$font_source_url}/liberationsans-regular-webfont.ttf') format('truetype'),
+         url('#{$font_source_url}/liberationsans-regular-webfont.svg#liberation_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'liberation_sans_bold';
+    src: url('#{$font_source_url}/liberationsans-bold-webfont.eot');
+    src: url('#{$font_source_url}/liberationsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$font_source_url}/liberationsans-bold-webfont.woff') format('woff'),
+         url('#{$font_source_url}/liberationsans-bold-webfont.ttf') format('truetype'),
+         url('#{$font_source_url}/liberationsans-bold-webfont.svg#liberation_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

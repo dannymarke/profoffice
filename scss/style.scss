@@ -3,6 +3,9 @@
 // sass --watch --debug-info scss:css --style expanded
 // sass --watch scss:css --style expanded
 
+
+@import "fonts.scss";
+
 // variables
 
 $link-out-color: #666666;
@@ -14,11 +17,16 @@ $big-text-multiplier: 1.2;
 $giant-text-multiplier: 2.5;
 $header-height: 30px;
 $sidebar_width: 230px;
+$product_sidebar_width: 240px;
 
 html, body {
 	height: 100%;
 	font-size: $font-size;
 	line-height: $font-size * $line-height-multiplier;
+}
+
+body {
+	font-family: liberation_sans_regular, Helvetica, Arial, sans-serif;
 }
 
 
@@ -344,6 +352,41 @@ html, body {
 						line-height: 20px;
 					}
 				}
+			}
+			#left_wr {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: 250px;
+				margin: 0;
+				padding: 0;
+				#text_wr {
+					zoom: 1;
+					#product_name {
+						zoom: 1;
+					}
+					#product_description_wr {
+						zoom: 1;
+						#intro_text {
+							zoom: 1;
+						}
+						#resources_list {
+							zoom: 1;
+						}
+					}
+				}
+			}
+			#right_wr {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 250px;
+				margin: 0;
+				padding: 0;
+				background-size: cover;
+				background-position: center;
 			}
 		}
 	}

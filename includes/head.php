@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="/css/main.css">
 
+        <?php /* <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'> */ ?>
+
         <link type="text/css" href="/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 
         <link rel="stylesheet" href="/css/style.css">
