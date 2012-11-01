@@ -38,6 +38,32 @@
                                 </ul>
                             </article>
                         </div>
+                        <div id="pic_wr">
+                            <ul id="pic_nav_nav">
+                                <li><a class="current" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                            </ul>
+                            <ul id="pic_nav_wr">
+                                <li>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div id="right_wr" class="dyn_bg_wr">
                         <img src="/img/zero_cover.jpg" alt="Zero" id="Zero" class="img_seo_placeholder">
