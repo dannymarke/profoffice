@@ -30,19 +30,19 @@ body {
 	#main_header {
 		position: absolute;
 		top: 0;
-		right:0;
-		left:0;
+		right:25px;
+		left:25px;
 		z-index:1;
 		height: $header-height;
 		// background-color: #ddd;
 		#main_logo_wr {
 			position: absolute;
-			left: 0;
+			left: 25px;
 			top: $header-height;
-			width: 72px;
-			height: 65px;
+			width: 80px;
+			height: 78px;
 			margin: 0;
-			background: url("../img/prof_logo.gif") no-repeat center center transparent;
+			background: url("../img/prof_logo.png") no-repeat center center transparent;
 			a {
 				display: block;
 				width: 100%;
@@ -92,9 +92,9 @@ body {
 	#main_body_wr {
 		position: absolute;
 		top: $header-height;
-		left: 0;
+		left: 25px;
 		bottom:30px;
-		right: 0;
+		right: 25px;
 		// background-color: #ccc;
 		#main_nav_wr {
 			position: absolute;
@@ -376,7 +376,7 @@ body {
 						margin: 0;
 						padding: 0;
 						font-size: 13px;
-						color: $link-hover-color;
+						color: $text_color;
 						text-decoration: underline;
 					}
 					#product_description_wr {
@@ -496,10 +496,27 @@ body {
 	overflow: hidden;
 }
 
-.tel_num {
+.tel_num,
+.email_link,
+.map_link {
 	text-decoration: none;
 	color: $link-out-color;
 	&:hover {
 		color: $link-hover-color;
 	}
 }
+
+.map_link {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	text-decoration: underline;
+	font-weight: bold;
+	color: $link-out-color;
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+
+
+
