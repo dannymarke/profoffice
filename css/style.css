@@ -37,19 +37,19 @@ body {
 #main_wr #main_header {
   position: absolute;
   top: 0;
-  right: 0;
-  left: 0;
+  right: 25px;
+  left: 25px;
   z-index: 1;
   height: 30px;
 }
 #main_wr #main_header #main_logo_wr {
   position: absolute;
-  left: 0;
+  left: 25px;
   top: 30px;
-  width: 72px;
-  height: 65px;
+  width: 80px;
+  height: 78px;
   margin: 0;
-  background: url("../img/prof_logo.gif") no-repeat center center transparent;
+  background: url("../img/prof_logo.png") no-repeat center center transparent;
 }
 #main_wr #main_header #main_logo_wr a {
   display: block;
@@ -97,9 +97,9 @@ body {
 #main_wr #main_body_wr {
   position: absolute;
   top: 30px;
-  left: 0;
+  left: 25px;
   bottom: 30px;
-  right: 0;
+  right: 25px;
 }
 #main_wr #main_body_wr #main_nav_wr {
   position: absolute;
@@ -354,7 +354,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 13px;
-  color: black;
+  color: #808284;
   text-decoration: underline;
 }
 #main_wr #main_body_wr #main_content_wr #left_wr #text_wr #product_description_wr {
@@ -467,10 +467,26 @@ body {
   overflow: hidden;
 }
 
-.tel_num {
+.tel_num,
+.email_link,
+.map_link {
   text-decoration: none;
   color: #808284;
 }
-.tel_num:hover {
+.tel_num:hover,
+.email_link:hover,
+.map_link:hover {
+  color: black;
+}
+
+.map_link {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #808284;
+}
+.map_link:hover {
   color: black;
 }
