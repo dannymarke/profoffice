@@ -77,6 +77,20 @@
                         <img src="/img/immagineCover.jpg" alt="Zero" id="Zero" class="img_seo_placeholder">
                     </div>
                 </section>
+                <div id="main_slideshow_wr">
+                    <a href="#" id="prev_control" class="main_slideshow_navigator">prev</a>
+                    <a href="#" id="next_control" class="main_slideshow_navigator">next</a>
+                    <a href="#" id="close_control" class="main_slideshow_navigator">close</a>
+                    <ul id="main_slideshow_list">
+                        <li><img rel="/img/immagineGrande_slide.jpg?1" src="/img/transparent.gif" alt="1" title="1" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?2" src="/img/transparent.gif" alt="2" title="2" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?3" src="/img/transparent.gif" alt="3" title="3" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?4" src="/img/transparent.gif" alt="4" title="4" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?5" src="/img/transparent.gif" alt="5" title="5" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?6" src="/img/transparent.gif" alt="6" title="6" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?7" src="/img/transparent.gif" alt="7" title="7" /></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <?php include_once "includes/scripts.php"; ?>

@@ -438,7 +438,8 @@ body {
 									display: inline;
 								}
 								img {}
-								&:hover img {
+								&:hover img,
+								&.current img {
 									opacity: 0.5;
 								}
 							}
@@ -518,7 +519,80 @@ body {
 	}
 }
 
-
 .err {
 	border: 1px #f00 solid;
+}
+
+#main_slideshow_wr {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	a {
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+		width: 50px;
+		height: 50px;
+		margin: -$external_margin 0 0 0;
+		border-radius: 25px;
+		background-color: rgba(0,0,0,0.75);
+		.lt-ie9 & {
+			background-color: #000;
+		}
+		&#prev_control {
+			left: $external_margin;
+		}
+		&#next_control {
+			right: $external_margin;
+		}
+		&#close_control {
+			right: $external_margin;
+			top:  $external_margin;
+			margin: 0;
+		}
+	}
+	#main_slideshow_list {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 700%;
+		margin: 0;
+		padding: 0;
+		background: url("/img/rgba_255-255-255-05.png") scroll repeat left top transparent;
+		-webkit-transition: left 0.5s linear;
+		-moz-transition: left 0.5s linear;
+		-o-transition: left 0.5s linear;
+		-ms-transition: left 0.5s linear;
+		transition: left 0.5s linear;
+		li {
+			position: relative;
+			display: inline-block;
+			.lt-ie8 & { display: inline }
+			vertical-align: top;
+			height: 100%;
+			background: url("/img/loader.gif") scroll no-repeat center transparent;
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-attachment: scroll;
+				background-color: transparent;
+			}
+		}
+	}
 }
