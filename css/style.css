@@ -490,3 +490,7 @@ body {
 .map_link:hover {
   color: black;
 }
+
+.err {
+  border: 1px #f00 solid;
+}
