@@ -516,22 +516,27 @@ body {
   width: 50px;
   height: 50px;
   margin: -25px 0 0 0;
-  border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-image: url("/img/slideshow_arrows.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: transparent;
 }
 .lt-ie9 #main_slideshow_wr a {
   background-color: #000;
 }
 #main_slideshow_wr a#prev_control {
   left: 25px;
+  background-position: left center;
 }
 #main_slideshow_wr a#next_control {
   right: 25px;
+  background-position: right center;
 }
 #main_slideshow_wr a#close_control {
   right: 25px;
   top: 25px;
   margin: 0;
+  background-position: center;
 }
 #main_slideshow_wr #main_slideshow_list {
   position: absolute;

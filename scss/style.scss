@@ -543,21 +543,26 @@ body {
 		width: 50px;
 		height: 50px;
 		margin: -$external_margin 0 0 0;
-		border-radius: 25px;
-		background-color: rgba(0,0,0,0.75);
+		background-image: url("/img/slideshow_arrows.png");
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-color: transparent;
 		.lt-ie9 & {
 			background-color: #000;
 		}
 		&#prev_control {
 			left: $external_margin;
+			background-position: left center;
 		}
 		&#next_control {
 			right: $external_margin;
+			background-position: right center;
 		}
 		&#close_control {
 			right: $external_margin;
 			top:  $external_margin;
 			margin: 0;
+			background-position: center;
 		}
 	}
 	#main_slideshow_list {
