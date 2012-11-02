@@ -547,9 +547,6 @@ body {
 		background-repeat: no-repeat;
 		background-attachment: scroll;
 		background-color: transparent;
-		.lt-ie9 & {
-			background-color: #000;
-		}
 		&#prev_control {
 			left: $external_margin;
 			background-position: left center;
@@ -597,6 +594,9 @@ body {
 				background-repeat: no-repeat;
 				background-attachment: scroll;
 				background-color: transparent;
+				.lt-ie9 & {
+					background-color: #ffffff;
+				}
 			}
 		}
 	}

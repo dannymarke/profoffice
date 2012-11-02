@@ -521,9 +521,6 @@ body {
   background-attachment: scroll;
   background-color: transparent;
 }
-.lt-ie9 #main_slideshow_wr a {
-  background-color: #000;
-}
 #main_slideshow_wr a#prev_control {
   left: 25px;
   background-position: left center;
@@ -574,4 +571,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-color: transparent;
+}
+.lt-ie9 #main_slideshow_wr #main_slideshow_list li img {
+  background-color: #ffffff;
 }
