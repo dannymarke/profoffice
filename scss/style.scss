@@ -30,14 +30,14 @@ body {
 	#main_header {
 		position: absolute;
 		top: 0;
-		right:25px;
-		left:25px;
+		right:$external_margin;
+		left:$external_margin;
 		z-index:1;
 		height: $header-height;
 		// background-color: #ddd;
 		#main_logo_wr {
 			position: absolute;
-			left: 25px;
+			left: $external_margin;
 			top: $header-height;
 			width: 80px;
 			height: 78px;
@@ -92,9 +92,9 @@ body {
 	#main_body_wr {
 		position: absolute;
 		top: $header-height;
-		left: 25px;
+		left: $external_margin;
 		bottom:30px;
-		right: 25px;
+		right: $external_margin;
 		// background-color: #ccc;
 		#main_nav_wr {
 			position: absolute;
