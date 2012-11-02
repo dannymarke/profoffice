@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div id="right_wr" class="dyn_bg_wr">
-                        <img src="/img/zero_cover.jpg" alt="Zero" id="Zero" class="img_seo_placeholder">
+                        <img src="/img/immagineCover.jpg" alt="Zero" id="Zero" class="img_seo_placeholder">
                     </div>
                 </section>
             </div>
