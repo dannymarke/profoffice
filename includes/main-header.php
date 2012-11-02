@@ -11,7 +11,5 @@ if(isset($_SESSION['lingua']))
 else
 	echo '<li><a href="/index.php?lang=it">ITA</a></li><li><a href="/index.php?lang=en">ENG</a></li>';
 ?>
-
-
                 </ul>
             </header>
