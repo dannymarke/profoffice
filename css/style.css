@@ -466,3 +466,11 @@ body {
 .dyn_bg_wr {
   overflow: hidden;
 }
+
+.tel_num {
+  text-decoration: none;
+  color: #808284;
+}
+.tel_num:hover {
+  color: black;
+}

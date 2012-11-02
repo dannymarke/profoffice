@@ -495,3 +495,11 @@ body {
 .dyn_bg_wr {
 	overflow: hidden;
 }
+
+.tel_num {
+	text-decoration: none;
+	color: $link-out-color;
+	&:hover {
+		color: $link-hover-color;
+	}
+}
