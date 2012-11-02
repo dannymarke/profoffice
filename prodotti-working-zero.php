@@ -39,10 +39,14 @@
                             </article>
                         </div>
                         <div id="pic_wr">
+                            <?php
+                            /*
                             <ul id="pic_nav_nav">
                                 <li><a class="current" href="#">1</a></li>
                                 <li><a href="#">2</a></li>
                             </ul>
+                            */
+                            ?>
                             <ul id="pic_nav_wr">
                                 <li>
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
@@ -53,6 +57,8 @@
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
                                 </li>
+                                <?php
+                                /*
                                 <li>
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
@@ -62,6 +68,8 @@
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
                                 </li>
+                                */
+                                ?>
                             </ul>
                         </div>
                     </div>
