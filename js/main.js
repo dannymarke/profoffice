@@ -2,8 +2,8 @@ var po = {};
 po.functions = {};
 po.constants = {};
 
-// po.constants.sitename = 'http://profoffice.dev/';
-po.constants.sitename = 'http://192.168.1.5/';
+po.constants.sitename = 'http://profoffice.dev/';
+// po.constants.sitename = 'http://192.168.1.5/';
 
 po.functions.img_seo_placeholder_resize = function($img){
   if($img[0] !== undefined){
