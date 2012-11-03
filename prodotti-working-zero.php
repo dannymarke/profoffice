@@ -33,8 +33,6 @@
                                 <ul id="resources_list">
                                     <li><a href="#">download CATALOGO</a></li>
                                     <li><a href="#">download SCHEDE TECNICHE</a></li>
-                                    <li><a href="#">download LOREM</a></li>
-                                    <li><a href="#">download IPSUM DOLOR</a></li>
                                 </ul>
                             </article>
                         </div>
