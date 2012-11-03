@@ -3,6 +3,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="initial-scale=1, width=device-width">
 
+        <!-- disattivo l'identificazione automatica dei numeri di telefono per Safari e Blackberry -->
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="x-rim-auto-match" content="none">
+
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="/css/normalize.css">
