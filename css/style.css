@@ -168,6 +168,9 @@ body {
   font-size: 10px;
   line-height: 10px;
 }
+#main_wr #main_body_wr #main_nav_wr ul li.always_opened > ul {
+  display: block;
+}
 #main_wr #main_body_wr #main_nav_wr ul li.clicked a, #main_wr #main_body_wr #main_nav_wr ul li.breadcrumb a {
   color: black;
 }

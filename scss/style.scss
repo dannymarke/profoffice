@@ -161,6 +161,11 @@ body {
 							}
 						}
 					}
+					&.always_opened {
+						&>ul {
+							display: block;
+						}
+					}
 					&.clicked, &.breadcrumb {
 						a {
 							color: $link-hover-color;

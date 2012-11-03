@@ -12,7 +12,7 @@
                                 <li><a href="/azienda/video"><?php echo(strtoupper(VIDEO));?></a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="always_opened">
                             <a href="/prodotti"><?php echo(strtoupper(PRODOTTI));?></a>
                             <ul>
                                 <li>
