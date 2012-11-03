@@ -39,8 +39,8 @@ if($lingua == "it") {
                                 <p id="intro_text">
                                     Via Cao de Villa 6/A <br/>
                                     31020 Falz&egrave; di Piave, TV / Italy <br/>
-                                    T. <a href="tel:+390438903190" class="tel_num">+39 0438 903190</a> <br/>
-                                    F. <a href="tel:+390438903228" class="tel_num">+39 0438 903228</a> <br/>
+                                    T. <a href="tel:390438903190" class="tel_num">+39 0438 903190</a> <br/>
+                                    F. <a href="tel:390438903228" class="tel_num">+39 0438 903228</a> <br/>
                                     <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a>
                                 </p>
                                 <a class="map_link" href="https://maps.google.it/maps?q=profoffice&daddr=Via+Cao+De+Villa,+6/a,+31020+Treviso+%28Prof+s.r.l.%29&hl=it&ll=45.857888,12.159934&spn=0.012389,0.027852&sll=43.036776,12.392578&sspn=26.584077,57.041016&view=map&geocode=Cah721jhtlHdFRDCuwIdXYS5ACGu8EplzYF8VQ&t=h&z=16&vpsrc=0" target="_blank">Indicazioni stradali</a>
