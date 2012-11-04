@@ -42,7 +42,7 @@ body {
 			width: 80px;
 			height: 78px;
 			margin: 0;
-			background: url("../img/prof_logo.png") no-repeat center center transparent;
+			background: url('#{$img_source_url}/prof_logo.png') no-repeat center center transparent;
 			a {
 				display: block;
 				width: 100%;
@@ -263,7 +263,7 @@ body {
 						padding: 0;
 						font-size: 0;
 						line-height: 0;
-						background-image: url("../img/main_social_spr.gif");
+						background-image: url('#{$img_source_url}/main_social_spr.gif');
 						background-repeat: no-repeat;
 						background-color: transparent;
 						background-attachment: scroll;
@@ -376,6 +376,9 @@ body {
 				padding: 0;
 				.contatti_wr & {
 					top: 270px;
+				}
+				.referenze_wr & {
+					top: 260px;
 				}
 				#text_wr {
 					margin: 0 20px 0 0;
@@ -557,7 +560,7 @@ body {
 		width: 50px;
 		height: 50px;
 		margin: -$external_margin 0 0 0;
-		background-image: url("/img/slideshow_arrows.png");
+		background-image: url('#{$img_source_url}/slideshow_arrows.png');
 		background-repeat: no-repeat;
 		background-attachment: scroll;
 		background-color: transparent;
@@ -584,7 +587,7 @@ body {
 		width: 700%;
 		margin: 0;
 		padding: 0;
-		background: url("/img/rgba_255-255-255-05.png") scroll repeat left top transparent;
+		background: url('#{$img_source_url}/rgba_255-255-255-05.png') scroll repeat left top transparent;
 		-webkit-transition: left 0.5s linear;
 		-moz-transition: left 0.5s linear;
 		-o-transition: left 0.5s linear;
@@ -596,7 +599,7 @@ body {
 			.lt-ie8 & { display: inline }
 			vertical-align: top;
 			height: 100%;
-			background: url("/img/loader.gif") scroll no-repeat center transparent;
+			background: url('#{$img_source_url}/loader.gif') scroll no-repeat center transparent;
 			img {
 				position: absolute;
 				left: 0;
@@ -696,6 +699,98 @@ body {
 				font-size: 12px;
 				line-height: 15px;
 				border: 1px #808284 solid;
+			}
+		}
+	}
+}
+
+.referenze_wr {
+	#product_name {
+		margin: 0 0 8px !important;
+		color: $link-hover-color !important;
+		font-size: 12px !important;
+		line-height: 12px !important;
+	}
+	#references_main_list {
+		margin: 0 0 0 35px;
+		padding: 0;
+		list-style: none;
+		li {
+			margin: 0;
+			padding: 0;
+			height: 14px;
+			a {
+				font-size: 12px;
+			    line-height: 12px;
+				text-decoration: none;
+				color: $link-out-color;
+				&:hover, &.current {
+					color: $link-hover-color;
+				}
+				&.current {
+					cursor: default;
+				}
+			}
+		}
+	}
+	#right_wr{
+		#references_scroller_wr {
+			position: absolute;
+			width: 250px;
+			height: 150px;
+			left: 0;
+			top: 145px;
+			overflow: hidden;
+			ul{
+				position: absolute;
+				top: 0;
+				margin: 0;
+				padding: 0;
+				list-style: none outside none;
+				&#references_scroller_list {
+					left: 0;
+					-webkit-transition: top 0.25s linear;
+					-moz-transition: top 0.25s linear;
+					-o-transition: top 0.25s linear;
+					-ms-transition: top 0.25s linear;
+					transition: top 0.25s linear;
+					li {
+						height: 15px;
+						font-size: 12px;
+					    line-height: 12px;
+					}
+				}
+				&#references_scroller_controls {
+					right: 0;
+					width: 25px;
+					height: 50px;
+					li {
+						position: absolute;
+						width: 25px;
+						height: 14px;
+						margin: 0;
+						background-image: url('#{$img_source_url}/vertical_scroller_arrows.png');
+						background-attachment: scroll;
+						background-repeat: no-repeat;
+						background-color: transparent;
+						&#prev {
+							top: 0;
+							background-position: center top;
+						}
+						&#next {
+							bottom: 0;
+							background-position: center bottom;
+						}
+						a {
+							display: block;
+							width: 25px;
+							height: 14px;
+							font-size: 0;
+							line-height: 0;
+							text-decoration: none;
+						}
+					}
+				}
 			}
 		}
 	}
