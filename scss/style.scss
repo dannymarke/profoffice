@@ -292,9 +292,46 @@ body {
 			bottom: 0;
 			left: $sidebar_width;
 			// background-color: #aaa;
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-size: cover;
+			&.dyn_bg_wr{
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				&.contain {
+					background-size: contain;
+				}
+				.continent_name {
+					position: absolute;
+					font-size: 14px;
+					line-height: 14px;
+					text-decoration: none;
+					color: $link-out-color;
+					&:hover { color: $link-hover-color }
+					&#europa {
+						left: 50%;
+						top: 30%;
+					}
+					&#asia {
+						left: 70%;
+						top: 28%;
+					}
+					&#africa {
+						left: 50%;
+						top: 45%;
+					}
+					&#nord_america {
+						left: 15%;
+						top: 28%;
+					}
+					&#sud_america {
+						left: 25%;
+						top: 60%;
+					}
+					&#oceania {
+						left: 85%;
+						top: 65%;
+					}
+				}
+			}
 			.content_wr {
 				position: absolute;
 				right: 50px;

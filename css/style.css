@@ -266,9 +266,48 @@ body {
   right: 0;
   bottom: 0;
   left: 200px;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr.contain {
+  background-size: contain;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name {
+  position: absolute;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+  color: #808284;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name:hover {
+  color: black;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name#europa {
+  left: 50%;
+  top: 30%;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name#asia {
+  left: 70%;
+  top: 28%;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name#africa {
+  left: 50%;
+  top: 45%;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name#nord_america {
+  left: 15%;
+  top: 28%;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name#sud_america {
+  left: 25%;
+  top: 60%;
+}
+#main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name#oceania {
+  left: 85%;
+  top: 65%;
 }
 #main_wr #main_body_wr #main_content_wr .content_wr {
   position: absolute;
