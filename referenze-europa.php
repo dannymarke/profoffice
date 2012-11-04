@@ -1,4 +1,14 @@
 <?php include_once "includes/conditional-init.php"; ?>
+<?php
+if($lingua == "it") {
+    $conn = mysql_pconnect(HOSTNAME, USERNAME, PASSWORD);
+    mysql_select_db(DATABASE);
+
+    $sQuery = "SELECT * "
+    ."FROM regioni ORDER BY regione";
+    $regioni = mysql_query($sQuery);
+}
+?>
     <head>
         <?php include_once "includes/head.php"; ?>
 
@@ -12,23 +22,30 @@
         <meta name="abstract" content="Profoffice S.r.l. Azienda mobili per arredamento di uffici"/>
         <meta name="keywords" content="Armadi, Scrivanie, Tavoli riunionr, Parete divisoria, Monolitica, Workstation, Partition, Wall, Cabinets, Desks"/>
 
-        <title>ProfOffice S.r.l. - referenze</title>
+        <title>ProfOffice S.r.l. - referenze - europa - italia</title>
 
     </head>
-    <body>
+    <body class="referenze_wr">
         <?php include_once "includes/chrome-frame.php"; ?>
         <div id="main_wr">
             <?php include_once "includes/main-header.php"; ?>
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
-                <section id="main_content_wr" class="bg_zoom dyn_bg_wr contain">
-                    <img src="/img/world.png" alt="referenze" id="referenze" class="img_seo_placeholder">
-                    <a id="europa" href="/referenze/europa" class="continent_name">EUROPA</a>
-                    <a id="asia" href="/referenze/asia" class="continent_name">ASIA</a>
-                    <a id="africa" href="/referenze/africa" class="continent_name">AFRICA</a>
-                    <a id="nord_america" href="/referenze/nord-america" class="continent_name">NORD AMERICA</a>
-                    <a id="sud_america" href="/referenze/sud-america" class="continent_name">SUD AMERICA</a>
-                    <a id="oceania" href="/referenze/oceania" class="continent_name">OCEANIA</a>
+                <section id="main_content_wr">
+                  <div id="left_wr">
+                    <div id="text_wr">
+                      <h2 id="product_name">EUROPA</h2>
+                      <ul id="references_main_list">
+                        <li><a href="/referenze/europa/italia">ITALIA</a></li>
+                        <li><a href="/referenze/europa/francia">FRANCIA</a></li>
+                        <li><a href="/referenze/europa/spagna">SPAGNA</a></li>
+                        <li><a href="/referenze/europa/germania">GERMANIA</a></li>
+                        <li><a href="/referenze/europa/grecia">GRECIA</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="right_wr">
+                  </div>
                 </section>
             </div>
         </div>
