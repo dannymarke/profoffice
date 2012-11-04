@@ -31,110 +31,116 @@ if($lingua == "it") {
             <?php include_once "includes/main-header.php"; ?>
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
-                <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <div id="left_wr">
-                        <div id="text_wr">
-                            <h2 id="product_name">Uffici, Stabilimento e Showroom:</h2>
-                            <article id="product_description_wr">
-                                <p id="intro_text">
-                                    Via Cao de Villa 6/A <br/>
-                                    31020 Falz&egrave; di Piave, TV / Italy <br/>
-                                    T. <a href="tel:390438903190" class="tel_num">+39 0438 903190</a> <br/>
-                                    F. <a href="tel:390438903228" class="tel_num">+39 0438 903228</a> <br/>
-                                    <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a>
-                                </p>
-                                <a class="map_link" href="https://maps.google.it/maps?q=profoffice&daddr=Via+Cao+De+Villa,+6/a,+31020+Treviso+%28Prof+s.r.l.%29&hl=it&ll=45.857888,12.159934&spn=0.012389,0.027852&sll=43.036776,12.392578&sspn=26.584077,57.041016&view=map&geocode=Cah721jhtlHdFRDCuwIdXYS5ACGu8EplzYF8VQ&t=h&z=16&vpsrc=0" target="_blank">Indicazioni stradali</a>
-                            </article>
-                        </div>
+                <section id="main_content_wr">
+                  <div id="left_wr">
+                    <div id="text_wr">
+                      <h2 id="product_name">Uffici, Stabilimento e Showroom:</h2>
+                      <article id="product_description_wr">
+                        <p id="intro_text">
+                            Via Cao de Villa 6/A <br/>
+                            31020 Falz&egrave; di Piave, TV / Italy <br/>
+                            T. <a href="tel:390438903190" class="tel_num">+39 0438 903190</a> <br/>
+                            F. <a href="tel:390438903228" class="tel_num">+39 0438 903228</a> <br/>
+                            <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a>
+                        </p>
+                        <a class="map_link" href="https://maps.google.it/maps?q=profoffice&daddr=Via+Cao+De+Villa,+6/a,+31020+Treviso+%28Prof+s.r.l.%29&hl=it&ll=45.857888,12.159934&spn=0.012389,0.027852&sll=43.036776,12.392578&sspn=26.584077,57.041016&view=map&geocode=Cah721jhtlHdFRDCuwIdXYS5ACGu8EplzYF8VQ&t=h&z=16&vpsrc=0" target="_blank">Indicazioni stradali</a>
+                      </article>
                     </div>
-                    <div id="right_wr" class="dyn_bg_wr">
-                        <p>Per informazioni invia una mail a <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a></p>
-                        <div id="right_container">
-                        <?php if(!isset($_GET['esito'])) { ?>
-                        <form id="contact_form" action="./actions/doContatti.php" method="post">
-                          <fieldset>
-                            <div>
-                            <?php echo(COMPILA_FORM);?><br/><br/>
-                            Email: <a href="mailto:info@profoffice.it">info@profoffice.it</a>
-                            </div>
-                          </fieldset>
-                          <fieldset>
-                            <div><label for="_nome"><?php echo(NOME);?></label><input class="required _name" type="text" name="nome" id="_nome"/></div>
-                            <div><label for="_cognome"><?php echo(COGNOME);?></label><input class="required _name" type="text" name="cognome" id="_cognome"/></div>
-                            <div><label for="_email"><?php echo(EMAIL);?></label><input class="required _email" type="text" name="email" id="_email"/></div>
-                            <div><label for="_telefono"><?php echo(TELEFONO);?></label><input type="text" name="telefono" id="_telefono"/></div>
-                            <?php
-                            if($lingua == "it") {
-                            ?>
-                            <div>
-                              <label for="_regione"><?php echo(REGIONE);?></label>
-                              <select name="regione" id="_regione">
-                                <option value=""><?php echo(SELEZIONA_REGIONE);?></option>
+                  </div>
+                  <div id="right_wr">
+                    <?php if(!isset($_GET['esito'])) { ?>
+                    <p class="incipit">
+                      <strong><?php echo(COMPILA_FORM_SENDMAIL);?> <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a></strong>
+                      <span><?php echo(COMPILA_FORM_FILLFORM);?></span>
+                      <ins><?php echo(COMPILA_FORM_REQUIRED);?></ins>
+                    </p>
+                    <form id="contact_form" action="./actions/doContatti.php" method="post">
+                      <fieldset>
+                        <div class="row">
+                          <div class="column"><label for="_nome"><?php echo(NOME);?></label><input class="required _name" type="text" name="nome" id="_nome"/></div>
+                          <div class="column"><label for="_cognome"><?php echo(COGNOME);?></label><input class="required _name" type="text" name="cognome" id="_cognome"/></div>
+                        </div>
+                        <div class="row">
+                          <div class="column"><label for="_email"><?php echo(EMAIL);?></label><input class="required _email" type="text" name="email" id="_email"/></div>
+                          <div class="column"><label for="_telefono"><?php echo(TELEFONO);?></label><input class="required _tel" type="text" name="telefono" id="_telefono"/></div>
+                        </div>
+                        <?php
+                        if($lingua == "it") {
+                        ?>
+                        <div class="row">
+                          <div class="column">
+                            <label for="_regione"><?php echo(REGIONE);?></label>
+                            <select name="regione" id="_regione" class="required _select">
+                              <option value=""><?php echo(SELEZIONA_REGIONE);?></option>
                             <?php
                             while ($row = mysql_fetch_assoc($regioni)) { ?>
-                                <option value="<?php echo $row['codice_istat']?>"><?php echo $row['regione']?></option>
+                              <option value="<?php echo $row['codice_istat']?>"><?php echo $row['regione']?></option>
                             <?php
                             }
                             ?>
-                              </select>
-                            </div>
-                            <div>
-                              <label for="_provincia"><?php echo(SELEZIONA_PROVINCIA);?></label>
-                              <select name="provincia" id="_provincia" disabled="disabled">
-                              </select>
-                            </div>
-                            <?php
-                            } else { ?>
-                            <div><label for="_nazione"><?php echo(NAZIONE);?></label><input type="text" name="nazione" id="_nazione"/></div>
-                            <?php
-                            }
-                            ?>
-                            <div><label for="_indirizzo"><?php echo(INDIRIZZO);?></label><input type="text" name="indirizzo" id="_indirizzo"/></div>
-                            <div>
-                              <label for="_posizione"><?php echo(POSIZIONE);?></label>
-                              <select name="posizione" id="_posizione" class="required _select">
-                                <option value=""><?php echo(SELEZIONA_POSIZIONE);?></option>
-                                <option value="Azienda"><?php echo(AZIENDA);?></option>
-                                <option value="Architetto"><?php echo(ARCHITETTO);?></option>
-                                <option value="Ingegnere"><?php echo(INGEGNERE);?></option>
-                                <option value="Rappresentante"><?php echo(RAPPRESENTANTE);?></option>
-                                <option value="Rivenditore"><?php echo(RIVENDITORE);?></option>
-                                <option value="Privato"><?php echo(PRIVATO);?></option>
-                                <option value="Altro"><?php echo(ALTRO);?></option>
-                              </select>
-                            </div>
-                            <div style="margin:0;"><label for="_testo"><?php echo(TESTO);?></label><textarea name="testo" id="_testo"></textarea></div>
-                            <div style="text-align:right; padding: 0 15px 0 0; font-size:12px; line-height:16px;"><?php echo(DATI_OBBLIGATORI);?></div>
-                            <div>
-                              <label for="_sicurezza" id="lbl_sicurezza" style="width:auto;">
+                            </select>
+                          </div>
+                          <div class="column">
+                            <label for="_provincia"><?php echo(SELEZIONA_PROVINCIA);?></label>
+                            <select name="provincia" id="_provincia" disabled="disabled" class="required _select">
+                            </select>
+                          </div>
+                        </div>
+                        <?php
+                        } else { ?>
+                        <div class="row"><label for="_nazione"><?php echo(NAZIONE);?></label><input class="required" type="text" name="nazione" id="_nazione"/></div>
+                        <?php
+                        }
+                        ?>
+                        <div class="row"><label for="_indirizzo"><?php echo(INDIRIZZO);?></label><input class="required _address" type="text" name="indirizzo" id="_indirizzo"/></div>
+                        <div class="row">
+                          <label for="_posizione"><?php echo(POSIZIONE);?></label>
+                          <select name="posizione" id="_posizione" class="required _select">
+                            <option value=""><?php echo(SELEZIONA_POSIZIONE);?></option>
+                            <option value="Azienda"><?php echo(AZIENDA);?></option>
+                            <option value="Architetto"><?php echo(ARCHITETTO);?></option>
+                            <option value="Ingegnere"><?php echo(INGEGNERE);?></option>
+                            <option value="Rappresentante"><?php echo(RAPPRESENTANTE);?></option>
+                            <option value="Rivenditore"><?php echo(RIVENDITORE);?></option>
+                            <option value="Privato"><?php echo(PRIVATO);?></option>
+                            <option value="Altro"><?php echo(ALTRO);?></option>
+                          </select>
+                        </div>
+                        <div class="row"><label for="_testo"><?php echo(TESTO);?></label><textarea class="required _message" name="testo" id="_testo"></textarea></div>
+                        <div class="row">
+                          <label for="_sicurezza" id="lbl_sicurezza" style="width:auto;">
                             <?php echo(CODICE_SICUREZZA);?>
-                                <strong id="captcha" style="display:inline-block; margin:0 20px; vertical-align:middle;">
-                                  <script type="text/javascript">
-                                    var _code = parseInt(Math.random()*10000);
-                                    document.open();
-                                    document.write(_code);
-                                    document.close();
-                                  </script>
-                                </strong>
-                              </label>
-                              <input style="width:30px;" type="text" name="sicurezza" id="_sicurezza" maxlength="4" />
-                            </div>
-                            <div class="checkbox_wrapper"><input class="required _checkbox" type="checkbox" name="dati" id="_dati"/><label for="_dati"><?php echo(PRIVACY);?></label></div>
-                            <div class="checkbox_wrapper"><input type="checkbox" name="adv" id="_adv"/><label for="_adv"><?php echo(MATERIALE);?></label></div>
-                            <div style="text-align:right; padding: 0 15px 0 0; margin-top:-10px;"><button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button></div>
-                          </fieldset>
-                        </form>
-                        <?php } else { ?>
-                        <div>
-                        <?php if(isset($_GET['esito']) && $_GET['esito'] == "ok") { ?>
-                        <?php echo(utf8_encode(SPEDIZIONE_OK));?>
-                        <?php } else { ?>
+                            <strong id="captcha" style="display:inline-block; margin:0 20px; vertical-align:middle;">
+                              <script type="text/javascript">
+                                var _code = parseInt(Math.random()*10000);
+                                document.open();
+                                document.write(_code);
+                                document.close();
+                              </script>
+                            </strong>
+                          </label>
+                          <input style="width:30px; min-width: auto;" type="text" name="sicurezza" id="_sicurezza" maxlength="4" />
+                        </div>
+                        <div class="row"><input class="required _checkbox" type="checkbox" name="dati" id="_dati"/><label class="wide" for="_dati"><?php echo(PRIVACY);?></label></div>
+                        <div class="row"><input type="checkbox" name="adv" id="_adv"/><label class="wide" for="_adv"><?php echo(MATERIALE);?></label></div>
+                        <div class="row" style="text-align:right; padding: 0 15px 0 0; margin-top:-5px;"><button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button></div>
+                      </fieldset>
+                    </form>
+                    <?php } else { ?>
+                    <div>
+                      <?php if(isset($_GET['esito']) && $_GET['esito'] == "ok") { ?>
+                      <p class="incipit">
+                        <strong><?php echo(utf8_encode(SPEDIZIONE_OK));?></strong>
+                      </p>
+                      <?php } else { ?>
+                      <p class="incipit">
+                        <strong><?php echo(COMPILA_FORM_SENDMAIL);?> <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a></strong>
                         <?php echo(utf8_encode(SPEDIZIONE_KO));?>
-                        <?php } ?>
-                        </div>
-                        <?php } ?>
-                        </div>
+                      </p>
+                      <?php } ?>
                     </div>
+                    <?php } ?>
+                  </div>
                 </section>
             </div>
         </div>
@@ -171,6 +177,30 @@ if($lingua == "it") {
                     label.removeClass('err');
                   } else {
                     label.addClass('err');
+                  }
+                }
+
+                if(me.hasClass('_tel')){
+                  if(me.val() == ''){
+                    label.addClass('err');
+                  } else {
+                    label.removeClass('err');
+                  }
+                }
+
+                if(me.hasClass('_address')){
+                  if(me.val() == ''){
+                    label.addClass('err');
+                  } else {
+                    label.removeClass('err');
+                  }
+                }
+
+                if(me.hasClass('_message')){
+                  if(me.val() == ''){
+                    label.addClass('err');
+                  } else {
+                    label.removeClass('err');
                   }
                 }
 
