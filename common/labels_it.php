@@ -42,7 +42,7 @@ define("PASSWORD:","PASSWORD:");
 define("BTN_LOGIN","Entra");
 define("ESITO_LOGIN","Login o password errata. Riprova.");
 define("REGISTRATI","REGISTRATI");
-define("TESTO_REGISTRATI","Regsitrati compilando il seguente form:");
+define("TESTO_REGISTRATI","Registrati compilando il seguente form:");
 define("NOME","Nome:");
 define("COGNOME","Cognome:");
 define("EMAIL","Email:");
