@@ -238,7 +238,7 @@ body {
 		#main_contact_wr {
 			position: absolute;
 			right: 30px;
-			bottom: 30px;
+			bottom: 0;
 			left: 20px;
 			#main_social_links_wr {
 				margin: 0 0 10px;
@@ -679,8 +679,12 @@ body {
 	}
 }
 
-.contatti_wr {
-	#contact_form, #registrati_form {
+.contatti_wr,
+.login_registrati_wr {
+	#contact_form,
+	#registrati_form,
+	#login_form,
+	#forgotten_form {
 		.row {
 			margin: 0 0 10px;
 			font-size: 0;
@@ -735,6 +739,61 @@ body {
 				font-size: 12px;
 				line-height: 15px;
 				border: 1px #808284 solid;
+			}
+		}
+	}
+}
+
+.login_registrati_wr {
+	#main_wr {
+		#main_body_wr {
+			#main_content_wr {
+				#left_wr {
+					top: 0;
+					#text_wr {
+						.incipit {
+							#product_name {
+								text-decoration: none;
+							}
+							#product_description_wr {
+								#intro_text {
+									margin: 52px 20px 0 0;
+								}
+							}
+						}
+						#login_form {
+							margin: 0;
+							fieldset {
+								.row {
+									label {}
+									span {
+										font-size: 12px;
+										line-height: 12px;
+									}
+									input[type="text"],
+									input[type="password"]{}
+								}
+							}
+						}
+						#lost_pwd_wr {
+							#lost_pwd_top_wr {
+								margin: 0 0 10px;
+								a {
+									text-decoration: none;
+									color: $link-out-color;
+									&:hover {
+										color: $link-hover-color;
+									}
+								}
+							}
+							#forgotten_form {
+								button {}
+							}
+						}
+					}
+				}
+				#right_wr {
+				}
 			}
 		}
 	}
