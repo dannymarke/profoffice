@@ -6,10 +6,11 @@ RewriteRule ^(prodotti)$ /$1.php [L]
 
 RewriteRule ^(referenze)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1.php?continente=$2&stato=$3 [L]
 RewriteRule ^(referenze)/([A-Za-z0-9\-]+)$ /$1.php?continente=$2 [L]
-RewriteRule ^(referenze)$ /preview/$1.php [L]
+RewriteRule ^(referenze)$ /$1.php [L]
+
+RewriteRule ^(catalogo)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-\.]+)$ /$1/$2/$3/$4 [L]
 
 RewriteRule ^(news)/([A-Za-z0-9\-]+)$ /$1.php?id=$2 [L]
-RewriteRule ^(news)$ /preview/$1.php [L]
 
 RewriteRule ^([A-Za-z0-9\-]+)$ /$1.php [L]
 RewriteRule ^([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1-$2.php [L]
