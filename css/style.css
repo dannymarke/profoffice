@@ -652,59 +652,59 @@ body {
   text-decoration: none;
 }
 
-.contatti_wr #contact_form .row {
+.contatti_wr #contact_form .row, .contatti_wr #registrati_form .row {
   margin: 0 0 10px;
   font-size: 0;
   line-height: 0;
 }
-.contatti_wr #contact_form .row .column {
+.contatti_wr #contact_form .row .column, .contatti_wr #registrati_form .row .column {
   width: 50%;
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-.lt-ie8 .contatti_wr #contact_form .row .column {
+.lt-ie8 .contatti_wr #contact_form .row .column, .lt-ie8 .contatti_wr #registrati_form .row .column {
   display: inline;
 }
-.contatti_wr #contact_form .row .column + .column {
+.contatti_wr #contact_form .row .column + .column, .contatti_wr #registrati_form .row .column + .column {
   text-align: right;
 }
-.contatti_wr #contact_form .row label {
+.contatti_wr #contact_form .row label, .contatti_wr #registrati_form .row label {
   display: inline-block;
   width: 70px;
   font-size: 12px;
   line-height: 15px;
   text-align: left;
 }
-.lt-ie8 .contatti_wr #contact_form .row label {
+.lt-ie8 .contatti_wr #contact_form .row label, .lt-ie8 .contatti_wr #registrati_form .row label {
   display: inline;
 }
-.contatti_wr #contact_form .row label.wide {
+.contatti_wr #contact_form .row label.wide, .contatti_wr #registrati_form .row label.wide {
   width: auto;
   margin: 0 0 0 5px;
 }
-.contatti_wr #contact_form .row input {
+.contatti_wr #contact_form .row input, .contatti_wr #registrati_form .row input {
   font-size: 12px;
   line-height: 15px;
   border: 1px #808284 solid;
 }
-.contatti_wr #contact_form .row input[type="text"], .contatti_wr #contact_form .row input[type="password"] {
+.contatti_wr #contact_form .row input[type="text"], .contatti_wr #contact_form .row input[type="password"], .contatti_wr #registrati_form .row input[type="text"], .contatti_wr #registrati_form .row input[type="password"] {
   min-width: 150px;
 }
-.contatti_wr #contact_form .row button {
+.contatti_wr #contact_form .row button, .contatti_wr #registrati_form .row button {
   font-size: 12px;
   line-height: 15px;
   border: 1px #fff solid;
   background-color: #fff;
   padding: 0px 5px;
 }
-.contatti_wr #contact_form .row select {
+.contatti_wr #contact_form .row select, .contatti_wr #registrati_form .row select {
   min-width: 150px;
   font-size: 12px;
   line-height: 15px;
   border: 1px #808284 solid;
 }
-.contatti_wr #contact_form .row textarea {
+.contatti_wr #contact_form .row textarea, .contatti_wr #registrati_form .row textarea {
   width: 100%;
   height: 100px;
   margin: 0 1px 0 0;

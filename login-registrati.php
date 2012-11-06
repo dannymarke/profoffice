@@ -34,7 +34,6 @@ if($lingua == "it") {
                 <section id="main_content_wr">
                   <div id="left_wr">
 
-
                     <div>
                       <h2 class="page_title"><?php echo(strtoupper(LOGIN));?></h2>
                       <div class="descrizione"><?php echo(TESTO_LOGIN);?></div>
@@ -53,14 +52,14 @@ if($lingua == "it") {
                           <button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button>
                         </div>
                         <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
-                        <div id="esito" style="margin-top:15px"><?php echo(LOGIN_OK);?>
-                        </div>
+                        <div id="esito"><strong><?php echo(LOGIN_OK);?></strong></div>
+
                         <?php } else if(isset($_GET['action']) && $_GET['action'] == "loginko") { ?>
-                        <div id="esito" style="margin-top:15px, color:#f00"><?php echo(ESITO_LOGIN);?>
-                        </div>
+                        <div id="esito" class="err"><strong><?php echo(ESITO_LOGIN);?></strong></div>
+
                         <?php } else if(isset($_GET['action']) && $_GET['action'] == "nonattivo") { ?>
-                        <div id="esito" style="margin-top:15px, color:#f00"><?php echo(ACCOUNT_NON_ATTIVATO);?>
-                        </div>
+                        <div id="esito" class="err"><strong><?php echo(ACCOUNT_NON_ATTIVATO);?></strong></div>
+
                         <?php }
                         ?>
                       </fieldset>
@@ -88,9 +87,7 @@ if($lingua == "it") {
                           </fieldset>
                       </form>
                     </div>
-
-
-
+                  </div>
 
 <!--                     <div id="text_wr">
                       <h2 id="product_name">Uffici, Stabilimento e Showroom:</h2>
@@ -105,15 +102,15 @@ if($lingua == "it") {
                         <a class="map_link" href="https://maps.google.it/maps?q=profoffice&daddr=Via+Cao+De+Villa,+6/a,+31020+Treviso+%28Prof+s.r.l.%29&hl=it&ll=45.857888,12.159934&spn=0.012389,0.027852&sll=43.036776,12.392578&sspn=26.584077,57.041016&view=map&geocode=Cah721jhtlHdFRDCuwIdXYS5ACGu8EplzYF8VQ&t=h&z=16&vpsrc=0" target="_blank">Indicazioni stradali</a>
                       </article>
                     </div> -->
-                  </div>
+
                   <div id="right_wr">
-                    <?php if(!isset($_GET['esito'])) { ?>
+                    <?php if(!isset($_GET['actionregister'])) { ?>
                     <p class="incipit">
                       <strong><?php echo(REGISTRATI);?></strong>
                       <span><?php echo(TESTO_REGISTRATI);?></span>
                       <ins><?php echo(COMPILA_FORM_REQUIRED);?></ins>
                     </p>
-                    <form id="contact_form" action="./actions/doContatti.php" method="post">
+                    <form id="registrati_form" action="./actions/doRegister.php" method="post">
                       <fieldset>
                         <div class="row">
                           <div class="column"><label for="_nome"><?php echo(NOME);?></label><input class="required _name" type="text" name="nome" id="_nome"/></div>
@@ -171,9 +168,8 @@ if($lingua == "it") {
                         </div>
                         <div class="row">
                           <div class="column"><label for="_pwd"><?php echo(PASSWORD_REGISTRAZIONE);?></label><input type="password" id="_password_registrati" name="password_registrati" class="required _pwd"></div>
-                          <div class="column"><label for="_password_registrati_2" id="lbl_conf_pwd"><?php echo(CONFERMA_PASSWORD);?></label><input class="required _pwd" name="password_registrati_2" id="_password_registrati_2" type="password"></div>
+                          <div class="column"><label for="_password_registrati_2" id="lbl_conf_pwd"><?php echo(CONFERMA_PASSWORD);?></label><input class="required _pwd" type="password" name="password_registrati_2" id="_password_registrati_2"/></div>
                         </div>
-                        <div class="row"><label for="_testo"><?php echo(TESTO);?></label><textarea class="required _message" name="testo" id="_testo"></textarea></div>
                         <div class="row">
                           <label for="_sicurezza" id="lbl_sicurezza" style="width:auto;">
                             <?php echo(CODICE_SICUREZZA);?>
@@ -194,18 +190,18 @@ if($lingua == "it") {
                       </fieldset>
                     </form>
                     <?php } else { ?>
+
                     <div>
-                      <?php if(isset($_GET['esito']) && $_GET['esito'] == "ok") { ?>
                       <p class="incipit">
-                        <strong><?php echo(utf8_encode(SPEDIZIONE_OK));?></strong>
+                        <strong><?php echo(utf8_encode(REGISTRATI));?></strong>
                       </p>
-                      <?php } else { ?>
-                      <p class="incipit">
-                        <strong><?php echo(COMPILA_FORM_SENDMAIL);?> <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a></strong>
-                        <?php echo(utf8_encode(SPEDIZIONE_KO));?>
-                      </p>
-                      <?php } ?>
+                        <?php if(isset($_GET['actionregister']) && $_GET['actionregister'] == "ok") { ?>
+                            <strong><?php echo(utf8_encode(REGISTRAZIONE_OK));?></strong>
+                        <?php } else { ?>
+                            <strong><?php echo(utf8_encode(REGISTRAZIONE_KO));?></strong>
+                        <?php } ?>
                     </div>
+
                     <?php } ?>
                   </div>
                 </section>
@@ -228,6 +224,11 @@ if($lingua == "it") {
         };
 
         $(document).ready(function() {
+
+          <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
+            document.location.href('/');
+          <?php } ?>
+
             $('#_regione').bind('change',function(){
                 regione = $(this).val();
                 $.ajax({
@@ -240,102 +241,109 @@ if($lingua == "it") {
                 });
             });
 
+            $('form').each(function() {
+              var cur_form = $(this);
+              cur_form.bind('submit', function(evt) {
 
-            $('#contact_form').bind('submit',function(evt){
+                //evt.preventDefault();
 
-              // evt.preventDefault();
+                cur_form.find('.required').each(function() {
+                  var me = $(this);
+                  var label = me.prev('label');
 
-              $('.required').each(function(){
-                var me = $(this);
-                var label = me.prev('label');
-
-                if(me.hasClass('_name')){
-                  var regexp = /^([a-z\u0027\u00C0-\u00F6\u00F8-\u017E]{1,})(\s[a-z\u0027\u00C0-\u00F6\u00F8-\u017E]{1,})*$/i;
-                  // console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
-                  if(regexp.test(me.val())){
-                    label.removeClass('err');
-                  } else {
-                    label.addClass('err');
+                  if (me.hasClass('_name')) {
+                    var regexp = /^([a-z\u0027\u00C0-\u00F6\u00F8-\u017E]{1,})(\s[a-z\u0027\u00C0-\u00F6\u00F8-\u017E]{1,})*$/i;
+                    //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
+                    if (regexp.test(me.val())) {
+                      label.removeClass('err');
+                    } else {
+                      label.addClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_tel')){
-                  if(me.val() == ''){
-                    label.addClass('err');
-                  } else {
-                    label.removeClass('err');
+                  if(me.hasClass('_tel')){
+                    if(me.val() == ''){
+                      label.addClass('err');
+                    } else {
+                      label.removeClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_address')){
-                  if(me.val() == ''){
-                    label.addClass('err');
-                  } else {
-                    label.removeClass('err');
+                  if(me.hasClass('_address')){
+                    if(me.val() == ''){
+                      label.addClass('err');
+                    } else {
+                      label.removeClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_message')){
-                  if(me.val() == ''){
-                    label.addClass('err');
-                  } else {
-                    label.removeClass('err');
+                  if (me.hasClass('_pwd')) {
+                    /* almeno 5 car no spazi*/
+                    var regexp = /^[\S]{4,}$/i;
+                    //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
+                    if (regexp.test(me.val())) {
+                      label.removeClass('err');
+                    } else {
+                      label.addClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_email')){
-                  var regexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+(\.\w{2,4})+$/i;
-                  //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
-                  if(regexp.test(me.val())){
-                    label.removeClass('err');
-                  } else {
-                    label.addClass('err');
+                  if (me.hasClass('_email')) {
+                    var regexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+(\.\w{2,4})+$/i;
+                    //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
+                    if (regexp.test(me.val())) {
+                      label.removeClass('err');
+                    } else {
+                      label.addClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_select')){
-                  //console.log(me.attr('id') + ' , ' + (me.val() == ''));
-                  if(me.val() == ''){
-                    label.addClass('err');
-                  } else {
-                    label.removeClass('err');
+                  if (me.hasClass('_select')) {
+                    //console.log(me.attr('id') + ' , ' + (me.val() == ''));
+                    if (me.val() == '') {
+                      label.addClass('err');
+                    } else {
+                      label.removeClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_checkbox')){
-                  var _label = me.next('label');
-                  //console.log(me.attr('id') + ' , ' + (me.attr('checked')));
-                  if(me.attr('checked')){
-                    _label.removeClass('err');
-                  } else {
-                    _label.addClass('err');
+                  if (me.hasClass('_checkbox')) {
+                    var _label = me.next('label');
+                    //console.log(me.attr('id') + ' , ' + (me.attr('checked')));
+                    if (me.attr('checked')) {
+                      _label.removeClass('err');
+                    } else {
+                      _label.addClass('err');
+                    }
                   }
-                }
 
-                if (me.hasClass('_pwd')) {
-                  /* almeno 5 car no spazi*/
-                  var regexp = /^[\S]{4,}$/i;
-                  //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
-                  if (regexp.test(me.val())) {
-                    label.removeClass('err');
-                  } else {
-                    label.addClass('err');
+                  console.log(cur_form.attr('id'));
+
+                  if(cur_form.attr('id') == 'registrati_form'){
+                    if (_code != parseInt($('#_sicurezza').val())) {
+                      $('#lbl_sicurezza').addClass('err');
+                    } else {
+                      $('#lbl_sicurezza').removeClass('err');
+                    }
+
+                    if($('#_password_registrati').val() != $('#_password_registrati_2').val()){
+                      $('#lbl_conf_pwd').addClass('err');
+                    }else{
+                      $('#lbl_conf_pwd').removeClass('err');
+                    }
                   }
+                });
+
+
+
+                if (cur_form.find('.err').size()) {
+                  //alert(cur_form.attr('id'));
+                  evt.preventDefault();
                 }
 
               });
-
-              if(_code != parseInt($('#_sicurezza').val())){
-                $('#lbl_sicurezza').addClass('err');
-              }else{
-                $('#lbl_sicurezza').removeClass('err');
-              }
-
-              if($('.err').size()){
-                evt.preventDefault();
-              }
-
             });
+
         });
 
         </script>
