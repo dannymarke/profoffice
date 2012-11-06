@@ -35,8 +35,9 @@
                                     <ul>
                                         <li><a href="/prodotti/executive/block">Block</a></li>
                                         <li><a href="/prodotti/executive/plano">Plano</a></li>
-                                        <li><a href="/prodotti/executive/light">Light</a></li>
+                                        <li><a href="/prodotti/executive/planolight">Plano Light</a></li>
                                         <li><a href="/prodotti/executive/spider">Spider</a></li>
+                                        <li><a href="/prodotti/executive/fast">Fast</a></li>
                                         <li><a href="/prodotti/executive/slim">Slim</a></li>
                                     </ul>
                                 </li>
@@ -45,13 +46,6 @@
                                     <ul>
                                         <li><a href="/prodotti/storage/profbox">Profbox</a></li>
                                         <li><a href="/prodotti/storage/profcase">Profcase</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/prodotti/"><?php echo(strtoupper(CLASSICAL));?></a>
-                                    <ul>
-                                        <li><a href="/prodotti/classical/diamante">Diamante</a></li>
-                                        <li><a href="/prodotti/classical/classic">Classic</a></li>
                                     </ul>
                                 </li>
                                 <li>

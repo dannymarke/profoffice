@@ -8,6 +8,8 @@
         <meta http-equiv="x-rim-auto-match" content="none">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="icon" href="http://www.profoffice.it/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="http://www.profoffice.it/favicon.ico" type="image/x-icon" />
 
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="/css/main.css">
