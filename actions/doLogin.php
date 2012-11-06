@@ -25,13 +25,13 @@ $num_rows = mysql_num_rows($result);
 if($num_rows > 0) {
     $stato_utente = mysql_result($result, 0, "stato");
     if($stato_utente != "false") {
-	if(!isset($_SESSION['loggato'])) 
+	if(!isset($_SESSION['loggato']))
 	    $_SESSION['loggato'] = "true";
-	header( "Location: ../login.php?action=loginok" );
+	header( "Location: ../login-registrati.php?action=loginok" );
     } else {
-	header( "Location: ../login.php?action=nonattivo" );
+	header( "Location: ../login-registrati.php?action=nonattivo" );
     }
 } else {
-    header( "Location: ../login.php?action=loginko" );
+    header( "Location: ../login-registrati.php?action=loginko" );
 }
 ?>
