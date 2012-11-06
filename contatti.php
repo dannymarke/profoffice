@@ -97,7 +97,7 @@ if($lingua == "it") {
                           <label for="_posizione"><?php echo(POSIZIONE);?></label>
                           <select name="posizione" id="_posizione" class="required _select">
                             <option value=""><?php echo(SELEZIONA_POSIZIONE);?></option>
-                            <option value="Azienda"><?php echo(AZIENDA);?></option>
+                            <option value="Azienda"><?php echo(AZIENDA_FORM);?></option>
                             <option value="Architetto"><?php echo(ARCHITETTO);?></option>
                             <option value="Ingegnere"><?php echo(INGEGNERE);?></option>
                             <option value="Rappresentante"><?php echo(RAPPRESENTANTE);?></option>
