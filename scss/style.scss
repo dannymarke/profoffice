@@ -17,7 +17,6 @@ body {
 	font-family: liberation_sans_regular, Helvetica, Arial, sans-serif;
 }
 
-
 #main_wr {
 	position: relative;
 	z-index:1;
@@ -574,7 +573,7 @@ body {
 .err {
 	// border: 1px #f00 solid;
 	color: #ff0000;
-	text-decoration: underline;
+	// text-decoration: underline;
 }
 
 #main_slideshow_wr {
@@ -712,7 +711,7 @@ body {
 				font-size: 12px;
 				line-height: 15px;
 				border: 1px #808284 solid;
-				&[type="text"]{
+				&[type="text"], &[type="password"]{
 					min-width: 150px;
 				}
 			}
