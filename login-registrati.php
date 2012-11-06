@@ -25,7 +25,7 @@ if($lingua == "it") {
         <title>ProfOffice S.r.l. - login/registrati</title>
 
     </head>
-    <body class="contatti_wr">
+    <body class="login_registrati_wr">
         <?php include_once "includes/chrome-frame.php"; ?>
         <div id="main_wr">
             <?php include_once "includes/main-header.php"; ?>
@@ -33,75 +33,55 @@ if($lingua == "it") {
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr">
                   <div id="left_wr">
-
-                    <div>
-                      <h2 class="page_title"><?php echo(strtoupper(LOGIN));?></h2>
-                      <div class="descrizione"><?php echo(TESTO_LOGIN);?></div>
-                    </div>
-                    <form id="login_form" action="./actions/doLogin.php" method="post" style="margin-top:15px">
-                      <fieldset>
-                        <div>
-                          <label for="_email_login"><?php echo(EMAIL);?></label>
-                          <input class="required _email" type="text" name="email_login" id="_email_login"/>
-                        </div>
-                        <div>
-                          <label for="_password_login"><?php echo(PASSWORD_AREA);?></label>
-                          <input class="required _pwd" type="password" name="password_login" id="_password_login"/>
-                        </div>
-                        <div style="text-align:right;">
-                          <button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button>
-                        </div>
-                        <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
-                        <div id="esito"><strong><?php echo(LOGIN_OK);?></strong></div>
-
-                        <?php } else if(isset($_GET['action']) && $_GET['action'] == "loginko") { ?>
-                        <div id="esito" class="err"><strong><?php echo(ESITO_LOGIN);?></strong></div>
-
-                        <?php } else if(isset($_GET['action']) && $_GET['action'] == "nonattivo") { ?>
-                        <div id="esito" class="err"><strong><?php echo(ACCOUNT_NON_ATTIVATO);?></strong></div>
-
-                        <?php }
-                        ?>
-                      </fieldset>
-                    </form>
-                    <div>
-                      <div>
-                          <a onclick="mostraFormLostPassword();" style="cursor:pointer;">
-                              <div class="descrizione"><?php echo(PASSWORD_DIMENTICATA);?></div>
-                          </a>
-                          <?php if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ok") { ?>
-                              <div class="descrizione"><?php echo(EMAIL_CORRETTA);?></div>
-                          <?php } else if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ko"){ ?>
-                              <div class="descrizione"><?php echo(EMAIL_ERRATA);?></div>
-                          <?php } ?>
+                    <div id="text_wr">
+                      <div class="incipit">
+                        <strong id="product_name"><?php echo(strtoupper(LOGIN));?></strong>
+                        <article id="product_description_wr">
+                          <p id="intro_text"><?php echo(TESTO_LOGIN);?></p>
+                        </article>
                       </div>
-                      <form style="display:none;" id="forgotten_form" action="./actions/doPasswordLost.php" method="post" style="margin-top:15px">
-                          <fieldset>
-                              <div>
-                                  <label for="_email_login"><?php echo(EMAIL);?>
-                                  </label><input class="required _email" type="text" name="email_recover" id="email_recover"/>
-                              </div>
-                              <div style="text-align:right;">
-                                  <button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button>
-                              </div>
-                          </fieldset>
+                      <form id="login_form" action="./actions/doLogin.php" method="post">
+                        <fieldset>
+                          <div class="row"><label for="_email_login"><?php echo(EMAIL);?></label><input class="required _email" type="text" name="email_login" id="_email_login"/></div>
+                          <div class="row"><label for="_password_login"><?php echo(PASSWORD_AREA);?></label><input class="required _pwd" type="password" name="password_login" id="_password_login"/></div>
+                          <div class="row" style="text-align:right; margin-right: 20px;"><button type="submit">&raquo; <?php echo(INVIA);?></button></div>
+
+                          <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
+                          <div class="row esito"><span><?php echo(LOGIN_OK);?></span></div>
+
+                          <?php } else if(isset($_GET['action']) && $_GET['action'] == "loginko") { ?>
+                          <div class="row esito err"><span><?php echo(ESITO_LOGIN);?></span></div>
+
+                          <?php } else if(isset($_GET['action']) && $_GET['action'] == "nonattivo") { ?>
+                          <div class="row esito err"><span><?php echo(ACCOUNT_NON_ATTIVATO);?></span></div>
+
+                          <?php }
+                          ?>
+                        </fieldset>
                       </form>
+                      <div id="lost_pwd_wr">
+                        <div id="lost_pwd_top_wr">
+                            <a onclick="mostraFormLostPassword(event);" href="#"><?php echo(PASSWORD_DIMENTICATA);?></a>
+                            <?php if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ok") { ?>
+                            <div class="esito"><?php echo(EMAIL_CORRETTA);?></div>
+                            <?php } else if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ko"){ ?>
+                            <div class="esito err"><?php echo(EMAIL_ERRATA);?></div>
+                            <?php } ?>
+                        </div>
+                        <form style="display:none;" id="forgotten_form" action="./actions/doPasswordLost.php" method="post">
+                            <fieldset>
+                                <div class="row">
+                                    <label for="_email_login"><?php echo(EMAIL);?></label><input class="required _email" type="text" name="email_recover" id="email_recover"/>
+                                </div>
+                                <div class="row" style="text-align:right; margin-right: 20px;">
+                                    <button type="submit">&raquo; <?php echo(INVIA);?></button>
+                                </div>
+                            </fieldset>
+                        </form>
+                      </div>
                     </div>
                   </div>
 
-<!--                     <div id="text_wr">
-                      <h2 id="product_name">Uffici, Stabilimento e Showroom:</h2>
-                      <article id="product_description_wr">
-                        <p id="intro_text">
-                            Via Cao de Villa 6/A <br/>
-                            31020 Falz&egrave; di Piave, TV / Italy <br/>
-                            T. <a href="tel:390438903190" class="tel_num">+39 0438 903190</a> <br/>
-                            F. <a href="tel:390438903228" class="tel_num">+39 0438 903228</a> <br/>
-                            <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a>
-                        </p>
-                        <a class="map_link" href="https://maps.google.it/maps?q=profoffice&daddr=Via+Cao+De+Villa,+6/a,+31020+Treviso+%28Prof+s.r.l.%29&hl=it&ll=45.857888,12.159934&spn=0.012389,0.027852&sll=43.036776,12.392578&sspn=26.584077,57.041016&view=map&geocode=Cah721jhtlHdFRDCuwIdXYS5ACGu8EplzYF8VQ&t=h&z=16&vpsrc=0" target="_blank">Indicazioni stradali</a>
-                      </article>
-                    </div> -->
 
                   <div id="right_wr">
                     <?php if(!isset($_GET['actionregister'])) { ?>
@@ -212,15 +192,11 @@ if($lingua == "it") {
 
         <script>
         /* recupera pwd */
-        var isFormPasswordOpen = false;
-        function mostraFormLostPassword() {
-          if(isFormPasswordOpen) {
-              $('#forgotten_form').hide("fast");
-              isFormPasswordOpen = false;
-          } else {
-              $('#forgotten_form').show("fast");
-              isFormPasswordOpen = true;
+        function mostraFormLostPassword(e) {
+          if(!jQuery('.lt-ie9').size()){
+            e.preventDefault();
           }
+          $('#forgotten_form').slideToggle('fast');
         };
 
         $(document).ready(function() {
@@ -317,7 +293,7 @@ if($lingua == "it") {
                     }
                   }
 
-                  console.log(cur_form.attr('id'));
+                  // console.log(cur_form.attr('id'));
 
                   if(cur_form.attr('id') == 'registrati_form'){
                     if (_code != parseInt($('#_sicurezza').val())) {

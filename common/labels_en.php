@@ -22,7 +22,7 @@ define("GALLERIA","PROJECTS GALLERY");
 define("CONTATTI","CONTACTS");
 define("CONTATTATECI","CONTACT US");
 define("DOVE_SIAMO","WHERE WE ARE");
-define("LOGIN","LOGIN/REGISTER");
+define("LOGIN","LOGIN / REGISTER");
 define("AREA","RESERVED AREA");
 define("SEGUICI","Follow us:");
 //LABELS

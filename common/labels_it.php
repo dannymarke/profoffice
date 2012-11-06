@@ -22,7 +22,7 @@ define("GALLERIA","GALLERIA PROGETTI");
 define("CONTATTI","CONTATTI");
 define("CONTATTATECI","CONTATTATECI");
 define("DOVE_SIAMO","DOVE SIAMO");
-define("LOGIN","LOGIN/REGISTRATI");
+define("LOGIN","LOGIN / REGISTRATI");
 define("AREA","AREA RISERVATA");
 define("SEGUICI","Seguici su:");
 //LABELS
