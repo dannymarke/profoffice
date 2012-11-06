@@ -50,8 +50,8 @@ if($lingua == "it") {
                   <div id="right_wr">
                     <?php if(!isset($_GET['esito'])) { ?>
                     <p class="incipit">
-                      <strong><?php echo(COMPILA_FORM_SENDMAIL);?> <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a></strong>
-                      <span><?php echo(COMPILA_FORM_FILLFORM);?></span>
+                      <strong><?php echo(REGISTRATI);?></strong>
+                      <span><?php echo(TESTO_REGISTRATI);?></span>
                       <ins><?php echo(COMPILA_FORM_REQUIRED);?></ins>
                     </p>
                     <form id="contact_form" action="./actions/doContatti.php" method="post">
