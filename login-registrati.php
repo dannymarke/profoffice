@@ -33,7 +33,66 @@ if($lingua == "it") {
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr">
                   <div id="left_wr">
-                    <div id="text_wr">
+
+
+                    <div>
+                      <h2 class="page_title"><?php echo(strtoupper(LOGIN));?></h2>
+                      <div class="descrizione"><?php echo(TESTO_LOGIN);?></div>
+                    </div>
+                    <form id="login_form" action="./actions/doLogin.php" method="post" style="margin-top:15px">
+                      <fieldset>
+                        <div>
+                          <label for="_email_login"><?php echo(EMAIL);?></label>
+                          <input class="required _email" type="text" name="email_login" id="_email_login"/>
+                        </div>
+                        <div>
+                          <label for="_password_login"><?php echo(PASSWORD_AREA);?></label>
+                          <input class="required _pwd" type="password" name="password_login" id="_password_login"/>
+                        </div>
+                        <div style="text-align:right;">
+                          <button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button>
+                        </div>
+                        <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
+                        <div id="esito" style="margin-top:15px"><?php echo(LOGIN_OK);?>
+                        </div>
+                        <?php } else if(isset($_GET['action']) && $_GET['action'] == "loginko") { ?>
+                        <div id="esito" style="margin-top:15px, color:#f00"><?php echo(ESITO_LOGIN);?>
+                        </div>
+                        <?php } else if(isset($_GET['action']) && $_GET['action'] == "nonattivo") { ?>
+                        <div id="esito" style="margin-top:15px, color:#f00"><?php echo(ACCOUNT_NON_ATTIVATO);?>
+                        </div>
+                        <?php }
+                        ?>
+                      </fieldset>
+                    </form>
+                    <div>
+                      <div>
+                          <a onclick="mostraFormLostPassword();" style="cursor:pointer;">
+                              <div class="descrizione"><?php echo(PASSWORD_DIMENTICATA);?></div>
+                          </a>
+                          <?php if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ok") { ?>
+                              <div class="descrizione"><?php echo(EMAIL_CORRETTA);?></div>
+                          <?php } else if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ko"){ ?>
+                              <div class="descrizione"><?php echo(EMAIL_ERRATA);?></div>
+                          <?php } ?>
+                      </div>
+                      <form style="display:none;" id="forgotten_form" action="./actions/doPasswordLost.php" method="post" style="margin-top:15px">
+                          <fieldset>
+                              <div>
+                                  <label for="_email_login"><?php echo(EMAIL);?>
+                                  </label><input class="required _email" type="text" name="email_recover" id="email_recover"/>
+                              </div>
+                              <div style="text-align:right;">
+                                  <button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button>
+                              </div>
+                          </fieldset>
+                      </form>
+                    </div>
+
+
+
+
+<!--                     <div id="text_wr">
                       <h2 id="product_name">Uffici, Stabilimento e Showroom:</h2>
                       <article id="product_description_wr">
                         <p id="intro_text">
@@ -45,7 +104,7 @@ if($lingua == "it") {
                         </p>
                         <a class="map_link" href="https://maps.google.it/maps?q=profoffice&daddr=Via+Cao+De+Villa,+6/a,+31020+Treviso+%28Prof+s.r.l.%29&hl=it&ll=45.857888,12.159934&spn=0.012389,0.027852&sll=43.036776,12.392578&sspn=26.584077,57.041016&view=map&geocode=Cah721jhtlHdFRDCuwIdXYS5ACGu8EplzYF8VQ&t=h&z=16&vpsrc=0" target="_blank">Indicazioni stradali</a>
                       </article>
-                    </div>
+                    </div> -->
                   </div>
                   <div id="right_wr">
                     <?php if(!isset($_GET['esito'])) { ?>
@@ -156,6 +215,18 @@ if($lingua == "it") {
         <?php include_once "includes/analytics.php"; ?>
 
         <script>
+        /* recupera pwd */
+        var isFormPasswordOpen = false;
+        function mostraFormLostPassword() {
+          if(isFormPasswordOpen) {
+              $('#forgotten_form').hide("fast");
+              isFormPasswordOpen = false;
+          } else {
+              $('#forgotten_form').show("fast");
+              isFormPasswordOpen = true;
+          }
+        };
+
         $(document).ready(function() {
             $('#_regione').bind('change',function(){
                 regione = $(this).val();
