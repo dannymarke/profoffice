@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
     
 <head>
-    <title>Prof office</title>
+    <title>Profoffice S.r.l.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
     <meta name="description" content="Dall'esperienza nel settore del mobile nel 1995 nasce Prof come azienda che produce sistemi d’arredo per ufficio. Partendo dalle collezioni operative, negli anni sviluppa sistemi direzionali, soluzioni per la reception e le sale riunioni, fino alle pareti divisorie e attrezzate. Dal mercato nazionale, Prof si è affacciata a quello internazionale con la capacità di proporre soluzioni di arredo complete per tutti gli ambienti di lavoro e con la flessibilità di realizzare progetti su misura personalizzati. Azienda giovane e dinamica, oggi Prof decide di orientare i suoi nuovi prodotti al design più internazionale, con un occhio sempre attento alla funzionalità e alla cura del dettaglio. Oggi Prof si presenta con l’evoluzione del proprio catalogo e con una rafforzata corporate identity, per aumentare la competitività e interpretare il cambiamento delle nuove esigenze dello spazio ufficio contemporaneo."/>
@@ -34,24 +34,30 @@
 <body>
     <div id="main">
 	<div id="main_contenitore">
+        <div id="contVideo">
+            <iframe src="http://player.vimeo.com/video/52853412?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" width="770" height="433" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
         <div id="spalladestra">
-            <img id="imgLogo" src="./images/prof_logo.png" />
+            <img id="imgLogo" src="./img/prof_logo.png" />
+            <div id="testoNewSite"
+                <span>NEW WEBSITE<br />COMING SOON</span><br />
+            </div>
             <div id="testoInfo">
-                <span><strong>PROF srl</strong></span><br />
                 <span>Via Cao de Villa 6/A</span><br />
                 <span>31020 Falz&egrave; di Piave, TV / Italy</span><br />
                 <span>Tel. <a class="tel_num" href="tel:390438903190">+39 0438 903190</a></span><br />
                 <span>Fax. <a class="tel_num" href="tel:390438903228">+39 0438 903228</a></span><br />
                 <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a><br />
                 <span>p.iva IT03134570260</span><br />
-            </div>
-        </div>
-        <div id="contVideo">
-            <div id="testoNewSite"
-                <span>NEW WEBSITE COMING SOON</span><br />
+                <span>2012 COPYRIGHT PROF srl</span>
             </div>
         </div>
 	</div>
+    <div id="social_bar">
+        <div class="condividi"><div id="wrapper"><div style="float:left; display:inline; overflow:hidden; width:80px;"><g:plusone href="http://www.profoffice.it" size="medium"></g:plusone></div><div style="float:left; display:inline; overflow:hidden; width:120px;"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.profoffice.it&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></div><div style="float:left; display:inline; overflow:hidden; width:120px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.profoffice.it">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+</div><!-- /condividi --></div>
+    </div>
     </div>
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
