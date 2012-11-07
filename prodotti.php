@@ -68,20 +68,44 @@ mysql_data_seek($risultato, 0);
                                         <li><a href="<?php echo(mysql_result($risultato, 0, "pdfVarianti"));?>"><?php echo(CATALOGO);?></a></li>
                                     <?php } else { ?>
                                         <li><a href="/login"><?php echo(CATALOGO);?></a></li>
-                                    <?php } ?>  
+                                    <?php } ?>
                                 </ul>
                             </article>
                         </div>
                         <div id="pic_wr">
                             <?php
                             /*
+                            ATTENZIONE
+                            generare via php la ul#pic_nav_nav se e solo se c'è più di una li in ul#pic_nav_wr
+                            in pratica, solo se hai più di 6 thumbs per il prodotto corrente.
+                            javascript controlla se c'è in pagina un elemento di id="pic_nav_nav" e se le trova
+                            allora applica la logica per la gestione della navigazione dei thumb
+                            */
+                            ?>
                             <ul id="pic_nav_nav">
                                 <li><a class="current" href="#">1</a></li>
                                 <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
                             </ul>
-                            */
-                            ?>
                             <ul id="pic_nav_wr">
+                                <li>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
+                                </li>
                                 <li>
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
                                     <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
@@ -93,15 +117,6 @@ mysql_data_seek($risultato, 0);
                                 </li>
                                 <?php
                                 /*
-                                <li>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                </li>
                                 */
                                 ?>
                             </ul>
@@ -116,13 +131,27 @@ mysql_data_seek($risultato, 0);
                     <a href="#" id="next_control" class="main_slideshow_navigator">next</a>
                     <a href="#" id="close_control" class="main_slideshow_navigator">close</a>
                     <ul id="main_slideshow_list">
-                        <li><img rel="/img/immagineGrande_slide.jpg?1" src="/img/transparent.gif" alt="1" title="1" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?2" src="/img/transparent.gif" alt="2" title="2" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?3" src="/img/transparent.gif" alt="3" title="3" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?4" src="/img/transparent.gif" alt="4" title="4" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?5" src="/img/transparent.gif" alt="5" title="5" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?6" src="/img/transparent.gif" alt="6" title="6" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?7" src="/img/transparent.gif" alt="7" title="7" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?01" src="/img/transparent.gif" alt="01" title="01" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?02" src="/img/transparent.gif" alt="02" title="02" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?03" src="/img/transparent.gif" alt="03" title="03" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?04" src="/img/transparent.gif" alt="04" title="04" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?05" src="/img/transparent.gif" alt="05" title="05" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?06" src="/img/transparent.gif" alt="06" title="06" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?07" src="/img/transparent.gif" alt="07" title="07" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?08" src="/img/transparent.gif" alt="08" title="08" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?09" src="/img/transparent.gif" alt="09" title="09" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?10" src="/img/transparent.gif" alt="10" title="10" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?11" src="/img/transparent.gif" alt="11" title="11" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?12" src="/img/transparent.gif" alt="12" title="12" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?13" src="/img/transparent.gif" alt="13" title="13" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?14" src="/img/transparent.gif" alt="14" title="14" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?15" src="/img/transparent.gif" alt="15" title="15" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?16" src="/img/transparent.gif" alt="16" title="16" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?17" src="/img/transparent.gif" alt="17" title="17" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?18" src="/img/transparent.gif" alt="18" title="18" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?29" src="/img/transparent.gif" alt="19" title="19" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?20" src="/img/transparent.gif" alt="20" title="20" /></li>
+                        <li><img rel="/img/immagineGrande_slide.jpg?21" src="/img/transparent.gif" alt="21" title="21" /></li>
                     </ul>
                 </div>
             </div>
