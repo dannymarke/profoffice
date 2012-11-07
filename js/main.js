@@ -3,6 +3,7 @@ po.functions = {};
 po.constants = {};
 
 po.constants.sitename = 'http://profoffice.dev/';
+// po.constants.sitename = 'http://10.10.11.234/';
 // po.constants.sitename = 'http://192.168.1.4/';
 
 po.functions.img_seo_placeholder_resize = function($img){
@@ -368,6 +369,7 @@ po.functions.set_references_navigation = function(){
 
       $references_scroller_controls_next.bind('click',function(e){
         e.preventDefault();
+        jQuery(this).blur();
         $references_scroller_controls_prev_wr.show();
         var references_scroller_list_top = parseInt($references_scroller_list.css('top'));
         if(references_scroller_list_h + references_scroller_list_top > references_scroller_wr_h){
@@ -393,6 +395,7 @@ po.functions.set_references_navigation = function(){
 
       $references_scroller_controls_prev.bind('click',function(e){
         e.preventDefault();
+        jQuery(this).blur();
         $references_scroller_controls_next_wr.show();
         var references_scroller_list_top = parseInt($references_scroller_list.css('top'));
         if(references_scroller_list_top < 0){
@@ -500,6 +503,7 @@ po.functions.set_news_navigation = function(){
 
       $news_scroller_controls_next.bind('click',function(e){
         e.preventDefault();
+        jQuery(this).blur();
         $news_scroller_controls_prev_wr.show();
         var news_scroller_list_top = parseInt($news_scroller_list.css('top'));
         if(news_scroller_list_h + news_scroller_list_top > news_scroller_wr_h){
@@ -525,6 +529,7 @@ po.functions.set_news_navigation = function(){
 
       $news_scroller_controls_prev.bind('click',function(e){
         e.preventDefault();
+        jQuery(this).blur();
         $news_scroller_controls_next_wr.show();
         var news_scroller_list_top = parseInt($news_scroller_list.css('top'));
         if(news_scroller_list_top < 0){
@@ -600,8 +605,6 @@ po.functions.set_news_navigation = function(){
         },
         threshold:20
       });
-
-
 
     }else{
       $news_scroller_controls.remove();
