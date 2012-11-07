@@ -6,17 +6,17 @@
 
         <meta property="og:image" content="<?php echo 'http'.(empty($_SERVER['HTTPS'])?'':'s').'://'.$_SERVER['SERVER_NAME']; ?>/img/zoom_image.jpg" />
         <meta property="og:title" content="Profoffice S.r.l. - L'azienda" />
-        <meta property="og:description" content="Profoffice S.r.l. design" />
+        <meta property="og:description" content="Profoffice S.r.l. consulenza" />
 
-        <meta name="description" content="Profoffice S.r.l. design" />
-        <meta name="abstract" content="Design"/>
-        <meta name="keywords" content="Azienda Profoffice design"/>
+        <meta name="description" content="Profoffice S.r.l. consulenza" />
+        <meta name="abstract" content="Il rispetto dell'ambiente."/>
+        <meta name="keywords" content="Azienda Profoffice funzionalità cura ufficio contemporaneo"/>
         <meta name="author" content="webmaster"/>
         <meta name="reply-to" content="info@profoffice.it"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="expires" content="2012.12.31"/>
 
-        <title>ProfOffice S.r.l. - <?php echo(strtoupper(AZIENDA));?> - <?php echo(strtoupper(DESIGN));?></title>
+        <title>ProfOffice S.r.l. - <?php echo(strtoupper(AZIENDA));?> - <?php echo(strtoupper(CONSULENZA));?></title>
 
     </head>
     <body>
@@ -26,12 +26,12 @@
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <img src="/img/main_azienda_design.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
+                    <img src="/img/main_azienda_consulenza.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
                     <article class="content_wr" style="right: 50px; top: 50px; color: #000000">
-                        <h2 class="content_title"><?php echo(strtoupper(DESIGN));?></h2>
+                        <h2 class="content_title"><?php echo(strtoupper(CONSULENZA));?></h2>
                         <div class="content_text scroll-pane">
                             <p>
-                                <?php echo(DESIGN_TESTO);?>
+                                <?php echo(CONSULENZA_TESTO);?>
                             </p>
                         </div>
                     </article>

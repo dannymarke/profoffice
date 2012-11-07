@@ -1,14 +1,4 @@
 <?php include_once "includes/conditional-init.php"; ?>
-<?php
-$conn = mysql_pconnect(HOSTNAME, USERNAME, PASSWORD);
-mysql_select_db(DATABASE);
-
-$sQuery = "SELECT * "
-."FROM  azienda ";
-
-$risultato = mysql_query($sQuery);
-$testo = mysql_result($risultato, 0, "testo_".$lingua);
-?>
     <head>
         <?php include_once "includes/head.php"; ?>
 
@@ -36,7 +26,7 @@ $testo = mysql_result($risultato, 0, "testo_".$lingua);
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <img src="/img/profFactory.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
+                    <img src="/img/main_azienda_certificazioni.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
                     <article class="content_wr" style="right: 50px; top: 50px; color: #000000">
                         <h2 class="content_title"><?php echo(strtoupper(CERTIFICAZIONI));?></h2>
                         <div class="content_text scroll-pane">

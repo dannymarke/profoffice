@@ -8,8 +8,8 @@
                                 <li><a href="/azienda/ambiente"><?php echo(strtoupper(AMBIENTE));?></a></li>
                                 <li><a href="/azienda/consulenza"><?php echo(strtoupper(CONSULENZA));?></a></li>
                                 <li><a href="/azienda/design"><?php echo(strtoupper(DESIGN));?></a></li>
-                                <li><a href="/azienda/showroom"><?php echo(strtoupper(SHOWROOM));?></a></li>
-                                <li><a href="/azienda/video"><?php echo(strtoupper(VIDEO));?></a></li>
+                                <!--<li><a href="/azienda/showroom"><?php echo(strtoupper(SHOWROOM));?></a></li>
+                                <li><a href="/azienda/video"><?php echo(strtoupper(VIDEO));?></a></li> -->
                             </ul>
                         </li>
                         <li class="always_opened">
