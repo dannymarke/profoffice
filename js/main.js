@@ -355,6 +355,7 @@ po.functions.set_references_navigation = function(){
         references_scroller_wr_h              = $references_scroller_wr.height(),
         $references_scroller_list             = jQuery('#references_scroller_list'),
         references_scroller_list_h            = $references_scroller_list.height(),
+        references_scroller_list_max_top      = references_scroller_wr_h - references_scroller_list_h,
         $references_scroller_controls         = jQuery('#references_scroller_controls'),
         $references_scroller_controls_prev_wr = jQuery('#references_scroller_controls #prev'),
         $references_scroller_controls_prev    = jQuery('#references_scroller_controls #prev a'),
@@ -371,6 +372,9 @@ po.functions.set_references_navigation = function(){
         var references_scroller_list_top = parseInt($references_scroller_list.css('top'));
         if(references_scroller_list_h + references_scroller_list_top > references_scroller_wr_h){
           var next_top = references_scroller_list_top - references_scroller_wr_h;
+          if(next_top < references_scroller_list_max_top ){
+            next_top = references_scroller_list_max_top;
+          }
           if(Modernizr.csstransition){
             $references_scroller_list.css({
               'top': next_top + 'px'
@@ -393,6 +397,10 @@ po.functions.set_references_navigation = function(){
         var references_scroller_list_top = parseInt($references_scroller_list.css('top'));
         if(references_scroller_list_top < 0){
           var next_top = references_scroller_list_top + references_scroller_wr_h;
+          if(next_top > 0 ){
+            next_top = 0;
+          }
+
           if(Modernizr.csstransition){
             $references_scroller_list.css({
               'top': next_top + 'px'
