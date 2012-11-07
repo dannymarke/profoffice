@@ -225,23 +225,31 @@ po.functions.set_slideshow_navigation = function(){
       jQuery('#prev_control').bind('click',function(e){
         e.preventDefault();
 
-        var $this   = jQuery(this),
-            $ssw    = jQuery('#main_slideshow_wr'),
-            _w      = $ssw.width(),
-            $ssl    = jQuery('#main_slideshow_list'),
-            $sld    = $ssl.find('li'),
-            nsld    = $sld.size(),
-            $thumbs    = jQuery('#pic_nav_wr a'),
-            $cur_thumb = jQuery('#pic_nav_wr a.current'),
-            cur_ind    = jQuery.inArray( $cur_thumb.get(0), $thumbs );
+        var $this         = jQuery(this),
+            $ssw          = jQuery('#main_slideshow_wr'),
+            _w            = $ssw.width(),
+            $ssl          = jQuery('#main_slideshow_list'),
+            $sld          = $ssl.find('li'),
+            nsld          = $sld.size(),
+            $thumb_wr     = jQuery('#pic_nav_wr li'),
+            $thumbs       = jQuery('#pic_nav_wr a'),
+            $cur_thumb    = jQuery('#pic_nav_wr a.current'),
+            cur_ind       = jQuery.inArray( $cur_thumb.get(0), $thumbs ),
+            $thmb_nav_lnk = jQuery('#pic_nav_nav a');
+
 
         if (cur_ind == nsld-1) {
           jQuery('#next_control').show();
         }
 
         if( cur_ind > 0 ){
-          jQuery('#pic_nav_wr a.current').removeClass('current');
-          jQuery('#pic_nav_wr a').eq(--cur_ind).addClass('current');
+          $cur_thumb.removeClass('current');
+          $thumbs.eq(--cur_ind).addClass('current');
+
+          $cur_thumb              = $thumbs.eq(cur_ind);
+          var cur_thumb_wr_index  = jQuery.inArray( $cur_thumb.parent().get(0), $thumb_wr );
+
+          $thmb_nav_lnk.eq(cur_thumb_wr_index).trigger('click');
 
           var $cur_img = $sld.eq(cur_ind).find('img');
 
@@ -274,31 +282,30 @@ po.functions.set_slideshow_navigation = function(){
       jQuery('#next_control').bind('click',function(e){
         e.preventDefault();
 
-        var $this      = jQuery(this),
-            $ssw       = jQuery('#main_slideshow_wr'),
-            _w         = $ssw.width(),
-            $ssl       = jQuery('#main_slideshow_list'),
-            $sld       = $ssl.find('li'),
-            nsld       = $sld.size(),
-            $thumbs    = jQuery('#pic_nav_wr a'),
-            $cur_thumb = jQuery('#pic_nav_wr a.current'),
-            cur_ind    = jQuery.inArray( $cur_thumb.get(0), $thumbs );
-
-        // console.log(jQuery('#pic_nav_wr a'));
-        // console.log(cur_ind);
-
-        // console.log(jQuery.inArray( cur_link.get(0), link_array ));
-
-
+        var $this         = jQuery(this),
+            $ssw          = jQuery('#main_slideshow_wr'),
+            _w            = $ssw.width(),
+            $ssl          = jQuery('#main_slideshow_list'),
+            $sld          = $ssl.find('li'),
+            nsld          = $sld.size(),
+            $thumb_wr     = jQuery('#pic_nav_wr li'),
+            $thumbs       = jQuery('#pic_nav_wr a'),
+            $cur_thumb    = jQuery('#pic_nav_wr a.current'),
+            cur_ind       = jQuery.inArray( $cur_thumb.get(0), $thumbs ),
+            $thmb_nav_lnk = jQuery('#pic_nav_nav a');
 
         if (cur_ind === 0) {
           jQuery('#prev_control').show();
         }
 
         if( cur_ind < nsld-1 ){
-          // console.log(cur_ind + ' < ' + (nsld-1));
-          jQuery('#pic_nav_wr a.current').removeClass('current');
-          jQuery('#pic_nav_wr a').eq(++cur_ind).addClass('current');
+          $cur_thumb.removeClass('current');
+          $thumbs.eq(++cur_ind).addClass('current');
+
+          $cur_thumb              = $thumbs.eq(cur_ind);
+          var cur_thumb_wr_index  = jQuery.inArray( $cur_thumb.parent().get(0), $thumb_wr );
+
+          $thmb_nav_lnk.eq(cur_thumb_wr_index).trigger('click');
 
           var $cur_img = $sld.eq(cur_ind).find('img');
           if($cur_img.css('background-image')==='none'){
@@ -320,6 +327,7 @@ po.functions.set_slideshow_navigation = function(){
           if (cur_ind == nsld-1) {
             $this.hide();
           }
+
         }
 
       });
@@ -340,14 +348,17 @@ po.functions.set_slideshow_navigation = function(){
     jQuery('#pic_nav_wr a').bind('click',function(e){
       e.preventDefault();
 
-      var $this    = jQuery(this),
-          cur_ind  = $this.index(),
-          $ssw     = jQuery('#main_slideshow_wr'),
-          _w       = $ssw.width(),
-          $ssl     = jQuery('#main_slideshow_list'),
-          $sld     = $ssl.find('li'),
-          nsld     = $sld.size(),
-          $cur_img = $sld.eq(cur_ind).find('img');
+      var $this      = jQuery(this),
+          $ssw       = jQuery('#main_slideshow_wr'),
+          _w         = $ssw.width(),
+          $ssl       = jQuery('#main_slideshow_list'),
+          $sld       = $ssl.find('li'),
+          nsld       = $sld.size(),
+          $thumbs    = jQuery('#pic_nav_wr a'),
+          cur_ind    = jQuery.inArray( this, $thumbs ),
+          $cur_img   = $sld.eq(cur_ind).find('img');
+
+      $this.blur();
 
       jQuery('#pic_nav_wr a.current').removeClass('current');
       $this.addClass('current');
