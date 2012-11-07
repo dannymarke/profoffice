@@ -25,7 +25,7 @@ if($lingua == "it") {
         <title>ProfOffice S.r.l. - login/registrati</title>
 
     </head>
-    <body class="contatti_wr">
+    <body class="login_registrati_wr">
         <?php include_once "includes/chrome-frame.php"; ?>
         <div id="main_wr">
             <?php include_once "includes/main-header.php"; ?>
@@ -33,87 +33,64 @@ if($lingua == "it") {
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr">
                   <div id="left_wr">
-
-
-                    <div>
-                      <h2 class="page_title"><?php echo(strtoupper(LOGIN));?></h2>
-                      <div class="descrizione"><?php echo(TESTO_LOGIN);?></div>
-                    </div>
-                    <form id="login_form" action="./actions/doLogin.php" method="post" style="margin-top:15px">
-                      <fieldset>
-                        <div>
-                          <label for="_email_login"><?php echo(EMAIL);?></label>
-                          <input class="required _email" type="text" name="email_login" id="_email_login"/>
-                        </div>
-                        <div>
-                          <label for="_password_login"><?php echo(PASSWORD_AREA);?></label>
-                          <input class="required _pwd" type="password" name="password_login" id="_password_login"/>
-                        </div>
-                        <div style="text-align:right;">
-                          <button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button>
-                        </div>
-                        <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
-                        <div id="esito" style="margin-top:15px"><?php echo(LOGIN_OK);?>
-                        </div>
-                        <?php } else if(isset($_GET['action']) && $_GET['action'] == "loginko") { ?>
-                        <div id="esito" style="margin-top:15px, color:#f00"><?php echo(ESITO_LOGIN);?>
-                        </div>
-                        <?php } else if(isset($_GET['action']) && $_GET['action'] == "nonattivo") { ?>
-                        <div id="esito" style="margin-top:15px, color:#f00"><?php echo(ACCOUNT_NON_ATTIVATO);?>
-                        </div>
-                        <?php }
-                        ?>
-                      </fieldset>
-                    </form>
-                    <div>
-                      <div>
-                          <a onclick="mostraFormLostPassword();" style="cursor:pointer;">
-                              <div class="descrizione"><?php echo(PASSWORD_DIMENTICATA);?></div>
-                          </a>
-                          <?php if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ok") { ?>
-                              <div class="descrizione"><?php echo(EMAIL_CORRETTA);?></div>
-                          <?php } else if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ko"){ ?>
-                              <div class="descrizione"><?php echo(EMAIL_ERRATA);?></div>
-                          <?php } ?>
+                    <div id="text_wr">
+                      <div class="incipit">
+                        <strong id="product_name"><?php echo(strtoupper(LOGIN));?></strong>
+                        <article id="product_description_wr">
+                          <p id="intro_text"><?php echo(TESTO_LOGIN);?></p>
+                        </article>
                       </div>
-                      <form style="display:none;" id="forgotten_form" action="./actions/doPasswordLost.php" method="post" style="margin-top:15px">
-                          <fieldset>
-                              <div>
-                                  <label for="_email_login"><?php echo(EMAIL);?>
-                                  </label><input class="required _email" type="text" name="email_recover" id="email_recover"/>
-                              </div>
-                              <div style="text-align:right;">
-                                  <button style="cursor:pointer;" type="submit">&raquo; <?php echo(INVIA);?></button>
-                              </div>
-                          </fieldset>
+                      <form id="login_form" action="./actions/doLogin.php" method="post">
+                        <fieldset>
+                          <div class="row"><label for="_email_login"><?php echo(EMAIL);?></label><input class="required _email" type="text" name="email_login" id="_email_login"/></div>
+                          <div class="row"><label for="_password_login"><?php echo(PASSWORD_AREA);?></label><input class="required _pwd" type="password" name="password_login" id="_password_login"/></div>
+                          <div class="row" style="text-align:right; margin-right: 20px;"><button type="submit">&raquo; <?php echo(INVIA);?></button></div>
+
+                          <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
+                          <div class="row esito"><span><?php echo(LOGIN_OK);?></span></div>
+
+                          <?php } else if(isset($_GET['action']) && $_GET['action'] == "loginko") { ?>
+                          <div class="row esito err"><span><?php echo(ESITO_LOGIN);?></span></div>
+
+                          <?php } else if(isset($_GET['action']) && $_GET['action'] == "nonattivo") { ?>
+                          <div class="row esito err"><span><?php echo(ACCOUNT_NON_ATTIVATO);?></span></div>
+
+                          <?php }
+                          ?>
+                        </fieldset>
                       </form>
+                      <div id="lost_pwd_wr">
+                        <div id="lost_pwd_top_wr">
+                            <a onclick="mostraFormLostPassword(event);" href="#"><?php echo(PASSWORD_DIMENTICATA);?></a>
+                            <?php if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ok") { ?>
+                            <div class="esito"><?php echo(EMAIL_CORRETTA);?></div>
+                            <?php } else if(isset($_GET['lostpassword']) && $_GET['lostpassword'] == "ko"){ ?>
+                            <div class="esito err"><?php echo(EMAIL_ERRATA);?></div>
+                            <?php } ?>
+                        </div>
+                        <form style="display:none;" id="forgotten_form" action="./actions/doPasswordLost.php" method="post">
+                            <fieldset>
+                                <div class="row">
+                                    <label for="_email_login"><?php echo(EMAIL);?></label><input class="required _email" type="text" name="email_recover" id="email_recover"/>
+                                </div>
+                                <div class="row" style="text-align:right; margin-right: 20px;">
+                                    <button type="submit">&raquo; <?php echo(INVIA);?></button>
+                                </div>
+                            </fieldset>
+                        </form>
+                      </div>
                     </div>
-
-
-
-
-<!--                     <div id="text_wr">
-                      <h2 id="product_name">Uffici, Stabilimento e Showroom:</h2>
-                      <article id="product_description_wr">
-                        <p id="intro_text">
-                            Via Cao de Villa 6/A <br/>
-                            31020 Falz&egrave; di Piave, TV / Italy <br/>
-                            T. <a href="tel:390438903190" class="tel_num">+39 0438 903190</a> <br/>
-                            F. <a href="tel:390438903228" class="tel_num">+39 0438 903228</a> <br/>
-                            <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a>
-                        </p>
-                        <a class="map_link" href="https://maps.google.it/maps?q=profoffice&daddr=Via+Cao+De+Villa,+6/a,+31020+Treviso+%28Prof+s.r.l.%29&hl=it&ll=45.857888,12.159934&spn=0.012389,0.027852&sll=43.036776,12.392578&sspn=26.584077,57.041016&view=map&geocode=Cah721jhtlHdFRDCuwIdXYS5ACGu8EplzYF8VQ&t=h&z=16&vpsrc=0" target="_blank">Indicazioni stradali</a>
-                      </article>
-                    </div> -->
                   </div>
+
+
                   <div id="right_wr">
-                    <?php if(!isset($_GET['esito'])) { ?>
+                    <?php if(!isset($_GET['actionregister'])) { ?>
                     <p class="incipit">
                       <strong><?php echo(REGISTRATI);?></strong>
                       <span><?php echo(TESTO_REGISTRATI);?></span>
                       <ins><?php echo(COMPILA_FORM_REQUIRED);?></ins>
                     </p>
-                    <form id="contact_form" action="./actions/doContatti.php" method="post">
+                    <form id="registrati_form" action="./actions/doRegister.php" method="post">
                       <fieldset>
                         <div class="row">
                           <div class="column"><label for="_nome"><?php echo(NOME);?></label><input class="required _name" type="text" name="nome" id="_nome"/></div>
@@ -171,9 +148,8 @@ if($lingua == "it") {
                         </div>
                         <div class="row">
                           <div class="column"><label for="_pwd"><?php echo(PASSWORD_REGISTRAZIONE);?></label><input type="password" id="_password_registrati" name="password_registrati" class="required _pwd"></div>
-                          <div class="column"><label for="_password_registrati_2" id="lbl_conf_pwd"><?php echo(CONFERMA_PASSWORD);?></label><input class="required _pwd" name="password_registrati_2" id="_password_registrati_2" type="password"></div>
+                          <div class="column"><label for="_password_registrati_2" id="lbl_conf_pwd"><?php echo(CONFERMA_PASSWORD);?></label><input class="required _pwd" type="password" name="password_registrati_2" id="_password_registrati_2"/></div>
                         </div>
-                        <div class="row"><label for="_testo"><?php echo(TESTO);?></label><textarea class="required _message" name="testo" id="_testo"></textarea></div>
                         <div class="row">
                           <label for="_sicurezza" id="lbl_sicurezza" style="width:auto;">
                             <?php echo(CODICE_SICUREZZA);?>
@@ -194,18 +170,18 @@ if($lingua == "it") {
                       </fieldset>
                     </form>
                     <?php } else { ?>
+
                     <div>
-                      <?php if(isset($_GET['esito']) && $_GET['esito'] == "ok") { ?>
                       <p class="incipit">
-                        <strong><?php echo(utf8_encode(SPEDIZIONE_OK));?></strong>
+                        <strong><?php echo(utf8_encode(REGISTRATI));?></strong>
                       </p>
-                      <?php } else { ?>
-                      <p class="incipit">
-                        <strong><?php echo(COMPILA_FORM_SENDMAIL);?> <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a></strong>
-                        <?php echo(utf8_encode(SPEDIZIONE_KO));?>
-                      </p>
-                      <?php } ?>
+                        <?php if(isset($_GET['actionregister']) && $_GET['actionregister'] == "ok") { ?>
+                            <strong><?php echo(utf8_encode(REGISTRAZIONE_OK));?></strong>
+                        <?php } else { ?>
+                            <strong><?php echo(utf8_encode(REGISTRAZIONE_KO));?></strong>
+                        <?php } ?>
                     </div>
+
                     <?php } ?>
                   </div>
                 </section>
@@ -216,18 +192,19 @@ if($lingua == "it") {
 
         <script>
         /* recupera pwd */
-        var isFormPasswordOpen = false;
-        function mostraFormLostPassword() {
-          if(isFormPasswordOpen) {
-              $('#forgotten_form').hide("fast");
-              isFormPasswordOpen = false;
-          } else {
-              $('#forgotten_form').show("fast");
-              isFormPasswordOpen = true;
+        function mostraFormLostPassword(e) {
+          if(!jQuery('.lt-ie9').size()){
+            e.preventDefault();
           }
+          $('#forgotten_form').slideToggle('fast');
         };
 
         $(document).ready(function() {
+
+          <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
+            document.location.href('/');
+          <?php } ?>
+
             $('#_regione').bind('change',function(){
                 regione = $(this).val();
                 $.ajax({
@@ -240,102 +217,109 @@ if($lingua == "it") {
                 });
             });
 
+            $('form').each(function() {
+              var cur_form = $(this);
+              cur_form.bind('submit', function(evt) {
 
-            $('#contact_form').bind('submit',function(evt){
+                //evt.preventDefault();
 
-              // evt.preventDefault();
+                cur_form.find('.required').each(function() {
+                  var me = $(this);
+                  var label = me.prev('label');
 
-              $('.required').each(function(){
-                var me = $(this);
-                var label = me.prev('label');
-
-                if(me.hasClass('_name')){
-                  var regexp = /^([a-z\u0027\u00C0-\u00F6\u00F8-\u017E]{1,})(\s[a-z\u0027\u00C0-\u00F6\u00F8-\u017E]{1,})*$/i;
-                  // console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
-                  if(regexp.test(me.val())){
-                    label.removeClass('err');
-                  } else {
-                    label.addClass('err');
+                  if (me.hasClass('_name')) {
+                    var regexp = /^([a-z\u0027\u00C0-\u00F6\u00F8-\u017E]{1,})(\s[a-z\u0027\u00C0-\u00F6\u00F8-\u017E]{1,})*$/i;
+                    //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
+                    if (regexp.test(me.val())) {
+                      label.removeClass('err');
+                    } else {
+                      label.addClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_tel')){
-                  if(me.val() == ''){
-                    label.addClass('err');
-                  } else {
-                    label.removeClass('err');
+                  if(me.hasClass('_tel')){
+                    if(me.val() == ''){
+                      label.addClass('err');
+                    } else {
+                      label.removeClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_address')){
-                  if(me.val() == ''){
-                    label.addClass('err');
-                  } else {
-                    label.removeClass('err');
+                  if(me.hasClass('_address')){
+                    if(me.val() == ''){
+                      label.addClass('err');
+                    } else {
+                      label.removeClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_message')){
-                  if(me.val() == ''){
-                    label.addClass('err');
-                  } else {
-                    label.removeClass('err');
+                  if (me.hasClass('_pwd')) {
+                    /* almeno 5 car no spazi*/
+                    var regexp = /^[\S]{4,}$/i;
+                    //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
+                    if (regexp.test(me.val())) {
+                      label.removeClass('err');
+                    } else {
+                      label.addClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_email')){
-                  var regexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+(\.\w{2,4})+$/i;
-                  //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
-                  if(regexp.test(me.val())){
-                    label.removeClass('err');
-                  } else {
-                    label.addClass('err');
+                  if (me.hasClass('_email')) {
+                    var regexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+(\.\w{2,4})+$/i;
+                    //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
+                    if (regexp.test(me.val())) {
+                      label.removeClass('err');
+                    } else {
+                      label.addClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_select')){
-                  //console.log(me.attr('id') + ' , ' + (me.val() == ''));
-                  if(me.val() == ''){
-                    label.addClass('err');
-                  } else {
-                    label.removeClass('err');
+                  if (me.hasClass('_select')) {
+                    //console.log(me.attr('id') + ' , ' + (me.val() == ''));
+                    if (me.val() == '') {
+                      label.addClass('err');
+                    } else {
+                      label.removeClass('err');
+                    }
                   }
-                }
 
-                if(me.hasClass('_checkbox')){
-                  var _label = me.next('label');
-                  //console.log(me.attr('id') + ' , ' + (me.attr('checked')));
-                  if(me.attr('checked')){
-                    _label.removeClass('err');
-                  } else {
-                    _label.addClass('err');
+                  if (me.hasClass('_checkbox')) {
+                    var _label = me.next('label');
+                    //console.log(me.attr('id') + ' , ' + (me.attr('checked')));
+                    if (me.attr('checked')) {
+                      _label.removeClass('err');
+                    } else {
+                      _label.addClass('err');
+                    }
                   }
-                }
 
-                if (me.hasClass('_pwd')) {
-                  /* almeno 5 car no spazi*/
-                  var regexp = /^[\S]{4,}$/i;
-                  //console.log(me.attr('id') + ' , ' + regexp.test(me.val()));
-                  if (regexp.test(me.val())) {
-                    label.removeClass('err');
-                  } else {
-                    label.addClass('err');
+                  // console.log(cur_form.attr('id'));
+
+                  if(cur_form.attr('id') == 'registrati_form'){
+                    if (_code != parseInt($('#_sicurezza').val())) {
+                      $('#lbl_sicurezza').addClass('err');
+                    } else {
+                      $('#lbl_sicurezza').removeClass('err');
+                    }
+
+                    if($('#_password_registrati').val() != $('#_password_registrati_2').val()){
+                      $('#lbl_conf_pwd').addClass('err');
+                    }else{
+                      $('#lbl_conf_pwd').removeClass('err');
+                    }
                   }
+                });
+
+
+
+                if (cur_form.find('.err').size()) {
+                  //alert(cur_form.attr('id'));
+                  evt.preventDefault();
                 }
 
               });
-
-              if(_code != parseInt($('#_sicurezza').val())){
-                $('#lbl_sicurezza').addClass('err');
-              }else{
-                $('#lbl_sicurezza').removeClass('err');
-              }
-
-              if($('.err').size()){
-                evt.preventDefault();
-              }
-
             });
+
         });
 
         </script>

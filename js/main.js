@@ -3,7 +3,8 @@ po.functions = {};
 po.constants = {};
 
 po.constants.sitename = 'http://profoffice.dev/';
-// po.constants.sitename = 'http://192.168.1.5/';
+// po.constants.sitename = 'http://10.10.11.234/';
+// po.constants.sitename = 'http://192.168.1.4/';
 
 po.functions.img_seo_placeholder_resize = function($img){
   if($img[0] !== undefined){
@@ -355,6 +356,7 @@ po.functions.set_references_navigation = function(){
         references_scroller_wr_h              = $references_scroller_wr.height(),
         $references_scroller_list             = jQuery('#references_scroller_list'),
         references_scroller_list_h            = $references_scroller_list.height(),
+        references_scroller_list_max_top      = references_scroller_wr_h - references_scroller_list_h,
         $references_scroller_controls         = jQuery('#references_scroller_controls'),
         $references_scroller_controls_prev_wr = jQuery('#references_scroller_controls #prev'),
         $references_scroller_controls_prev    = jQuery('#references_scroller_controls #prev a'),
@@ -367,10 +369,14 @@ po.functions.set_references_navigation = function(){
 
       $references_scroller_controls_next.bind('click',function(e){
         e.preventDefault();
+        jQuery(this).blur();
         $references_scroller_controls_prev_wr.show();
         var references_scroller_list_top = parseInt($references_scroller_list.css('top'));
         if(references_scroller_list_h + references_scroller_list_top > references_scroller_wr_h){
           var next_top = references_scroller_list_top - references_scroller_wr_h;
+          if(next_top < references_scroller_list_max_top ){
+            next_top = references_scroller_list_max_top;
+          }
           if(Modernizr.csstransition){
             $references_scroller_list.css({
               'top': next_top + 'px'
@@ -389,10 +395,15 @@ po.functions.set_references_navigation = function(){
 
       $references_scroller_controls_prev.bind('click',function(e){
         e.preventDefault();
+        jQuery(this).blur();
         $references_scroller_controls_next_wr.show();
         var references_scroller_list_top = parseInt($references_scroller_list.css('top'));
         if(references_scroller_list_top < 0){
           var next_top = references_scroller_list_top + references_scroller_wr_h;
+          if(next_top > 0 ){
+            next_top = 0;
+          }
+
           if(Modernizr.csstransition){
             $references_scroller_list.css({
               'top': next_top + 'px'
@@ -469,6 +480,139 @@ po.functions.set_references_navigation = function(){
 
   }
 };
+
+
+// NEWS
+
+po.functions.set_news_navigation = function(){
+  if(jQuery('.news_wr').size()){
+    var $news_scroller_wr               = jQuery('#news_scroller_wr'),
+        news_scroller_wr_h              = $news_scroller_wr.height(),
+        $news_scroller_list             = jQuery('#news_scroller_list'),
+        news_scroller_list_h            = $news_scroller_list.height(),
+        news_scroller_list_max_top      = news_scroller_wr_h - news_scroller_list_h,
+        $news_scroller_controls         = jQuery('#news_scroller_controls'),
+        $news_scroller_controls_prev_wr = jQuery('#news_scroller_controls #prev'),
+        $news_scroller_controls_prev    = jQuery('#news_scroller_controls #prev a'),
+        $news_scroller_controls_next_wr = jQuery('#news_scroller_controls #next'),
+        $news_scroller_controls_next    = jQuery('#news_scroller_controls #next a');
+
+    if(news_scroller_list_h > news_scroller_wr_h){
+
+      $news_scroller_controls_prev_wr.hide();
+
+      $news_scroller_controls_next.bind('click',function(e){
+        e.preventDefault();
+        jQuery(this).blur();
+        $news_scroller_controls_prev_wr.show();
+        var news_scroller_list_top = parseInt($news_scroller_list.css('top'));
+        if(news_scroller_list_h + news_scroller_list_top > news_scroller_wr_h){
+          var next_top = news_scroller_list_top - news_scroller_wr_h;
+          if(next_top < news_scroller_list_max_top ){
+            next_top = news_scroller_list_max_top;
+          }
+          if(Modernizr.csstransition){
+            $news_scroller_list.css({
+              'top': next_top + 'px'
+            });
+          } else {
+            $news_scroller_list.animate({
+              'top': next_top + 'px'
+            });
+          }
+
+          if(news_scroller_list_h + next_top <= news_scroller_wr_h){
+            jQuery(this).parent().hide();
+          }
+        }
+      });
+
+      $news_scroller_controls_prev.bind('click',function(e){
+        e.preventDefault();
+        jQuery(this).blur();
+        $news_scroller_controls_next_wr.show();
+        var news_scroller_list_top = parseInt($news_scroller_list.css('top'));
+        if(news_scroller_list_top < 0){
+          var next_top = news_scroller_list_top + news_scroller_wr_h;
+          if(next_top > 0 ){
+            next_top = 0;
+          }
+
+          if(Modernizr.csstransition){
+            $news_scroller_list.css({
+              'top': next_top + 'px'
+            });
+          } else {
+            $news_scroller_list.animate({
+              'top': next_top + 'px'
+            });
+          }
+          if(next_top >= 0){
+            jQuery(this).parent().hide();
+          }
+        }
+      });
+
+
+      /* gestisco il keydown da tastiera per azionare la navigazione con le frecce dx e sx della tastiera */
+      var event2key = {
+          '37' : 'left',
+          '39' : 'right',
+          '38' : 'up',
+          '40' : 'down',
+          '13' : 'enter',
+          '27' : 'esc',
+          '32' : 'space',
+          '107' : '+',
+          '109' : '-',
+          '33' : 'pageUp',
+          '34' : 'pageDown'
+      }, e2key = function(e) {
+          return event2key[(e.which || e.keyCode)] || '';
+      }, pageKey = function(e) {
+          switch(e2key(e)) {
+              case 'up':
+                  if($news_scroller_controls_prev_wr.is(':visible')) {
+                    $news_scroller_controls_prev.trigger('click');
+                  }
+                  break;
+              case 'down':
+                  if($news_scroller_controls_next_wr.is(':visible')) {
+                    $news_scroller_controls_next.trigger('click');
+                  }
+                  break;
+          }
+      }, captEvt = function(e) {
+          e = e || window.event;
+          /* catturo correttamente l'evento anche per IE */
+          pageKey(e);
+      };
+
+      document.onkeydown = captEvt;
+
+
+      // touch support
+      $news_scroller_list.swipe({
+        swipeUp:function(event, direction, distance, duration, fingerCount) {
+          if($news_scroller_controls_next_wr.is(':visible')) {
+            $news_scroller_controls_next.trigger('click');
+          }
+        },
+        swipeDown:function(event, direction, distance, duration, fingerCount) {
+          if($news_scroller_controls_prev_wr.is(':visible')) {
+            $news_scroller_controls_prev.trigger('click');
+          }
+        },
+        threshold:20
+      });
+
+    }else{
+      $news_scroller_controls.remove();
+    }
+
+  }
+};
+
 
 
 jQuery(document).bind('ready',function(){

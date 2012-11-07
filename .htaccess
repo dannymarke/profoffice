@@ -10,7 +10,7 @@ RewriteRule ^(referenze)$ /$1.php [L]
 
 RewriteRule ^(catalogo)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-\.]+)$ /$1/$2/$3/$4 [L]
 
-RewriteRule ^(news)/([A-Za-z0-9\-]+)$ /$1.php?id=$2 [L]
+RewriteRule ^(news)/([A-Za-z0-9\-]+)/([0-9]+)$ /$1-$2.php?id=$3 [L]
 
 RewriteRule ^([A-Za-z0-9\-]+)$ /$1.php [L]
 RewriteRule ^([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1-$2.php [L]
