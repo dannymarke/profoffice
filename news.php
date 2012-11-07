@@ -33,65 +33,62 @@ if($lingua == "it") {
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr">
                   <div id="left_wr">
-                    <div id="text_wr">
-                      <h2 id="product_name">EUROPA</h2>
-                      <ul id="news_main_list">
-                        <li><a class="current" href="/referenze/europa/italia">ITALIA</a></li>
-                        <li><a href="/referenze/europa/francia">FRANCIA</a></li>
-                        <li><a href="/referenze/europa/spagna">SPAGNA</a></li>
-                        <li><a href="/referenze/europa/germania">GERMANIA</a></li>
-                        <li><a href="/referenze/europa/grecia">GRECIA</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div id="right_wr">
                     <div id="news_scroller_wr">
                       <ul id="news_scroller_list">
-                          <li>Hotel Danieli, VENEZIA</li>
-                          <li>Hotel Hilton, ROMA</li>
-                          <li>Hotel Lorem, MILANO</li>
-                          <li>Hotel Ipsum, RICCIONE</li>
-                          <li>Hotel Dolor, NAPOLI</li>
-                          <li>Hotel Sit amet, SAN SEPLOCRO</li>
-                          <li>Hotel Consectetur, PADOVA</li>
-                          <li>Hotel Adipiscing, REGGIO CALABRIA</li>
-                          <li>Hotel Elit urque, ENNA</li>
-                          <li>Hotel Lirensites, OTRANTO</li>
-                          <li>Hotel Wagallupa, TORINO</li>
-                          <li>Hotel Erimester, GENOVA</li>
-                          <li>Hotel Palmyras, SASSARI</li>
-                          <li>Hotel Boogaboonga, SASSUOLO</li>
-                          <li>Hotel Maribellis, LORETO</li>
-                          <li>Hotel Danieli, VENEZIA</li>
-                          <li>Hotel Hilton, ROMA</li>
-                          <li>Hotel Lorem, MILANO</li>
-                          <li>Hotel Ipsum, RICCIONE</li>
-                          <li>Hotel Dolor, NAPOLI</li>
-                          <li>Hotel Sit amet, SAN SEPLOCRO</li>
-                          <li>Hotel Consectetur, PADOVA</li>
-                          <li>Hotel Adipiscing, REGGIO CALABRIA</li>
-                          <li>Hotel Elit urque, ENNA</li>
-                          <li>Hotel Lirensites, OTRANTO</li>
-                          <li>Hotel Wagallupa, TORINO</li>
-                          <li>Hotel Erimester, GENOVA</li>
-                          <li>Hotel Palmyras, SASSARI</li>
-                          <li>Hotel Boogaboonga, SASSUOLO</li>
-                          <li>Hotel Maribellis, LORETO</li>
-                          <li>Hotel Danieli, VENEZIA</li>
-                          <li>Hotel Hilton, ROMA</li>
-                          <li>Hotel Lorem, MILANO</li>
-                          <li>Hotel Ipsum, RICCIONE</li>
-                          <li>Hotel Dolor, NAPOLI</li>
-                          <li>Hotel Sit amet, SAN SEPLOCRO</li>
-                          <li>Hotel Consectetur, PADOVA</li>
-                          <li>Hotel Adipiscing, REGGIO CALABRIA</li>
-                          <li>Hotel Elit urque, ENNA</li>
-                          <li>Hotel Lirensites, OTRANTO</li>
-                          <li>Hotel Wagallupa, TORINO</li>
-                          <li>Hotel Erimester, GENOVA</li>
-                          <li>Hotel Palmyras, SASSARI</li>
-                          <li>Hotel Boogaboonga, SASSUOLO</li>
-                          <li>Hotel Maribellis, LORETO</li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">01.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">02.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">03.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">04.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">05.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">06.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">07.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">08.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="news/01">
+                              <strong class="news_date">09.11.2012</strong>
+                              <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
+                            </a>
+                          </li>
                         </ul>
                         <ul id="news_scroller_controls">
                           <li id="prev"><a href="#">prev</a></li>
