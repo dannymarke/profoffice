@@ -36,55 +36,55 @@ if($lingua == "it") {
                     <div id="news_scroller_wr">
                       <ul id="news_scroller_list">
                           <li>
-                            <a href="news/01">
+                            <a href="/news/01">
                               <strong class="news_date">01.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>
                           </li>
                           <li>
-                            <a href="news/01">
+                            <a href="/news/02">
                               <strong class="news_date">02.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>
                           </li>
                           <li>
-                            <a href="news/01">
+                            <a href="/news/03">
                               <strong class="news_date">03.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>
                           </li>
                           <li>
-                            <a href="news/01">
+                            <a href="/news/04">
                               <strong class="news_date">04.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>
                           </li>
                           <li>
-                            <a href="news/01">
+                            <a href="/news/05">
                               <strong class="news_date">05.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>
                           </li>
                           <li>
-                            <a href="news/01">
+                            <a href="/news/06">
                               <strong class="news_date">06.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>
                           </li>
                           <li>
-                            <a href="news/01">
+                            <a href="/news/07">
                               <strong class="news_date">07.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>
                           </li>
                           <li>
-                            <a href="news/01">
+                            <a href="/news/08">
                               <strong class="news_date">08.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>
                           </li>
                           <li>
-                            <a href="news/01">
+                            <a href="/news/09">
                               <strong class="news_date">09.11.2012</strong>
                               <span class="news_text">Lorem ipsum voluptate dolore in magna sunt reprehenderit culpa mollit laborum id sit minim cupidatat est fugiat veniam consectetur officia minim ullamco. </span>
                             </a>

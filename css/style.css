@@ -975,7 +975,6 @@ body {
   margin: 0 50px 20px 0;
   line-height: 12px;
   font-size: 12px;
-  text-align: justify;
 }
 .news_wr #left_wr #news_scroller_wr ul#news_scroller_list li a {
   text-decoration: none;
@@ -986,11 +985,15 @@ body {
 }
 .news_wr #left_wr #news_scroller_wr ul#news_scroller_list li a strong {
   display: block;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  line-height: 15px;
   text-decoration: underline;
 }
 .news_wr #left_wr #news_scroller_wr ul#news_scroller_list li a span {
   display: block;
+  font-size: 13px;
+  line-height: 13px;
 }
 .news_wr #left_wr #news_scroller_wr ul#news_scroller_controls {
   right: 0;
