@@ -80,6 +80,7 @@ po.functions.prepare_menu = function(){
 po.functions.manage_menu = function(){
   jQuery('#main_nav_wr a').bind('click',function(e){
     // e.preventDefault();
+    e.stopPropagation();
     var $this = jQuery(this),
         _href = $this.attr('href'),
         $parent = $this.parent('li'),
@@ -106,10 +107,12 @@ po.functions.manage_menu = function(){
         break;
         case 2:
           e.preventDefault();
-          // console.log('sub sub');
         break;
       }
     }
+  });
+  jQuery('body').bind('click',function(){
+    jQuery('#main_nav_wr .clicked a').trigger('click');
   });
 };
 
@@ -119,6 +122,45 @@ po.functions.set_custom_scroll_pane = function(){
   });
 };
 
+// PRODUCT THUMBS NAVIGATOR
+po.functions.set_pick_slideshow = function(){
+  if(jQuery('#pic_nav_nav').size()){
+
+    var $pic_nav_nav       = jQuery('#pic_nav_nav'),
+        $pic_nav_nav_link  = jQuery('#pic_nav_nav li a'),
+        $pic_nav_wr        = jQuery('#pic_nav_wr'),
+        $pic_nav_li        = jQuery('#pic_nav_wr li'),
+        pic_nav_li_w       = $pic_nav_li.eq(0).width();
+
+    $pic_nav_wr.width(pic_nav_li_w * $pic_nav_li.size());
+
+    $pic_nav_nav_link.bind('click',function(e){
+      e.preventDefault();
+      var $this   = jQuery(this),
+          $parent = $this.parent(),
+          index   = $parent.index();
+
+      $this.blur();
+
+      if($this.hasClass('current')){
+        return;
+      } else {
+        jQuery('#pic_nav_nav li a.current').removeClass('current');
+        $this.addClass('current');
+
+        if(Modernizr.csstransitions){
+          $pic_nav_wr.css({
+            'left' : (-pic_nav_li_w * index ) + 'px'
+          });
+        } else {
+          $pic_nav_wr.animate({
+            'left' : (-pic_nav_li_w * index ) + 'px'
+          });
+        }
+      }
+    });
+  }
+};
 
 
 // SLIDESHOW
@@ -180,29 +222,37 @@ po.functions.set_slideshow_navigation = function(){
 
     document.onkeydown = captEvt;
 
-
-
     if(jQuery('#main_slideshow_list li').size() > 1){
 
       // arrow navigation: prev
       jQuery('#prev_control').bind('click',function(e){
         e.preventDefault();
 
-        var $this   = jQuery(this),
-            $ssw    = jQuery('#main_slideshow_wr'),
-            _w      = $ssw.width(),
-            $ssl    = jQuery('#main_slideshow_list'),
-            $sld    = $ssl.find('li'),
-            nsld    = $sld.size(),
-            cur_ind = jQuery('#pic_nav_wr a.current').index();
+        var $this         = jQuery(this),
+            $ssw          = jQuery('#main_slideshow_wr'),
+            _w            = $ssw.width(),
+            $ssl          = jQuery('#main_slideshow_list'),
+            $sld          = $ssl.find('li'),
+            nsld          = $sld.size(),
+            $thumb_wr     = jQuery('#pic_nav_wr li'),
+            $thumbs       = jQuery('#pic_nav_wr a'),
+            $cur_thumb    = jQuery('#pic_nav_wr a.current'),
+            cur_ind       = jQuery.inArray( $cur_thumb.get(0), $thumbs ),
+            $thmb_nav_lnk = jQuery('#pic_nav_nav a');
+
 
         if (cur_ind == nsld-1) {
           jQuery('#next_control').show();
         }
 
         if( cur_ind > 0 ){
-          jQuery('#pic_nav_wr a.current').removeClass('current');
-          jQuery('#pic_nav_wr a').eq(--cur_ind).addClass('current');
+          $cur_thumb.removeClass('current');
+          $thumbs.eq(--cur_ind).addClass('current');
+
+          $cur_thumb              = $thumbs.eq(cur_ind);
+          var cur_thumb_wr_index  = jQuery.inArray( $cur_thumb.parent().get(0), $thumb_wr );
+
+          $thmb_nav_lnk.eq(cur_thumb_wr_index).trigger('click');
 
           var $cur_img = $sld.eq(cur_ind).find('img');
 
@@ -235,21 +285,30 @@ po.functions.set_slideshow_navigation = function(){
       jQuery('#next_control').bind('click',function(e){
         e.preventDefault();
 
-        var $this   = jQuery(this),
-            $ssw    = jQuery('#main_slideshow_wr'),
-            _w      = $ssw.width(),
-            $ssl    = jQuery('#main_slideshow_list'),
-            $sld    = $ssl.find('li'),
-            nsld    = $sld.size(),
-            cur_ind = jQuery('#pic_nav_wr a.current').index();
+        var $this         = jQuery(this),
+            $ssw          = jQuery('#main_slideshow_wr'),
+            _w            = $ssw.width(),
+            $ssl          = jQuery('#main_slideshow_list'),
+            $sld          = $ssl.find('li'),
+            nsld          = $sld.size(),
+            $thumb_wr     = jQuery('#pic_nav_wr li'),
+            $thumbs       = jQuery('#pic_nav_wr a'),
+            $cur_thumb    = jQuery('#pic_nav_wr a.current'),
+            cur_ind       = jQuery.inArray( $cur_thumb.get(0), $thumbs ),
+            $thmb_nav_lnk = jQuery('#pic_nav_nav a');
 
         if (cur_ind === 0) {
           jQuery('#prev_control').show();
         }
 
         if( cur_ind < nsld-1 ){
-          jQuery('#pic_nav_wr a.current').removeClass('current');
-          jQuery('#pic_nav_wr a').eq(++cur_ind).addClass('current');
+          $cur_thumb.removeClass('current');
+          $thumbs.eq(++cur_ind).addClass('current');
+
+          $cur_thumb              = $thumbs.eq(cur_ind);
+          var cur_thumb_wr_index  = jQuery.inArray( $cur_thumb.parent().get(0), $thumb_wr );
+
+          $thmb_nav_lnk.eq(cur_thumb_wr_index).trigger('click');
 
           var $cur_img = $sld.eq(cur_ind).find('img');
           if($cur_img.css('background-image')==='none'){
@@ -257,7 +316,6 @@ po.functions.set_slideshow_navigation = function(){
               'background-image' : 'url("' + $cur_img.attr('rel') + '")'
             });
           }
-
 
           if(Modernizr.csstransitions){
             $ssl.css({
@@ -272,6 +330,7 @@ po.functions.set_slideshow_navigation = function(){
           if (cur_ind == nsld-1) {
             $this.hide();
           }
+
         }
 
       });
@@ -292,14 +351,17 @@ po.functions.set_slideshow_navigation = function(){
     jQuery('#pic_nav_wr a').bind('click',function(e){
       e.preventDefault();
 
-      var $this    = jQuery(this),
-          cur_ind  = $this.index(),
-          $ssw     = jQuery('#main_slideshow_wr'),
-          _w       = $ssw.width(),
-          $ssl     = jQuery('#main_slideshow_list'),
-          $sld     = $ssl.find('li'),
-          nsld     = $sld.size(),
-          $cur_img = $sld.eq(cur_ind).find('img');
+      var $this      = jQuery(this),
+          $ssw       = jQuery('#main_slideshow_wr'),
+          _w         = $ssw.width(),
+          $ssl       = jQuery('#main_slideshow_list'),
+          $sld       = $ssl.find('li'),
+          nsld       = $sld.size(),
+          $thumbs    = jQuery('#pic_nav_wr a'),
+          cur_ind    = jQuery.inArray( this, $thumbs ),
+          $cur_img   = $sld.eq(cur_ind).find('img');
+
+      $this.blur();
 
       jQuery('#pic_nav_wr a.current').removeClass('current');
       $this.addClass('current');
