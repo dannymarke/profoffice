@@ -80,6 +80,7 @@ po.functions.prepare_menu = function(){
 po.functions.manage_menu = function(){
   jQuery('#main_nav_wr a').bind('click',function(e){
     // e.preventDefault();
+    e.stopPropagation();
     var $this = jQuery(this),
         _href = $this.attr('href'),
         $parent = $this.parent('li'),
@@ -106,10 +107,12 @@ po.functions.manage_menu = function(){
         break;
         case 2:
           e.preventDefault();
-          // console.log('sub sub');
         break;
       }
     }
+  });
+  jQuery('body').bind('click',function(){
+    jQuery('#main_nav_wr .clicked a').trigger('click');
   });
 };
 
