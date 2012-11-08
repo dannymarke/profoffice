@@ -37,7 +37,7 @@
         <div id="spalladestra">
             <img id="imgLogo" src="./images/prof_logo.png" />
             <div id="testoInfo">
-                <span><strong>PROF srl</strong></span><br />
+                <span id="testo_bold"><strong>PROF srl</strong></span><br />
                 <span>Via Cao de Villa 6/A</span><br />
                 <span>31020 Falz&egrave; di Piave, TV / Italy</span><br />
                 <span>Tel. <a class="tel_num" href="tel:390438903190">+39 0438 903190</a></span><br />

@@ -5,6 +5,30 @@ a img {
 
 a, a:focus { outline: 0; }
 
+@font-face {
+    font-family: 'liberation_sans_regular';
+    src: url('/font/liberationsans-regular-webfont.eot');
+    src: url('/font/liberationsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/liberationsans-regular-webfont.woff') format('woff'),
+         url('/font/liberationsans-regular-webfont.ttf') format('truetype'),
+         url('/font/liberationsans-regular-webfont.svg#liberation_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'liberation_sans_bold';
+    src: url('/font/liberationsans-bold-webfont.eot');
+    src: url('/font/liberationsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/liberationsans-bold-webfont.woff') format('woff'),
+         url('/font/liberationsans-bold-webfont.ttf') format('truetype'),
+         url('/font/liberationsans-bold-webfont.svg#liberation_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* body*/
 body {
   margin: 0;
@@ -57,12 +81,13 @@ body {
   width: 300px;
   height: 100px;
   text-align: left;
-  margin-top: 100px;
+  margin-top: 132px;
   margin-left: 150px;
   line-height: 20px;
 
 }
 #testoInfo {
+  font-family: 'liberation_sans_regular';
   display: inline;
   float: left;
   width: 190px;
@@ -74,6 +99,9 @@ body {
   text-decoration: none;
   font-size: 13px;
   margin-left: 10px;
+}
+#testo_bold {
+  font-family: 'liberation_sans_bold';
 }
 #testoInfo a {
   text-decoration: none;
