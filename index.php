@@ -36,9 +36,9 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 116px;
+            width: 120px;
             height: 190px;
-            margin: -95px 0 0 -58px;
+            margin: -95px 0 0 -60px;
             text-align: center;
         }
 
