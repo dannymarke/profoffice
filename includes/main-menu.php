@@ -41,13 +41,13 @@
                                         <li><a href="/prodotti/executive/slim">Slim</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="/prodotti/storage"><?php echo(strtoupper(STORAGE));?></a>
+                                <!--<li>
+                                    <a href="/prodotti/storage"><?php //echo(strtoupper(STORAGE));?></a>
                                     <ul>
                                         <li><a href="/prodotti/storage/profbox">Profbox</a></li>
                                         <li><a href="/prodotti/storage/profcase">Profcase</a></li>
                                     </ul>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a href="/prodotti/"><?php echo(strtoupper(WALL));?></a>
                                     <ul>

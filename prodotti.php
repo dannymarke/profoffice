@@ -83,47 +83,46 @@ mysql_data_seek($risultato, 0);
                             */
                             ?>
                             <ul id="pic_nav_nav">
-                                <li><a class="current" href="#">1</a></li>
+                                <!--<li><a class="current" href="#">1</a></li>
                                 <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
+                                <li><a href="#">3</a></li>-->
                             </ul>
                             <ul id="pic_nav_wr">
                                 <li>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_small.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                    <a href="#"><img src="/img/icon/icon_prodotti_large.jpg" alt="" title=""></a>
-                                </li>
+                            <?php
+                                $i=0;
+                                mysql_data_seek($risultato, 0);
+                                $immagine = mysql_result($risultato, 0, "img".$i);
+                                $immagine_senzasuffisso = explode(".jpg", $immagine);
+                                $immagine = $immagine_senzasuffisso[0]."_thumb.jpg";
+                                while($immagine != null && $immagine != "" && $i < 12) {
+                                ?>
+                                    <a href="#"><img src="<?php echo($immagine); ?>" alt="" title=""></a>
                                 <?php
-                                /*
-                                */
+                                    $i++;
+                                    mysql_data_seek($risultato, 0);
+                                    if($i < 12) {
+                                        $immagine = mysql_result($risultato, 0, "img".$i);
+                                        $immagine_senzasuffisso = explode(".jpg", $immagine);
+                                        $immagine = $immagine_senzasuffisso[0]."_thumb.jpg";
+                                    } else {
+                                        $immagine = "";
+                                    }
+                                    if($i % 6 == 0) {
+                                        echo("</li><li>");
+                                    }
+                                }
                                 ?>
                             </ul>
                         </div>
                     </div>
                     <div id="right_wr" class="dyn_bg_wr">
-                        <img src="/img/immagineCover.jpg" alt="Zero" id="Zero" class="img_seo_placeholder">
+                        <?php
+                        $i=0;
+                        mysql_data_seek($risultato, 0);
+                        $immagine = mysql_result($risultato, 0, "imgPreview");
+                        ?>
+                        <img src="<?php echo($immagine); ?>" alt="" id="" class="img_seo_placeholder">
                     </div>
                 </section>
                 <div id="main_slideshow_wr">
@@ -131,27 +130,22 @@ mysql_data_seek($risultato, 0);
                     <a href="#" id="next_control" class="main_slideshow_navigator">next</a>
                     <a href="#" id="close_control" class="main_slideshow_navigator">close</a>
                     <ul id="main_slideshow_list">
-                        <li><img rel="/img/immagineGrande_slide.jpg?01" src="/img/transparent.gif" alt="01" title="01" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?02" src="/img/transparent.gif" alt="02" title="02" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?03" src="/img/transparent.gif" alt="03" title="03" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?04" src="/img/transparent.gif" alt="04" title="04" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?05" src="/img/transparent.gif" alt="05" title="05" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?06" src="/img/transparent.gif" alt="06" title="06" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?07" src="/img/transparent.gif" alt="07" title="07" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?08" src="/img/transparent.gif" alt="08" title="08" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?09" src="/img/transparent.gif" alt="09" title="09" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?10" src="/img/transparent.gif" alt="10" title="10" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?11" src="/img/transparent.gif" alt="11" title="11" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?12" src="/img/transparent.gif" alt="12" title="12" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?13" src="/img/transparent.gif" alt="13" title="13" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?14" src="/img/transparent.gif" alt="14" title="14" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?15" src="/img/transparent.gif" alt="15" title="15" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?16" src="/img/transparent.gif" alt="16" title="16" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?17" src="/img/transparent.gif" alt="17" title="17" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?18" src="/img/transparent.gif" alt="18" title="18" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?29" src="/img/transparent.gif" alt="19" title="19" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?20" src="/img/transparent.gif" alt="20" title="20" /></li>
-                        <li><img rel="/img/immagineGrande_slide.jpg?21" src="/img/transparent.gif" alt="21" title="21" /></li>
+                    <?php
+                        $i=0;
+                        $immagine = mysql_result($risultato, 0, "img".$i);
+                        while($immagine != null && $immagine != "" && $i < 12) {
+                    ?> 
+                        <li><img rel="<?php echo($immagine); ?>" src="/img/transparent.gif" alt="" title="" /></li>
+                    <?php
+                        $i++;
+                        mysql_data_seek($risultato, 0);
+                        if($i < 12) {
+                            $immagine = mysql_result($risultato, 0, "img".$i);
+                        } else {
+                            $immagine = "";
+                        }
+                    }
+                    ?>
                     </ul>
                 </div>
             </div>
