@@ -37,8 +37,8 @@
                                         <li><a href="/prodotti/executive/plano">Plano</a></li>
                                         <li><a href="/prodotti/executive/planolight">Plano Light</a></li>
                                         <li><a href="/prodotti/executive/spider">Spider</a></li>
-                                        <li><a href="/prodotti/executive/fast">Fast</a></li>
-                                        <li><a href="/prodotti/executive/slim">Slim</a></li>
+                                        <!--<li><a href="/prodotti/executive/fast">Fast</a></li>
+                                        <li><a href="/prodotti/executive/slim">Slim</a></li>-->
                                     </ul>
                                 </li>
                                 <!--<li>
