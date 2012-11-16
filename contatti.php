@@ -22,7 +22,7 @@ if($lingua == "it") {
         <meta name="abstract" content="Profoffice S.r.l. Azienda mobili per arredamento di uffici"/>
         <meta name="keywords" content="Armadi, Scrivanie, Tavoli riunionr, Parete divisoria, Monolitica, Workstation, Partition, Wall, Cabinets, Desks"/>
 
-        <title>ProfOffice S.r.l. - contatti</title>
+        <title>Prof office - <?php echo(CONTATTI);?></title>
 
     </head>
     <body class="contatti_wr">

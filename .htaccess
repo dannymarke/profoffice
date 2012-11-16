@@ -4,14 +4,15 @@ RewriteRule ^(prodotti)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1.php?categoria=$2&
 RewriteRule ^(prodotti)/([A-Za-z0-9\-]+)$ /$1.php?categoria=$2 [L]
 RewriteRule ^(prodotti)$ /$1.php [L]
 
-RewriteRule ^(referenze)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1.php?continente=$2&stato=$3 [L]
-RewriteRule ^(referenze)/([A-Za-z0-9\-]+)$ /$1.php?continente=$2 [L]
+RewriteRule ^(referenze)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-%\s]+)$ /referenze-dettaglio.php?continente=$2&stato=$3 [L]
+RewriteRule ^(referenze)/([A-Za-z0-9\-]+)$ /referenze-dettaglio.php?continente=$2 [L]
 RewriteRule ^(referenze)$ /$1.php [L]
 
 RewriteRule ^(catalogo)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-\.]+)$ /$1/$2/$3/$4 [L]
 
-RewriteRule ^(news)/([A-Za-z0-9\-]+)/([0-9]+)$ /$1-$2.php?id=$3 [L]
+RewriteRule ^(news)/([A-Za-z0-9\-]+)/([0-9]+)$ /news-dettaglio.php?id=$3 [L]
+RewriteRule ^(news)/$ /$1.php [L]
 
-RewriteRule ^([A-Za-z0-9\-]+)$ /$1.php [L]
-RewriteRule ^([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1-$2.php [L]
 RewriteRule ^([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1-$2-$3.php [L]
+RewriteRule ^([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1-$2.php [L]
+RewriteRule ^([A-Za-z0-9\-]+)$ /$1.php [L]

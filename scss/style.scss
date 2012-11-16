@@ -836,7 +836,7 @@ body {
 	#right_wr{
 		#references_scroller_wr {
 			position: absolute;
-			width: 250px;
+			width: 500px;
 			height: 150px;
 			left: 0;
 			top: 145px;
@@ -1029,6 +1029,23 @@ body {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+#resources_list_certificazioni {
+	margin: 10px 0 0 0;
+	padding: 0;
+	list-style: none outside none;
+	li {
+		margin: 5px 0 0 0;
+		a {
+			padding: 0 0 0 25px;
+			text-decoration: none;
+			color: #000000;
+			background: url('#{$img_source_url}/download_ico_certificazioni.gif') scroll no-repeat left center transparent;
+			&:hover {
+				color: $link-hover-color;
 			}
 		}
 	}

@@ -39,7 +39,7 @@
             <iframe src="http://player.vimeo.com/video/53070033?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="770" height="433" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>    
         </div>
         <div id="spalladestra">
-            <img id="imgLogo" src="./images/prof_logo.png" />
+            <img id="imgLogo" src="./img/prof_logo.png" />
             <div id="testoNewSite"
                 <span>NEW WEBSITE<br />COMING SOON</span><br />
                 <a id="link_old"class="tel_num" href="/html">Old site</a>

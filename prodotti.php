@@ -4,7 +4,7 @@ $conn = mysql_pconnect(HOSTNAME, USERNAME, PASSWORD);
 mysql_select_db(DATABASE);
 
 $sQuery = "SELECT * "
-."FROM  prodotti "
+."FROM  prodotti_new "
 ."WHERE nome_query = '".getUrlStringValue("modello", "uno")."';";
 
 $risultato = mysql_query($sQuery);
@@ -39,7 +39,7 @@ mysql_data_seek($risultato, 0);
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="expires" content="2012.12.31"/>
 
-        <title>ProfOffice S.r.l. - Dettaglio prodotto <?php echo($nomeProdottoOriginale); ?></title>
+        <title>Prof office - <?php echo(PRODOTTI);?> - <?php echo($nomeProdottoOriginale); ?></title>
 
     </head>
     <body>
@@ -61,13 +61,13 @@ mysql_data_seek($risultato, 0);
                                     ?>
                                 </p>
                                 <ul id="resources_list">
-                                    <li><a href="<?php echo(mysql_result($risultato, 0, "pdfColori")); ?>"><?php echo(FINITURE_MISURE);?></a></li>
+                                    <li><a target="_blank" href="<?php echo(mysql_result($risultato, 0, "pdfColori")); ?>"><?php echo(FINITURE_MISURE);?></a></li>
                                     <?php
                                     if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true") {
                                     ?>
-                                        <li><a href="<?php echo(mysql_result($risultato, 0, "pdfVarianti"));?>"><?php echo(CATALOGO);?></a></li>
+                                        <li><a target="_blank" href="<?php echo(mysql_result($risultato, 0, "pdfVarianti"));?>"><?php echo(CATALOGO);?></a></li>
                                     <?php } else { ?>
-                                        <li><a href="/login"><?php echo(CATALOGO);?></a></li>
+                                        <li><a target="_blank" href="/login-registrati"><?php echo(CATALOGO);?></a></li>
                                     <?php } ?>
                                 </ul>
                             </article>
@@ -95,7 +95,7 @@ mysql_data_seek($risultato, 0);
                                 $immagine = mysql_result($risultato, 0, "img".$i);
                                 $immagine_senzasuffisso = explode(".jpg", $immagine);
                                 $immagine = $immagine_senzasuffisso[0]."_thumb.jpg";
-                                while($immagine != null && $immagine != "" && $i < 12) {
+                                while($immagine != null && $immagine != "" && $immagine != "_thumb.jpg" && $i < 12) {
                                 ?>
                                     <a href="#"><img src="<?php echo($immagine); ?>" alt="" title=""></a>
                                 <?php

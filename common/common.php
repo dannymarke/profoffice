@@ -1,8 +1,14 @@
 <?php
+//LOCAL
 define("USERNAME","root");
 define("PASSWORD","root");
 define("HOSTNAME","localhost");
 define("DATABASE","profoffice");
+//PRODUCTION
+//define("USERNAME","profoffi1262");
+//define("PASSWORD","nq5sKuDpVt");
+//define("HOSTNAME","sql.profoffice.it");
+//define("DATABASE","profoffi1262");
 
 function getUrlStringValue($urlStringName, $returnIfNotSet) {
   if(isset($_GET[$urlStringName]) && $_GET[$urlStringName] != "")

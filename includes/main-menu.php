@@ -61,5 +61,5 @@
                         <li><a href="/referenze"><?php echo(strtoupper(REFERENZE));?></a></li>
                         <li><a href="/contatti"><?php echo(strtoupper(CONTATTI));?></a></li>
                         <li><a href="/login-registrati"><?php echo(strtoupper(LOGIN));?></a></li>
-                        <li><a href="/area-riservata"><?php echo(strtoupper(AREA));?></a></li>
+                        <!--<li><a href="/area-riservata"><?php echo(strtoupper(AREA));?></a></li>-->
                     </ul>

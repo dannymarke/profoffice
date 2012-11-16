@@ -16,7 +16,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="expires" content="2012.12.31"/>
 
-        <title>ProfOffice S.r.l. - <?php echo(strtoupper(AZIENDA));?> - <?php echo(strtoupper(CERTIFICAZIONI));?></title>
+        <title>Prof office - <?php echo(strtoupper(AZIENDA));?> - <?php echo(strtoupper(CERTIFICAZIONI));?></title>
 
     </head>
     <body>
@@ -27,12 +27,15 @@
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
                     <img src="/img/main_azienda_certificazioni.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
-                    <article class="content_wr" style="right: 50px; top: 50px; color: #000000">
-                        <h2 class="content_title"><?php echo(strtoupper(CERTIFICAZIONI));?></h2>
+                    <article class="content_wr" style="right: 100px; top:190px; width:500px; color: #000000">
+                        <h2 class="content_title"><strong><?php echo(strtoupper(CERTIFICAZIONI));?></strong></h2>
                         <div class="content_text scroll-pane">
                             <p>
                                 <?php echo(CERTIFICAZIONE_TESTO);?>
                             </p>
+                            <ul id="resources_list_certificazioni">
+                                <li><a href="./files/CertificatoISO9001.pdf" target="_blank"><strong>ISO 9001<strong></a></li>
+                            </ul>
                         </div>
                     </article>
                 </section>

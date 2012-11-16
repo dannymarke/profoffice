@@ -12,7 +12,7 @@
         <meta name="abstract" content="Profoffice S.r.l. Azienda mobili per arredamento di uffici"/>
         <meta name="keywords" content="Armadi, Scrivanie, Tavoli riunionr, Parete divisoria, Monolitica, Workstation, Partition, Wall, Cabinets, Desks"/>
 
-        <title>ProfOffice S.r.l.</title>
+        <title>Prof office</title>
 
     </head>
     <body>

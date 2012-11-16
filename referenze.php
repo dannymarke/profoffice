@@ -12,7 +12,7 @@
         <meta name="abstract" content="Profoffice S.r.l. Azienda mobili per arredamento di uffici"/>
         <meta name="keywords" content="Armadi, Scrivanie, Tavoli riunionr, Parete divisoria, Monolitica, Workstation, Partition, Wall, Cabinets, Desks"/>
 
-        <title>ProfOffice S.r.l. - referenze</title>
+        <title>Prof office - <?php echo(REFERENZE);?></title>
 
     </head>
     <body>
@@ -23,12 +23,12 @@
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr contain">
                     <img src="/img/world.png" alt="referenze" id="referenze" class="img_seo_placeholder">
-                    <a id="europa" href="/referenze/europa" class="continent_name">EUROPA</a>
-                    <a id="asia" href="/referenze/asia" class="continent_name">ASIA</a>
-                    <a id="africa" href="/referenze/africa" class="continent_name">AFRICA</a>
-                    <a id="nord_america" href="/referenze/nord-america" class="continent_name">NORD AMERICA</a>
-                    <a id="sud_america" href="/referenze/sud-america" class="continent_name">SUD AMERICA</a>
-                    <a id="oceania" href="/referenze/oceania" class="continent_name">OCEANIA</a>
+                    <a id="europa" href="/referenze/europa" class="continent_name"><?php echo(strtoupper(REFERENZE_EUROPA));?></a>
+                    <a id="asia" href="/referenze/asia" class="continent_name"><?php echo(strtoupper(REFERENZE_ASIA));?></a>
+                    <a id="africa" href="/referenze/africa" class="continent_name"><?php echo(strtoupper(REFERENZE_AFRICA));?></a>
+                    <a id="nord_america" href="/referenze/america" class="continent_name"><?php echo(strtoupper(REFERENZE_AMERICA));?></a>
+                    <!-- <a id="sud_america" href="/referenze/sud-america" class="continent_name"><?php //echo(strtoupper(REFERENZE_SUD_AMERICA));?></a> -->
+                    <a id="oceania" href="/referenze/australia" class="continent_name"><?php echo(strtoupper(REFERENZE_OCEANIA));?></a>
                 </section>
             </div>
         </div>

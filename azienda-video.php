@@ -26,7 +26,7 @@ $testo = mysql_result($risultato, 0, "testo_".$lingua);
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="expires" content="2012.12.31"/>
 
-        <title>ProfOffice S.r.l. - <?php echo(strtoupper(AZIENDA));?> - <?php echo(strtoupper(VIDEO));?></title>
+        <title>Prof office - <?php echo(strtoupper(AZIENDA));?> - <?php echo(strtoupper(VIDEO));?></title>
 
     </head>
     <body>

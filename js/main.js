@@ -2,9 +2,9 @@ var po = {};
 po.functions = {};
 po.constants = {};
 
-po.constants.sitename = 'http://profoffice.dev/';
-// po.constants.sitename = 'http://10.10.11.234/';
-// po.constants.sitename = 'http://192.168.1.4/';
+//po.constants.sitename = 'http://profoffice.dev/';
+po.constants.sitename = 'http://www.profoffice.it/';
+
 
 po.functions.img_seo_placeholder_resize = function($img){
   if($img[0] !== undefined){
