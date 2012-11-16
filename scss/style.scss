@@ -157,6 +157,9 @@ body {
 										line-height: 10px;
 									}
 								}
+								.lt-ie9 & {
+									background: url('#{$img_source_url}/rgba_255-255-255-05.png') scroll repeat left top transparent;
+								}
 							}
 						}
 					}
