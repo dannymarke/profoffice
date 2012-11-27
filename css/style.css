@@ -1068,3 +1068,52 @@ body {
 #resources_list_certificazioni li a:hover {
   color: black;
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #main_wr {
+    position: relative;
+    left: 0;
+    top: 0;
+    border: none;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  #main_wr {
+    max-width: 1024px;
+    max-height: 600px;
+    margin: 30px auto 0;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #main_wr {
+    max-width: 768px;
+    max-height: 600px;
+    margin: 170px auto 0;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #main_wr {
+    position: relative;
+    left: 0;
+    top: 0;
+    border: none;
+  }
+}
+@media only screen and (min-width: 321px) {
+  #main_wr {
+    max-width: 900px;
+    margin: 20px auto 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #main_wr {
+    max-width: 900px;
+    margin: 50px auto 0;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  #main_wr {
+    max-width: 900px;
+    margin: 10px auto 0;
+  }
+}
