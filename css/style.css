@@ -113,13 +113,14 @@ body {
   list-style: none;
   margin: 145px 0 0 20px;
   padding: 0;
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 13px;
+  line-height: 13px;
 }
 #main_wr #main_body_wr #main_nav_wr ul li {
   position: relative;
   margin: 0 0 2px;
   padding: 0;
+  min-height: 14px;
 }
 #main_wr #main_body_wr #main_nav_wr ul li a {
   text-decoration: none;
@@ -131,14 +132,15 @@ body {
 }
 #main_wr #main_body_wr #main_nav_wr ul li ul {
   display: none;
-  margin: 5px 0 10px 20px;
+  margin: 1px 0 10px 20px;
 }
 #main_wr #main_body_wr #main_nav_wr ul li ul li {
-  margin: 0 0 -2px;
+  margin: 0;
+  min-height: 12px;
 }
 #main_wr #main_body_wr #main_nav_wr ul li ul li a {
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 11px;
+  line-height: 11px;
 }
 #main_wr #main_body_wr #main_nav_wr ul li ul li ul {
   background-color: rgba(255, 255, 255, 0.75);
