@@ -16,6 +16,7 @@
 
         <?php /* <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'> */ ?>
 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <link type="text/css" href="/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 
         <link rel="stylesheet" href="/css/style.css">

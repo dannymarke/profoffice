@@ -2,8 +2,8 @@ var po = {};
 po.functions = {};
 po.constants = {};
 
-//po.constants.sitename = 'http://profoffice.dev/';
-po.constants.sitename = 'http://www.profoffice.it/';
+po.constants.sitename = 'http://profoffice.dev/';
+//po.constants.sitename = 'http://www.profoffice.it/';
 
 
 po.functions.img_seo_placeholder_resize = function($img){
