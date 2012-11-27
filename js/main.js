@@ -97,13 +97,13 @@ po.functions.manage_menu = function(){
           $parent.toggleClass('clicked');
         break;
         case 1:
-          e.preventDefault();
-          if ($parent.hasClass('clicked')) {
-            $parent.removeClass('clicked');
-          } else {
-            $parent.siblings().removeClass('clicked');
-            $parent.addClass('clicked');
-          }
+          // e.preventDefault();
+          // if ($parent.hasClass('clicked')) {
+          //   $parent.removeClass('clicked');
+          // } else {
+          //   $parent.siblings().removeClass('clicked');
+          //   $parent.addClass('clicked');
+          // }
         break;
         case 2:
           e.preventDefault();
