@@ -83,7 +83,7 @@
           left: 190px;
           top: 112px;
           right: auto;
-          width: 66px;
+          width: 70px;
           margin: 0 0 0 -33px;
           padding: 0;
           overflow: hidden;
