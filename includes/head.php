@@ -20,6 +20,9 @@
         <link type="text/css" href="/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" media="all and (min-width: 768px) and (max-width: 1024px)" href="/css/tablet.css">
+        <link rel="stylesheet" media="all and (max-width: 767px)" href="/css/mobile.css">
+
         <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 
         <?php include_once "includes/fb-metas.php"; ?>
