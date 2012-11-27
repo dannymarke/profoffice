@@ -18,13 +18,14 @@ body {
 }
 
 #main_wr {
-	position: relative;
+	position: absolute;
+	left: 50%;
+	top: 50%;
 	z-index:1;
-	max-width: 1200px;
-	min-width: 980px;
-	height: 100%;
-	min-height: 650px;
-	margin: 0 auto;
+	width: 1024px;
+	height: 600px;
+	margin: -300px 0 0 -512px;
+	border: 1px #e0e0e0 solid;
 	// background-color: #eee;
 	#main_header {
 		position: absolute;
@@ -156,6 +157,9 @@ body {
 										font-size: 10px;
 										line-height: 10px;
 									}
+								}
+								.lt-ie9 & {
+									background: url('#{$img_source_url}/rgba_255-255-255-05.png') scroll repeat left top transparent;
 								}
 							}
 						}
