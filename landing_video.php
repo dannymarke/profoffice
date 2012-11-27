@@ -35,8 +35,13 @@
 <body>
     <div id="main">
 	<div id="main_contenitore">
-        <div id="contVideo">
-            <iframe src="http://player.vimeo.com/video/53070033?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="770" height="433" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>    
+        <div id="cont_video">
+            <div id="contVideo">
+                <iframe src="http://player.vimeo.com/video/54002949?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="770" height="433" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>    
+            </div>
+            <div id="contVideo" style="margin-top:20px;">
+                <iframe src="http://player.vimeo.com/video/53070033?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="770" height="433" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>    
+            </div>
         </div>
         <div id="spalladestra">
             <img id="imgLogo" src="./img/prof_logo.png" />
@@ -55,7 +60,7 @@
             </div>
         </div>
 	</div>
-    <div id="credits">Regia e montaggio: Alice Brazzit, riprese: David Da Ros, suono: Alberto Biasutti, attore: Andrea Ros<br />Interior design and styling: <a href="http://www.rmdesignstudio.it/" target="_blank">RMDESIGNSTUDIO</a></div>
+    <div id="credits">Regia e montaggio: Alice Brazzit, Riprese: David Da Ros, Suono: Alberto Biasutti, Attore: Andrea Ros<br />Musica: Quantum Jazz - Balcarabic Chicken - <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Licenza CC</a><br />Produzione: <a href="http://www.linkfoto.it" target="_blank">Linkfoto</a><br />Interior design and styling: <a href="http://www.rmdesignstudio.it/" target="_blank">RMDESIGNSTUDIO</a></div>
     <div id="social_bar">
         <div class="condividi"><div id="wrapper"><div style="float:left; display:inline; overflow:hidden; width:65px;"><g:plusone href="http://www.profoffice.it" size="medium"></g:plusone></div><div style="float:left; display:inline; overflow:hidden; width:115px;"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.profoffice.it&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></div><div style="float:left; display:inline; overflow:hidden; width:70px;"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Guarda il video del nuovo showroom di Prof office" data-via="Prof_office" data-count="none">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>

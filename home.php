@@ -22,13 +22,24 @@
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <img src="/img/main_prodotti_executive_block.jpg" alt="image name" id="image name" class="img_seo_placeholder">
+                    <img src="/img/main_prodotti_executive_block.jpg" alt="" id="img_slide_0" class="" />
                     <article class="product_description_wr">
                         <h2 class="product_name">block</h2><span class="product_description_separator" >\</span><h3 class="collection_name">executive collection</h3>
                     </article>
                 </section>
             </div>
         </div>
+        <script type="text/javascript">
+            /*$(document).ready( function() {
+                var offset = 0;
+                setTimeout(function(){
+                    alert($("#img_slide_0"));
+                    $("#img_slide_0").fadeOut('slow', function() {
+                    // Animation complete.
+                    });
+                },2000);
+            });*/
+        </script>
         <?php include_once "includes/scripts.php"; ?>
         <?php include_once "includes/analytics.php"; ?>
     </body>
