@@ -49,7 +49,7 @@
                                     </ul>
                                 </li>-->
                                 <li>
-                                    <a href="/prodotti/"><?php echo(strtoupper(WALL));?></a>
+                                    <a href="/prodotti/wall"><?php echo(strtoupper(WALL));?></a>
                                     <ul>
                                         <li><a href="/prodotti/profwall">Profwall</a></li>
                                     </ul>
