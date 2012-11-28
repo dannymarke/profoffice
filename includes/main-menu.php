@@ -16,7 +16,7 @@
                             <a href="/prodotti"><?php echo(strtoupper(PRODOTTI));?></a>
                             <ul>
                                 <li>
-                                    <a href="/prodotti/working"><?php echo(strtoupper(WORKING));?></a>
+                                    <a href="/categoria/working"><?php echo(strtoupper(WORKING));?></a>
                                     <ul>
                                         <li><a href="/prodotti/working/zero">Zero</a></li>
                                         <li><a href="/prodotti/working/uno">Uno</a></li>
@@ -25,13 +25,13 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="/prodotti/reception"><?php echo(strtoupper(RECEPTION));?></a>
+                                    <a href="/categoria/reception"><?php echo(strtoupper(RECEPTION));?></a>
                                     <ul>
                                         <li><a href="/prodotti/reception/reception">Reception</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="/prodotti/executive"><?php echo(strtoupper(EXECUTIVE));?></a>
+                                    <a href="/categoria/executive"><?php echo(strtoupper(EXECUTIVE));?></a>
                                     <ul>
                                         <li><a href="/prodotti/executive/block">Block</a></li>
                                         <li><a href="/prodotti/executive/plano">Plano</a></li>
@@ -42,14 +42,14 @@
                                     </ul>
                                 </li>
                                 <!--<li>
-                                    <a href="/prodotti/storage"><?php //echo(strtoupper(STORAGE));?></a>
+                                    <a href="/categoria/storage"><?php //echo(strtoupper(STORAGE));?></a>
                                     <ul>
                                         <li><a href="/prodotti/storage/profbox">Profbox</a></li>
                                         <li><a href="/prodotti/storage/profcase">Profcase</a></li>
                                     </ul>
                                 </li>-->
                                 <li>
-                                    <a href="/prodotti/wall"><?php echo(strtoupper(WALL));?></a>
+                                    <a href="/categoria/wall"><?php echo(strtoupper(WALL));?></a>
                                     <ul>
                                         <li><a href="/prodotti/profwall">Profwall</a></li>
                                     </ul>

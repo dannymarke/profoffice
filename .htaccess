@@ -1,5 +1,7 @@
 RewriteEngine On
 
+RewriteRule ^(categoria)/([A-Za-z0-9\-]+)$ /$1.php?categoria=$2 [L]
+
 RewriteRule ^(prodotti)/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)$ /$1.php?categoria=$2&modello=$3 [L]
 RewriteRule ^(prodotti)/([A-Za-z0-9\-]+)$ /$1.php?categoria=$2 [L]
 RewriteRule ^(prodotti)$ /$1.php [L]
