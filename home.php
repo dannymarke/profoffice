@@ -22,23 +22,34 @@
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <img src="/img/main_prodotti_executive_block.jpg" alt="" id="img_slide_0" class="" />
-                    <article class="product_description_wr">
-                        <h2 class="product_name">block</h2><span class="product_description_separator" >\</span><h3 class="collection_name">executive collection</h3>
-                    </article>
+                    <img src="/img/slideshow/img_00.jpg" alt="" id="img_slide_0" class="immagine_slide" />
+                    <img src="/img/slideshow/img_01.jpg" alt="" id="img_slide_1" class="immagine_slide nascosto" />
+                    <img src="/img/slideshow/img_02.jpg" alt="" id="img_slide_2" class="immagine_slide nascosto" />
+                    <img src="/img/slideshow/img_03.jpg" alt="" id="img_slide_3" class="immagine_slide nascosto" />
+                    <img src="/img/slideshow/img_04.jpg" alt="" id="img_slide_4" class="immagine_slide nascosto" />
                 </section>
             </div>
         </div>
         <script type="text/javascript">
-            /*$(document).ready( function() {
+            $(document).ready( function() {
                 var offset = 0;
-                setTimeout(function(){
-                    alert($("#img_slide_0"));
-                    $("#img_slide_0").fadeOut('slow', function() {
+                setInterval(function(){
+                    $("#img_slide_"+offset).fadeOut(1500, function() {
                     // Animation complete.
                     });
-                },2000);
-            });*/
+                    if(offset != 4) {
+                        $("#img_slide_"+(offset+1)).fadeIn(1500, function() {
+                            // Animation complete.
+                            offset = offset+1;
+                        });
+                    } else {
+                        $("#img_slide_"+0).fadeIn(1500, function() {
+                            // Animation complete.
+                            offset = 0;
+                        });
+                    }
+                },9000);
+            });
         </script>
         <?php include_once "includes/scripts.php"; ?>
         <?php include_once "includes/analytics.php"; ?>

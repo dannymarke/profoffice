@@ -34,8 +34,8 @@ po.functions.img_seo_placeholder = function(){
       // console.log('ie8');
       po.functions.img_seo_placeholder_resize($this);
     } else {
-      $this.parent('.dyn_bg_wr').css({'background-image' : 'url(' + $this.attr('src') + ')'});
-      $this.remove();
+      //$this.parent('.dyn_bg_wr').css({'background-image' : 'url(' + $this.attr('src') + ')'});
+      //$this.remove();
     }
   });
 };
