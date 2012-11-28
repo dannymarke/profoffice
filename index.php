@@ -36,7 +36,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 120px;
+            width: 126px;
             height: 190px;
             margin: -95px 0 0 -60px;
             text-align: center;
@@ -71,6 +71,8 @@
 
         #inner_wrapper address span {
           display: block;
+          font-style: normal;
+          font-size: 11px;
         }
 
         .tel_num, .email_link, .map_link {

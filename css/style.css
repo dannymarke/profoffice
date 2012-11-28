@@ -95,7 +95,7 @@ body {
       width: 200px; }
       #main_wr #main_body_wr #main_nav_wr ul {
         list-style: none;
-        margin: 145px 0 0 20px;
+        margin: 90px 0 0 20px;
         padding: 0;
         font-size: 13px;
         line-height: 13px; }
@@ -211,7 +211,8 @@ body {
               background-position: right top; }
       #main_wr #main_body_wr #main_contact_wr address {
         font-size: 9.6px;
-        line-height: 13.44px; }
+        line-height: 13.44px;
+        font-style: normal; }
         #main_wr #main_body_wr #main_contact_wr address span {
           display: block; }
     #main_wr #main_body_wr #main_content_wr {

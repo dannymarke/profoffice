@@ -8,8 +8,8 @@
                                 <li><a href="/azienda/ambiente"><?php echo(strtoupper(AMBIENTE));?></a></li>
                                 <li><a href="/azienda/consulenza"><?php echo(strtoupper(CONSULENZA));?></a></li>
                                 <li><a href="/azienda/design"><?php echo(strtoupper(DESIGN));?></a></li>
-                                <!--<li><a href="/azienda/showroom"><?php echo(strtoupper(SHOWROOM));?></a></li>
-                                <li><a href="/azienda/video"><?php echo(strtoupper(VIDEO));?></a></li> -->
+                                <li><a href="/azienda/video"><?php echo(strtoupper(VIDEO));?></a></li>
+                                <li><a href="/azienda/press"><?php echo(strtoupper(PRESS));?></a></li>
                             </ul>
                         </li>
                         <li class="always_opened">
@@ -41,13 +41,13 @@
                                         <li><a href="/prodotti/executive/slim">Slim</a></li>-->
                                     </ul>
                                 </li>
-                                <!--<li>
-                                    <a href="/categoria/storage"><?php //echo(strtoupper(STORAGE));?></a>
+                                <li>
+                                    <a href="/categoria/storage"><?php echo(strtoupper(STORAGE));?></a>
                                     <ul>
                                         <li><a href="/prodotti/storage/profbox">Profbox</a></li>
                                         <li><a href="/prodotti/storage/profcase">Profcase</a></li>
                                     </ul>
-                                </li>-->
+                                </li>
                                 <li>
                                     <a href="/categoria/wall"><?php echo(strtoupper(WALL));?></a>
                                     <ul>
@@ -57,9 +57,9 @@
                             </ul>
                         </li>
                         <li><a href="/news"><?php echo(strtoupper(NEWS));?></a></li>
-                        <!--li><a href="/gallery"><?php /*echo(strtoupper(GALLERIA));*/?></a></li-->
+                        <li><a href="/gallery"><?php echo(strtoupper(GALLERIA));?></a></li>
                         <li><a href="/referenze"><?php echo(strtoupper(REFERENZE));?></a></li>
                         <li><a href="/contatti"><?php echo(strtoupper(CONTATTI));?></a></li>
                         <li><a href="/login-registrati"><?php echo(strtoupper(LOGIN));?></a></li>
-                        <!--<li><a href="/area-riservata"><?php echo(strtoupper(AREA));?></a></li>-->
+                        <li><a href="/area-riservata"><?php echo(strtoupper(AREA));?></a>
                     </ul>

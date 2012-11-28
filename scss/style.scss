@@ -284,6 +284,7 @@ body {
 			address {
 				font-size: $font-size * $small-text-multiplier;
 				line-height: $font-size * $small-text-multiplier * $line-height-multiplier;
+				font-style: normal;
 				span {
 					display: block;
 				}

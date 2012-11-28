@@ -3,12 +3,20 @@
 //MENU
 define("AZIENDA","COMPANY");
 define("PROFILO","PROFILE");
+define("PROFILO_AZIENZA","Profile");
 define("CERTIFICAZIONI","CERTIFICATIONS");
+define("CERTIFICAZIONI_AZIENDA","Certifications");
 define("AMBIENTE","ENVIRONMENT");
+define("AMBIENTE_AZIENDA","Environment");
 define("CONSULENZA","ADVISING");
-define("DESIGN","DESIGN");
-define("SHOWROOM","SHOWROOM");
+define("CONSULENZA_AZIENDA","Advising");
 define("VIDEO","VIDEO");
+define("VIDEO_AZIENDA","Video");
+define("PRESS","PRESS");
+define("PRESS_AZIENDA","Press");
+define("DESIGN","DESIGN");
+define("DESIGN_AZIENDA","Design");
+define("SHOWROOM","SHOWROOM");
 define("PRODOTTI","PRODUCTS");
 define("WORKING","WORKING SYSTEM");
 define("EXECUTIVE","EXECUTIVE COLLECTION");

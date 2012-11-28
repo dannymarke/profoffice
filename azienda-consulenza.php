@@ -27,9 +27,9 @@
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
                     <img src="/img/main_azienda_consulenza.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
-                    <article class="content_wr" style="right: 40px; top:130px; width:500px; color: #000000">
-                        <h2 class="content_title"><strong><?php echo(strtoupper(CONSULENZA));?></strong></h2>
-                        <div class="content_text scroll-pane">
+                    <article class="content_wr" style="right: 50px; top:130px; width:450px; color: #000000;">
+                        <h2 class="content_title" style="font-size:13px;"><strong><?php echo(CONSULENZA_AZIENDA);?></strong></h2>
+                        <div class="content_text scroll-pane" style="font-size:12px; line-height:12px;">
                             <p>
                                 <?php echo(CONSULENZA_TESTO);?>
                             </p>
