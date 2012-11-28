@@ -103,9 +103,12 @@ body {
 			left: 0;
 			width: $sidebar_width;
 			// background-color: #bbb;
+			& > ul {
+				overflow: hidden;
+			}
 			ul {
 				list-style: none;
-				margin: 145px 0 0 20px;
+				margin: 90px 0 0 20px;
 				padding: 0;
 				font-size: 13px;
 				line-height: 13px;
@@ -135,7 +138,7 @@ body {
 							ul {
 								background-color: rgba(255,255,255,0.75);
 								border-left: 1px solid #ddd;
-								left: 140px;
+								left: 200px;
 								margin: 0;
 								padding: 10px;
 								position: absolute;
@@ -1063,3 +1066,49 @@ body {
 .immagine_slide {
 	position:absolute;
 }
+
+.category_preview_wr {
+	#main_wr {
+		#main_body_wr {
+			#main_content_wr {
+				#left_wr {
+					left: 30px;
+					width: auto;
+					#text_wr {
+						margin: 0;
+						#product_list {
+							margin: 0;
+							padding: 0;
+							list-style: none;
+							font-size: 11px;
+							line-height: 11px;
+							li {
+								margin: 0;
+								padding: 0;
+								min-height: 12px;
+								a {
+									text-decoration: none;
+									color: $link-out-color;
+									&:hover {
+										color: $link-hover-color;
+									}
+								}
+							}
+						}
+					}
+				}
+				#right_wr {
+					text-align: right;
+					#category_preview_image {
+						display: block;
+						width: 100%;
+						background: url('#{$img_source_url}/loader.gif') scroll no-repeat center transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

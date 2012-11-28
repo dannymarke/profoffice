@@ -675,7 +675,14 @@ po.functions.set_news_navigation = function(){
   }
 };
 
-
+po.functions.category_preview = function(){
+  if(jQuery('.category_preview_wr').size()){
+    jQuery('li[rel="/prodotti"]').addClass('breadcrumb');
+    jQuery('#product_list a').bind('mouseover',function(){
+      jQuery('#category_preview_image').attr('src',jQuery(this).attr('rel'));
+    });
+  }
+};
 
 jQuery(document).bind('ready',function(){
   jQuery.each(po.functions, function(){

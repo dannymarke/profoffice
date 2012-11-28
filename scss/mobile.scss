@@ -9,6 +9,20 @@ and (max-device-width : 480px) {
 		top: 0;
 		border: none;
 	}
+	.category_preview_wr {
+		#main_wr {
+			#main_body_wr {
+				#main_content_wr {
+					#right_wr {
+						#category_preview_image {
+							width: auto;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // Smartphones (landscape)

@@ -33,4 +33,19 @@ and (orientation : portrait) {
 		max-height: 600px;
 		margin: 170px auto 0;
 	}
+
+	.category_preview_wr {
+		#main_wr {
+			#main_body_wr {
+				#main_content_wr {
+					#right_wr {
+						#category_preview_image {
+							width: auto;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -28,25 +28,28 @@ $news = mysql_fetch_assoc($risultato)
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="expires" content="2012.12.31"/>
 
-        <title>Prof office - <?php echo utf8_encode($news['nome_'.$lingua]);?></title>
+        <title>Prof office - <?php echo utf8_encode($news['nome_'.$lingua]);?></title> <!-- ricalcolare il nome delle categoria -->
 
     </head>
-    <body class="news_detail_wr">
+    <body class="category_preview_wr">
         <?php include_once "includes/chrome-frame.php"; ?>
         <div id="main_wr">
             <?php include_once "includes/main-header.php"; ?>
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <div id="left_wr">
+                    <div id="left_wr" style="top: 122px;"> <!-- ho lasciato accessibile il posizionamento verticale del menù perchè forse riesci a collegarlo alla categoria corrente per l'allineamento -->
                         <div id="text_wr">
                             <ul id="product_list">
-                                <li><a rel="url_immagine_prodotto" href="/prodotti/linea_corrente/nome_prodotto">nome_prodotto</a></li>
+                                <!-- esempio con due immagini statiche, dinamicizzare -->
+                                <li><a rel="/news/slimPreview.jpg" href="/prodotti/linea_corrente/nome_prodotto">SLIM</a></li>
+                                <li><a rel="/news/showroom.jpg" href="/prodotti/linea_corrente/nome_prodotto">SHOWROOM</a></li>
                             </ul>
                         </div>
                     </div>
                     <div id="right_wr" class="dyn_bg_wr">
-                        <img src="<?php echo($news['imgPreview']);?>" alt="" id="" class="img_seo_placeholder">
+                        <!-- questa immagine è fissa: via javascript se ne cambia l'attributo src leggendolo dall'attributo rel dei links -->
+                        <img src="/news/slimPreview.jpg" alt="" id="category_preview_image" class="img_seo_placeholder">
                     </div>
                 </section>
             </div>
