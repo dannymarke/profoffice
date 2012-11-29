@@ -34,7 +34,7 @@
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr">
-                  <div id="left_wr">
+                  <div id="left_wr" style="top:43px;">
                     <div id="news_scroller_wr">
                       <ul id="news_scroller_list">
                         <?php

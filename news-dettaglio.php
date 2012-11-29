@@ -38,7 +38,7 @@ $news = mysql_fetch_assoc($risultato)
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <div id="left_wr">
+                    <div id="left_wr" style="top:202px;">
                         <div id="text_wr">
                             <h2 id="product_name"><?php echo $news['datapubblicazione'];?></h2>
                             <h3 id="abstract"><?php echo utf8_encode($news['nome_'.$lingua]);?></h3>
