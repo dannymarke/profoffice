@@ -39,7 +39,8 @@ and (orientation : portrait) {
 			#main_body_wr {
 				#main_content_wr {
 					#right_wr {
-						#category_preview_image {
+						#category_preview_image,
+						#press_preview_image {
 							width: auto;
 							height: 100%;
 						}

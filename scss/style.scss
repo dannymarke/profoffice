@@ -907,7 +907,7 @@ body {
 }
 
 
-.news_wr {
+.news_wr, .press_wr {
 	#product_name {
 		margin: 0 0 8px !important;
 		color: $link-hover-color !important;
@@ -1099,7 +1099,8 @@ body {
 				}
 				#right_wr {
 					text-align: right;
-					#category_preview_image {
+					#category_preview_image,
+					#press_preview_image {
 						display: block;
 						width: 100%;
 						background: url('#{$img_source_url}/loader.gif') scroll no-repeat center transparent;

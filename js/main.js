@@ -547,7 +547,7 @@ po.functions.set_references_navigation = function(){
 // NEWS
 
 po.functions.set_news_navigation = function(){
-  if(jQuery('.news_wr').size()){
+  if(jQuery('.news_wr, .press_wr').size()){
     var $news_scroller_wr               = jQuery('#news_scroller_wr'),
         news_scroller_wr_h              = $news_scroller_wr.height(),
         $news_scroller_list             = jQuery('#news_scroller_list'),
@@ -680,6 +680,16 @@ po.functions.category_preview = function(){
     jQuery('li[rel="/prodotti"]').addClass('breadcrumb');
     jQuery('#product_list a').bind('mouseover',function(){
       jQuery('#category_preview_image').attr('src',jQuery(this).attr('rel'));
+    });
+  }
+};
+
+po.functions.press_preview = function(){
+  if(jQuery('.press_wr').size()){
+    jQuery('#news_scroller_list a').bind('click',function(event){
+      event.preventDefault();
+      jQuery(this).blur();
+      jQuery('#press_preview_image').attr('src',jQuery(this).attr('rel'));
     });
   }
 };

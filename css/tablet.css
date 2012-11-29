@@ -20,7 +20,8 @@
     margin: 170px auto 0;
   }
 
-  .category_preview_wr #main_wr #main_body_wr #main_content_wr #right_wr #category_preview_image {
+  .category_preview_wr #main_wr #main_body_wr #main_content_wr #right_wr #category_preview_image,
+  .category_preview_wr #main_wr #main_body_wr #main_content_wr #right_wr #press_preview_image {
     width: auto;
     height: 100%;
   }
