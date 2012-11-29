@@ -49,7 +49,7 @@ mysql_data_seek($risultato, 0);
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
-                    <div id="left_wr">
+                    <div id="left_wr" style="top:50px;">
                         <div id="text_wr">
                             <h2 id="product_name"><?php echo($nomeProdottoOriginale); ?></h2>
                             <article id="product_description_wr">
@@ -108,7 +108,7 @@ mysql_data_seek($risultato, 0);
                                     } else {
                                         $immagine = "";
                                     }
-                                    if($i % 6 == 0) {
+                                    if($i % 8 == 0) {
                                         echo("</li><li>");
                                     }
                                 }
