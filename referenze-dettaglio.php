@@ -57,7 +57,7 @@
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr">
-                  <div id="left_wr">
+                  <div id="left_wr" style="top:221px;">
                     <div id="text_wr">
                       <h2 id="product_name">EUROPA</h2>
                       <ul id="references_main_list">
@@ -76,7 +76,7 @@
                       </ul>
                     </div>
                   </div>
-                  <div id="right_wr">
+                  <div id="right_wr" style="left:250px;">
                     <div id="references_scroller_wr">
                       <ul id="references_scroller_list">
                           <?php

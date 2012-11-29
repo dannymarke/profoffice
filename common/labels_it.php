@@ -39,7 +39,7 @@ define("CATALOGO","Catalogo");
 define("SELEZIONA_POSIZIONE","Seleziona posizione");
 define("SELEZIONA_REGIONE","Seleziona Regione");
 define("SELEZIONA_PROVINCIA","Provincia");
-define("TESTO_LOGIN","L'area \"login/registrati\" di Prof consente in pochi istanti agli utenti interessati di scaricare i cataloghi di ogni prodotto.<br/> Per effettuare l'accesso all'area download &egrave necessario compilare il form presente in questa pagina. Sar&agrave sufficiente inserire i propri dati una sola volta, e mai durante gli accessi successivi. Registrandosi si fornisce il consenso a ricevere newsletter di Prof, che potranno essere revocate in qualsiasi momento utilizzando il tasto \"UNSUBSCRIBE\" presente in ciascuna newsletter. L'utilizzo dei testi e delle immagini scaricate da questo sito &egrave permesso a condizione che venga menzionata Prof.");
+define("TESTO_LOGIN","L'area \"login/registrati\" consente di scaricare i cataloghi. E' necessario compilare il form presente in questa pagina. Registrandosi si fornisce il consenso a ricevere newsletter di Prof. Per la revoca utilizzare il tasto \"UNSUBSCRIBE\" presente in ciascuna newsletter. L'utilizzo dei testi e delle immagini scaricate da questo sito è permesso a condizione che venga menzionataProf.");
 define("TESTO_LOGIN_AREARISERVATA","Inserisci la tua login e password per entrare nell'area riservata.");
 define("ERRORE_LOGIN","Login o password errata.");
 define("REGISTRAZIONE_OK","La ringraziamo per essersi registrato. Prima di effettuare il login dovr&agrave; confermare il suo indirizzo di posta cliccando sul link di attivazione che ha ricevuto tramite mail.");
@@ -95,7 +95,8 @@ define("DESC_AREA_RISERVATA","L'area \"area riservata\" di Prof consente ad arch
 define("REFERENZE_TESTO","SELEZIONA UN CONTINENTE PER VEDERE LE NOSTRE REFERENZE:");
 define("REFERENZE_EUROPA","EUROPA");
 define("REFERENZE_ASIA","ASIA");
-define("REFERENZE_AMERICA","AMERICA");
+define("REFERENZE_AMERICA","NORD AMERICA");
+define("REFERENZE_AMERICA_SUD","SUD AMERICA");
 define("REFERENZE_AFRICA","AFRICA");
 define("REFERENZE_OCEANIA","OCEANIA");
 define("CERTIFICAZIONE_TESTO", "A conferma del suo impegno per la qualità, Prof S.rl. è certificata UNI EN ISO 9001:2008 e rispetta le normative internazionali per la qualità nella progettazione, nello sviluppo, nella fabbricazione e nell’assistenza ai clienti. L'indroduzione della certificazione permette a Prof S.r.l. di rispondere in modo adeguato alle esigenze normative di settore e di mercato.<br /><br />Prof S.r.l ha sempre posto, inoltre, una particolare attenzione all'ambiente introducendo un sistema certificato UNI EN ISO 14001:2004 che lo attesta!<br /><br />Scarica le nostre certificazioni:");

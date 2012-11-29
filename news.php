@@ -4,7 +4,8 @@
   mysql_select_db(DATABASE);
 
   $sQuery = "SELECT * "
-  ."FROM news_new ORDER BY 'ordine' DESC;";
+  ."FROM news_new ORDER BY ordine DESC;";
+
   $risultato = mysql_query($sQuery);
 ?>
     <head>

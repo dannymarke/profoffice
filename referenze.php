@@ -22,12 +22,12 @@
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr contain">
-                    <img src="/img/world.png" alt="referenze" id="referenze" class="img_seo_placeholder">
+                    <img src="/img/world.png" alt="referenze" id="referenze" class="img_seo_placeholder" style="margin-top:90px;">
                     <a id="europa" href="/referenze/europa" class="continent_name"><?php echo(strtoupper(REFERENZE_EUROPA));?></a>
                     <a id="asia" href="/referenze/asia" class="continent_name"><?php echo(strtoupper(REFERENZE_ASIA));?></a>
                     <a id="africa" href="/referenze/africa" class="continent_name"><?php echo(strtoupper(REFERENZE_AFRICA));?></a>
                     <a id="nord_america" href="/referenze/america" class="continent_name"><?php echo(strtoupper(REFERENZE_AMERICA));?></a>
-                    <!-- <a id="sud_america" href="/referenze/sud-america" class="continent_name"><?php //echo(strtoupper(REFERENZE_SUD_AMERICA));?></a> -->
+                    <a id="sud_america" href="" class="continent_name"><?php echo(strtoupper(REFERENZE_AMERICA_SUD));?></a>
                     <a id="oceania" href="/referenze/australia" class="continent_name"><?php echo(strtoupper(REFERENZE_OCEANIA));?></a>
                 </section>
             </div>
