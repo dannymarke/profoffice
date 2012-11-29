@@ -27,9 +27,9 @@
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
                     <img src="/img/main_azienda_ambiente.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
-                    <article class="content_wr" style="right: 50px; top:117px; width:450px; color: #000000;">
-                        <h2 class="content_title" style="font-size:13px;"><strong><?php echo(AMBIENTE_AZIENDA);?></strong></h2>
-                        <div class="content_text scroll-pane" style="font-size:12px; line-height:12px;">
+                    <article class="content_wr" style="right: 50px; top:126px; width:450px; color: #000000;">
+                        <h2 class="content_title" style="font-size:15px;"><strong><?php echo(AMBIENTE_AZIENDA);?></strong></h2>
+                        <div class="content_text scroll-pane" style="font-size:13px; line-height:13px;">
                             <p>
                                 <?php echo(AMBIENTE_TESTO);?>
                             </p>

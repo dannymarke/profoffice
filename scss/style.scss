@@ -37,10 +37,10 @@ body {
 		// background-color: #ddd;
 		#main_logo_wr {
 			position: absolute;
-			left: $external_margin;
+			left: 20px;
 			top: $header-height;
-			width: 80px;
-			height: 78px;
+			width: 72px;
+			height: 70px;
 			margin: 0;
 			background: url('#{$img_source_url}/prof_logo.png') no-repeat center center transparent;
 			a {
@@ -108,7 +108,7 @@ body {
 			}
 			ul {
 				list-style: none;
-				margin: 90px 0 0 20px;
+				margin: 100px 0 0 20px;
 				padding: 0;
 				font-size: 13px;
 				line-height: 13px;
