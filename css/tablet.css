@@ -25,4 +25,32 @@
     width: auto;
     height: 100%;
   }
+
+  .contatti_wr #contact_form .row input[type="text"], .contatti_wr #contact_form .row input[type="password"],
+  .contatti_wr #registrati_form .row input[type="text"],
+  .contatti_wr #registrati_form .row input[type="password"],
+  .contatti_wr #login_form .row input[type="text"],
+  .contatti_wr #login_form .row input[type="password"],
+  .contatti_wr #forgotten_form .row input[type="text"],
+  .contatti_wr #forgotten_form .row input[type="password"],
+  .login_registrati_wr #contact_form .row input[type="text"],
+  .login_registrati_wr #contact_form .row input[type="password"],
+  .login_registrati_wr #registrati_form .row input[type="text"],
+  .login_registrati_wr #registrati_form .row input[type="password"],
+  .login_registrati_wr #login_form .row input[type="text"],
+  .login_registrati_wr #login_form .row input[type="password"],
+  .login_registrati_wr #forgotten_form .row input[type="text"],
+  .login_registrati_wr #forgotten_form .row input[type="password"] {
+    min-width: 50px;
+  }
+  .contatti_wr #contact_form .row select,
+  .contatti_wr #registrati_form .row select,
+  .contatti_wr #login_form .row select,
+  .contatti_wr #forgotten_form .row select,
+  .login_registrati_wr #contact_form .row select,
+  .login_registrati_wr #registrati_form .row select,
+  .login_registrati_wr #login_form .row select,
+  .login_registrati_wr #forgotten_form .row select {
+    min-width: 50px;
+  }
 }

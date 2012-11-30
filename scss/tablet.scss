@@ -49,4 +49,22 @@ and (orientation : portrait) {
 			}
 		}
 	}
+	.contatti_wr,
+	.login_registrati_wr {
+		#contact_form,
+		#registrati_form,
+		#login_form,
+		#forgotten_form {
+			.row {
+				input {
+					&[type="text"], &[type="password"]{
+						min-width: 50px;
+					}
+				}
+				select {
+					min-width: 50px;
+				}
+			}
+		}
+	}
 }
