@@ -27,15 +27,20 @@
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr" class="bg_zoom dyn_bg_wr">
                     <img src="/img/main_azienda_certificazioni.jpg" alt="image name" id="Azienda - profilo" class="img_seo_placeholder">
-                    <article class="content_wr" style="right: 50px; top:112px; width:450px; color: #000000;">
+                    <div style="position:absolute; text-align:right; left: 50px; top:150px; width:200px; color: #000000;">
+                        <p>
+                            <?php echo(CERTIFICAZIONE_SCARICA);?>
+                        </p>
+                        <ul id="resources_list_certificazioni">
+                            <li><a href="./files/CertificatoISO9001.pdf" target="_blank"><strong>ISO 9001<strong></a></li>
+                        </ul>
+                    </div>
+                    <article class="content_wr" style="font-weight: normal; right: 50px; top:112px; width:450px; color: #000000; text-">
                         <h2 class="content_title" style="font-size:15px;"><strong><?php echo(CERTIFICAZIONI_AZIENDA);?></strong></h2>
                         <div class="content_text scroll-pane" style="font-size:13px; line-height:13px;">
                             <p>
                                 <?php echo(CERTIFICAZIONE_TESTO);?>
                             </p>
-                            <ul id="resources_list_certificazioni">
-                                <li><a href="./files/CertificatoISO9001.pdf" target="_blank"><strong>ISO 9001<strong></a></li>
-                            </ul>
                         </div>
                     </article>
                 </section>

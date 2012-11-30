@@ -1,8 +1,8 @@
 
 					<div id="main_contact_wr">
 						<ul id="main_social_links_wr">
-							<li><a href="https://www.facebook.com/Prof.professional.office" class="fb">FB</a></li>
-							<li><a href="https://twitter.com/Prof_office" class="tw">TW</a></li>
+							<li><a href="https://www.facebook.com/Prof.professional.office" class="fb" target="_blank">FB</a></li>
+							<li><a href="https://twitter.com/Prof_office" class="tw" target="_blank">TW</a></li>
 						</ul>
 						<address>
 							<span>2012 COPYRIGHT PROF srl</span>

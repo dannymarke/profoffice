@@ -61,13 +61,19 @@ mysql_data_seek($risultato, 0);
                                     ?>
                                 </p>
                                 <ul id="resources_list">
+                                    <?php
+                                    if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true") {
+                                    ?>
                                     <li><a target="_blank" href="<?php echo(mysql_result($risultato, 0, "pdfColori")); ?>"><?php echo(FINITURE_MISURE);?></a></li>
+                                    <?php } else { ?>
+                                        <li><a target="_self" href="/login-registrati"><?php echo(FINITURE_MISURE);?></a></li>
+                                    <?php } ?>
                                     <?php
                                     if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true") {
                                     ?>
                                         <li><a target="_blank" href="<?php echo(mysql_result($risultato, 0, "pdfVarianti"));?>"><?php echo(CATALOGO);?></a></li>
                                     <?php } else { ?>
-                                        <li><a target="_blank" href="/login-registrati"><?php echo(CATALOGO);?></a></li>
+                                        <li><a target="_self" href="/login-registrati"><?php echo(CATALOGO);?></a></li>
                                     <?php } ?>
                                 </ul>
                             </article>
