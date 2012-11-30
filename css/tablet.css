@@ -1,5 +1,4 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/tablet\.scss}line{font-family:\000036}}
   #main_wr {
     position: relative;
     left: 0;
@@ -8,7 +7,6 @@
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/tablet\.scss}line{font-family:\0000319}}
   #main_wr {
     max-width: 1024px;
     max-height: 600px;
@@ -16,14 +14,12 @@
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/tablet\.scss}line{font-family:\0000331}}
   #main_wr {
     max-width: 768px;
     max-height: 600px;
     margin: 170px auto 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/tablet\.scss}line{font-family:\0000343}}
   .category_preview_wr #main_wr #main_body_wr #main_content_wr #right_wr #category_preview_image,
   .category_preview_wr #main_wr #main_body_wr #main_content_wr #right_wr #press_preview_image {
     width: auto;

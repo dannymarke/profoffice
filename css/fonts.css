@@ -3,11 +3,13 @@
   src: url("/font/liberationsans-regular-webfont.eot");
   src: url("/font/liberationsans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/font/liberationsans-regular-webfont.woff") format("woff"), url("/font/liberationsans-regular-webfont.ttf") format("truetype"), url("/font/liberationsans-regular-webfont.svg#liberation_sansregular") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'liberation_sans_bold';
   src: url("/font/liberationsans-bold-webfont.eot");
   src: url("/font/liberationsans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/font/liberationsans-bold-webfont.woff") format("woff"), url("/font/liberationsans-bold-webfont.ttf") format("truetype"), url("/font/liberationsans-bold-webfont.svg#liberation_sansbold") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}

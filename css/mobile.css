@@ -1,5 +1,4 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/mobile\.scss}line{font-family:\000036}}
   #main_wr {
     position: relative;
     left: 0;
@@ -7,7 +6,6 @@
     border: none;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/mobile\.scss}line{font-family:\0000318}}
   .category_preview_wr #main_wr #main_body_wr #main_content_wr #right_wr #category_preview_image,
   .category_preview_wr #main_wr #main_body_wr #main_content_wr #right_wr #press_preview_image {
     width: auto;
@@ -15,21 +13,18 @@
   }
 }
 @media only screen and (min-width: 321px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/mobile\.scss}line{font-family:\0000332}}
   #main_wr {
     max-width: 900px;
     margin: 20px auto 0;
   }
 }
 @media only screen and (max-width: 320px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/mobile\.scss}line{font-family:\0000341}}
   #main_wr {
     max-width: 900px;
     margin: 50px auto 0;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/danielemarchesini\/Sites\/personal\/www\.profoffice\.it\/new\/scss\/mobile\.scss}line{font-family:\0000351}}
   #main_wr {
     max-width: 900px;
     margin: 10px auto 0;
