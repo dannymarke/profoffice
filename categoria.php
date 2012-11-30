@@ -55,7 +55,7 @@ if(getUrlStringValue("categoria", "working") == "working") {
                                 <?php
                                     while ($row = mysql_fetch_assoc($risultato)) { ?>
                                         <!-- esempio con due immagini statiche, dinamicizzare -->
-                                        <li style="font-size:12px; line-height:13px;"><a rel="/catalogo/<?php echo strtolower($row['categoria'])?>/<?php echo $row['nome_query'];?>/preview.jpg" href="/prodotti/<?php echo strtolower($row['categoria'])?>/<?php echo $row['nome_query']?>"><?php echo ucfirst(str_replace("_", " ", $row['nome_query']));?></a></li>
+                                        <li style="font-size:12px; line-height:13px;"><a rel="/catalogo/<?php echo strtolower($row['categoria'])?>/<?php echo $row['nome_query'];?>/preview.jpg" href="/prodotti/<?php echo strtolower($row['categoria'])?>/<?php echo $row['nome_query']?>"><?php echo ucfirst(strtolower($row['nome_it']));?></a></li>
                                 <?php } ?>                
                             </ul>
                         </div>

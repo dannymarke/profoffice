@@ -11,6 +11,8 @@ html, body {
 	font-size: $font-size;
 	line-height: $font-size * $line-height-multiplier;
 	color: $text_color;
+	min-width:1024px;
+	min-height:600px;
 }
 
 body {
@@ -23,7 +25,9 @@ body {
 	top: 50%;
 	z-index:1;
 	width: 1024px;
+	min-width:1024px;
 	height: 600px;
+	min-height: 600px;
 	margin: -300px 0 0 -512px;
 	border: 1px #e0e0e0 solid;
 	// background-color: #eee;
@@ -304,9 +308,9 @@ body {
 			&.dyn_bg_wr{
 				background-repeat: no-repeat;
 				background-position: center center;
-				background-size: cover;
+				//background-size: cover;
 				&.contain {
-					background-size: contain;
+					//background-size: contain;
 				}
 				.continent_name {
 					position: absolute;
@@ -566,8 +570,10 @@ body {
 .tel_num,
 .email_link,
 .map_link {
+	font-style:normal;
 	text-decoration: none;
 	color: $link-out-color;
+	te
 	&:hover {
 		color: $link-hover-color;
 	}
@@ -681,7 +687,7 @@ body {
 }
 
 .incipit {
-	margin: 75px 0 20px;
+	margin: 55px 0 20px;
 	font-size: 14px;
 	line-height: 17px;
 	strong {

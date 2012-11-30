@@ -59,7 +59,7 @@
                 <section id="main_content_wr">
                   <div id="left_wr" style="top:221px;">
                     <div id="text_wr">
-                      <h2 id="product_name">EUROPA</h2>
+                      <h2 id="product_name"><?php echo(strtoupper($continente));?></h2>
                       <ul id="references_main_list">
                         <?php
                         $cont = 0;

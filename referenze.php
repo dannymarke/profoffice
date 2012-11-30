@@ -27,8 +27,8 @@
                     <a id="asia" href="/referenze/asia" class="continent_name"><?php echo(strtoupper(REFERENZE_ASIA));?></a>
                     <a id="africa" href="/referenze/africa" class="continent_name"><?php echo(strtoupper(REFERENZE_AFRICA));?></a>
                     <a id="nord_america" href="/referenze/america" class="continent_name"><?php echo(strtoupper(REFERENZE_AMERICA));?></a>
-                    <a id="sud_america" href="" class="continent_name"><?php echo(strtoupper(REFERENZE_AMERICA_SUD));?></a>
-                    <a id="oceania" href="/referenze/australia" class="continent_name"><?php echo(strtoupper(REFERENZE_OCEANIA));?></a>
+                    <a id="sud_america" href="#" class="continent_name"><?php echo(strtoupper(REFERENZE_AMERICA_SUD));?></a>
+                    <a id="oceania" href="#" class="continent_name"><?php echo(strtoupper(REFERENZE_OCEANIA));?></a>
                 </section>
             </div>
         </div>

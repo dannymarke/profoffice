@@ -78,6 +78,7 @@
         .tel_num, .email_link, .map_link {
           color: #808284;
           text-decoration: none;
+          font-style:normal;
         }
 
         #inner_wrapper #main_lang_selector {

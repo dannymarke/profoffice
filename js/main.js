@@ -2,8 +2,8 @@ var po = {};
 po.functions = {};
 po.constants = {};
 
-po.constants.sitename = 'http://profoffice.dev/';
-//po.constants.sitename = 'http://www.profoffice.it/';
+//po.constants.sitename = 'http://profoffice.dev/';
+po.constants.sitename = 'http://www.profoffice.it/';
 
 
 po.functions.img_seo_placeholder_resize = function($img){
@@ -14,15 +14,15 @@ po.functions.img_seo_placeholder_resize = function($img){
         H = $parent.height(),
         R = W/H;
     if(R>1){
-      $this.width(W);
-      $this.css({
-        'margin-top' : (Math.round((H - $this.height())/2)) + 'px'
-      });
+      //$this.width(W);
+      //$this.css({
+      //  'margin-top' : (Math.round((H - $this.height())/2)) + 'px'
+      //});
     } else {
-      $this.height(H);
-      $this.css({
-        'margin-left' : (Math.round((W - $this.width())/2)) + 'px'
-      });
+      //$this.height(H);
+      //$this.css({
+      //  'margin-left' : (Math.round((W - $this.width())/2)) + 'px'
+      //});
     }
   }
 };
@@ -230,6 +230,7 @@ po.functions.set_slideshow_navigation = function(){
 
         jQuery('#next_control').css("background-image", "url('/img/freccia_dx_grigia.png')");
         jQuery('#prev_control').css("background-image", "url('/img/freccia_sx_nera.png')");
+        jQuery('#prev_control').blur();
 
         var $this         = jQuery(this),
             $ssw          = jQuery('#main_slideshow_wr'),
@@ -290,6 +291,9 @@ po.functions.set_slideshow_navigation = function(){
         
         jQuery('#next_control').css("background-image", "url('/img/freccia_dx_nera.png')");
         jQuery('#prev_control').css("background-image", "url('/img/freccia_sx_grigia.png')");
+        jQuery('#next_control').blur();
+
+
         var $this         = jQuery(this),
             $ssw          = jQuery('#main_slideshow_wr'),
             _w            = $ssw.width(),

@@ -16,7 +16,9 @@ html, body {
   height: 100%;
   font-size: 12px;
   line-height: 16.8px;
-  color: #808284; }
+  color: #808284;
+  min-width: 1024px;
+  min-height: 600px; }
 
 body {
   font-family: liberation_sans_regular, Helvetica, Arial, sans-serif; }
@@ -27,7 +29,9 @@ body {
   top: 50%;
   z-index: 1;
   width: 1024px;
+  min-width: 1024px;
   height: 600px;
+  min-height: 600px;
   margin: -300px 0 0 -512px;
   border: 1px #e0e0e0 solid; }
   #main_wr #main_header {
@@ -225,10 +229,7 @@ body {
       left: 200px; }
       #main_wr #main_body_wr #main_content_wr.dyn_bg_wr {
         background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover; }
-        #main_wr #main_body_wr #main_content_wr.dyn_bg_wr.contain {
-          background-size: contain; }
+        background-position: center center; }
         #main_wr #main_body_wr #main_content_wr.dyn_bg_wr .continent_name {
           position: absolute;
           font-size: 14px;
@@ -434,10 +435,12 @@ body {
 .tel_num,
 .email_link,
 .map_link {
+  font-style: normal;
   text-decoration: none;
   color: #808284; }
-  .tel_num:hover,
-  .email_link:hover,
+  te
+  .tel_num:hover, te
+  .email_link:hover, te
   .map_link:hover {
     color: black; }
 
@@ -536,7 +539,7 @@ body {
           background-color: #ffffff; }
 
 .incipit {
-  margin: 75px 0 20px;
+  margin: 55px 0 20px;
   font-size: 14px;
   line-height: 17px; }
   .incipit strong {
