@@ -477,18 +477,28 @@ body {
     background-image: url("/img/slideshow_arrows.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-color: transparent; }
+    background-color: transparent;
+    text-decoration: none; }
     #main_slideshow_wr a#prev_control {
       left: 25px;
-      background-position: left center; }
+      background-position: left center;
+      background-image: url("/img/freccia_sx_grigia.png");
+      top: 330px;
+      left: 913px; }
     #main_slideshow_wr a#next_control {
       right: 25px;
-      background-position: right center; }
+      background-position: right center;
+      background-image: url("/img/freccia_dx_grigia.png");
+      top: 270px;
+      right: 30px; }
     #main_slideshow_wr a#close_control {
-      right: 25px;
-      top: 25px;
+      right: 30px;
+      top: 30px;
       margin: 0;
-      background-position: center; }
+      background-position: center;
+      background-image: url("/img/close_btn.png");
+      width: 32px;
+      height: 32px; }
   #main_slideshow_wr #main_slideshow_list {
     position: absolute;
     top: 0;

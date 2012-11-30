@@ -615,19 +615,29 @@ body {
 		background-repeat: no-repeat;
 		background-attachment: scroll;
 		background-color: transparent;
+		text-decoration: none;
 		&#prev_control {
 			left: $external_margin;
 			background-position: left center;
+			background-image: url('#{$img_source_url}/freccia_sx_grigia.png');
+			top: 330px;
+			left: 913px;
 		}
 		&#next_control {
 			right: $external_margin;
 			background-position: right center;
+			background-image: url('#{$img_source_url}/freccia_dx_grigia.png');
+			top: 270px;
+			right: 30px;;
 		}
 		&#close_control {
-			right: $external_margin;
-			top:  $external_margin;
+			right: 30px;
+			top:  30px;
 			margin: 0;
 			background-position: center;
+			background-image: url('#{$img_source_url}/close_btn.png');
+			width: 32px;
+			height: 32px;
 		}
 	}
 	#main_slideshow_list {

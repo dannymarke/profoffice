@@ -228,6 +228,9 @@ po.functions.set_slideshow_navigation = function(){
       jQuery('#prev_control').bind('click',function(e){
         e.preventDefault();
 
+        jQuery('#next_control').css("background-image", "url('/img/freccia_dx_grigia.png')");
+        jQuery('#prev_control').css("background-image", "url('/img/freccia_sx_nera.png')");
+
         var $this         = jQuery(this),
             $ssw          = jQuery('#main_slideshow_wr'),
             _w            = $ssw.width(),
@@ -284,7 +287,9 @@ po.functions.set_slideshow_navigation = function(){
       // arrow navigation: next
       jQuery('#next_control').bind('click',function(e){
         e.preventDefault();
-
+        
+        jQuery('#next_control').css("background-image", "url('/img/freccia_dx_nera.png')");
+        jQuery('#prev_control').css("background-image", "url('/img/freccia_sx_grigia.png')");
         var $this         = jQuery(this),
             $ssw          = jQuery('#main_slideshow_wr'),
             _w            = $ssw.width(),
