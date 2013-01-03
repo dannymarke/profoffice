@@ -65,7 +65,7 @@ if(getUrlStringValue("categoria", "working") == "working") {
                         mysql_data_seek($risultato, 0);
                         $row = mysql_fetch_assoc($risultato); ?>
                         <!-- questa immagine è fissa: via javascript se ne cambia l'attributo src leggendolo dall'attributo rel dei links -->
-                        <img src="/catalogo/<?php echo strtolower($row['categoria'])?>/<?php echo $row['nome_query']?>/preview.jpg" alt="" id="category_preview_image" class="img_seo_placeholder">
+                        <img src="" alt="" id="category_preview_image" class="img_seo_placeholder">
                     </div>
                 </section>
             </div>

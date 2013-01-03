@@ -2,10 +2,11 @@
 <?php
     $conn = mysql_pconnect(HOSTNAME, USERNAME, PASSWORD);
     mysql_select_db(DATABASE);
-
     $continente = getUrlStringValue("continente", "europa");
     $idStato = getUrlStringValue("stato", "0");
-    $idStato = str_replace("%20", "", $idStato);
+    $idStato = str_replace("-", " ", $idStato);
+    //$idStato = str_replace("kkk", "'", $idStato);
+    echo($idStato);
 
     $sQuery = "SELECT DISTINCT(nazione_it), nazione_en "
     ."FROM  ".$continente;
@@ -64,12 +65,16 @@
                         <?php
                         $cont = 0;
                         while ($row = mysql_fetch_assoc($nazioni)) {
+                            $nomeStato = str_replace(" ", "-", $row['nazione_it']);
+                            $nomeStato = str_replace("'", "kkk", $nomeStato);
+                            //$nomeLista = str_replace("-", " ", $row['nazione_'.$lingua]);
+                            $nomeLista = str_replace("kkk", "'", $row['nazione_'.$lingua]);
                             if($cont == 0 && $idStato == -1) { ?>
-                                <li><a class="current" href="/referenze/<?php echo $continente?>/<?php echo $row['nazione_it']?>"><?php echo strtoupper(utf8_encode($row['nazione_'.$lingua]))?></a></li>
+                                <li><a class="current" href="/referenze/<?php echo $continente?>/<?php echo $nomeStato?>"><?php echo strtoupper(utf8_encode($nomeLista))?></a></li>
                             <?php } else if($idStato == $row['nazione_it']) { ?>
-                                <li><a class="current" href="/referenze/<?php echo $continente?>/<?php echo $row['nazione_it']?>"><?php echo strtoupper(utf8_encode($row['nazione_'.$lingua]))?></a></li>
+                                <li><a class="current" href="/referenze/<?php echo $continente?>/<?php echo $nomeStato?>"><?php echo strtoupper(utf8_encode($nomeLista))?></a></li>
                             <?php } else { ?>
-                                <li><a href="/referenze/<?php echo $continente?>/<?php echo $row['nazione_it']?>"><?php echo strtoupper(utf8_encode($row['nazione_'.$lingua]))?></a></li>
+                                <li><a href="/referenze/<?php echo $continente?>/<?php echo $nomeStato?>"><?php echo strtoupper(utf8_encode($nomeLista))?></a></li>
                             <?php } 
                             $cont++;?>
                         <?php } ?>

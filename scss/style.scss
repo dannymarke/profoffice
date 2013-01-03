@@ -610,6 +610,7 @@ body {
 	overflow: hidden;
 	font-size: 0;
 	line-height: 0;
+	background: #fff;
 	a {
 		position: absolute;
 		top: 50%;
@@ -865,9 +866,9 @@ body {
 		#references_scroller_wr {
 			position: absolute;
 			width: 500px;
-			height: 300px;
+			height: 436px;
 			left: 0;
-			top: 145px;
+			top: 100px;
 			overflow: hidden;
 			ul{
 				position: absolute;
@@ -925,7 +926,7 @@ body {
 }
 
 
-.news_wr, .press_wr {
+.news_wr, .press_wr, .video_wr {
 	#product_name {
 		margin: 0 0 8px !important;
 		color: $link-hover-color !important;
@@ -958,9 +959,9 @@ body {
 		#news_scroller_wr {
 			position: absolute;
 			width: 250px;
-			height: 200px;
+			height: 500px;
 			left: 0;
-			top: 160px;
+			top: 58px;
 			overflow: hidden;
 			ul{
 				position: absolute;

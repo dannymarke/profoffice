@@ -32,7 +32,7 @@ if($lingua == "it") {
             <div id="main_body_wr">
                 <?php include_once "includes/main-sidebar.php"; ?>
                 <section id="main_content_wr">
-                  <div id="left_wr">
+                  <div id="left_wr" style="border-right: 1px solid #DDDDDD; width:250px;">
                     <div id="text_wr">
                       <div class="incipit">
                         <strong id="product_name"><?php echo(strtoupper(LOGIN));?></strong>
@@ -44,7 +44,7 @@ if($lingua == "it") {
                         <fieldset>
                           <div class="row"><label for="_email_login"><?php echo(EMAIL);?></label><input class="required _email" type="text" name="email_login" id="_email_login"/></div>
                           <div class="row"><label for="_password_login"><?php echo(PASSWORD_AREA);?></label><input class="required _pwd" type="password" name="password_login" id="_password_login"/></div>
-                          <div class="row" style="text-align:right; margin-right: 20px;"><button type="submit">&raquo; <?php echo(INVIA);?></button></div>
+                          <div class="row" style="text-align:right; margin-right: 20px;"><button type="submit">&raquo; <?php echo(ENTRA);?></button></div>
 
                           <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
                           <div class="row esito"><span><?php echo(LOGIN_OK);?></span></div>
@@ -202,7 +202,7 @@ if($lingua == "it") {
         $(document).ready(function() {
 
           <?php if(isset($_SESSION['loggato']) && $_SESSION['loggato'] == "true" && isset($_GET['action'])  && $_GET['action'] == "loginok") { ?>
-            document.location.href('/');
+            //document.location.href('/');
           <?php } ?>
 
             $('#_regione').bind('change',function(){

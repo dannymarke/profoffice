@@ -35,37 +35,38 @@
 <body>
     <div id="main">
 	<div id="main_contenitore">
-        <div id="cont_video">
-            <div id="contVideo">
-                <iframe src="http://player.vimeo.com/video/54002949?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="770" height="433" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>    
-            </div>
-            <div id="contVideo" style="margin-top:20px;">
-                <iframe src="http://player.vimeo.com/video/53070033?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="770" height="433" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>    
+        <div id="spalladestra">
+            <img id="imgAlbero" src="./img/albero.jpg" />
+            <div id="contLogo">
+                <img id="imgLogo" src="./img/prof_logo.png" />
+                 <div id="testoChiusura">
+                    <span>CHIUSURA NATALIZIA - CHRISTMAS CLOSING</span><br />
+                    <span>Gli uffici saranno chiusi dal 22 dicembre 2012 al 6 gennaio 2013</span><br />
+                    <span>Our office will be closed from December, 22th 2012 to January, 6th 2013</span><br /><br />
+                    <span>NEW WEBSITE COMING SOON - </span><a id="link_old"class="tel_num" href="/html">Old site</a>
+                </div>
             </div>
         </div>
-        <div id="spalladestra">
-            <img id="imgLogo" src="./img/prof_logo.png" />
-            <div id="testoNewSite"
-                <span>NEW WEBSITE<br />COMING SOON</span><br />
-                <a id="link_old"class="tel_num" href="/html">Old site</a>
-            </div>
-            <div id="testoInfo">
-                <span id="testo_bold"><strong>PROF srl</strong></span><br />
-                <span>Via Cao de Villa 6/A</span><br />
-                <span>31020 Falz&egrave; di Piave, TV / Italy</span><br />
-                <span>Tel. <a class="tel_num" href="tel:390438903190">+39 0438 903190</a></span><br />
-                <span>Fax. <a class="tel_num" href="tel:390438903228">+39 0438 903228</a></span><br />
-                <a class="email_link" href="mailto:info@profoffice.it">info@profoffice.it</a><br />
-                <span>p.iva IT03134570260</span><br />
+        <div id="cont_video">
+            <div id="contVideo">
+                <iframe src="http://player.vimeo.com/video/54002949?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="375" height="221" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>    
+                <iframe class="last" src="http://player.vimeo.com/video/53070033?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="375" height="221" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
             </div>
         </div>
 	</div>
-    <div id="credits">Regia e montaggio: Alice Brazzit, Riprese: David Da Ros, Suono: Alberto Biasutti, Attore: Andrea Ros<br />Musica: Quantum Jazz - Balcarabic Chicken - <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Licenza CC</a><br />Produzione: <a href="http://www.linkfoto.it" target="_blank">Linkfoto</a><br />Interior design and styling: <a href="http://www.rmdesignstudio.it/" target="_blank">RMDESIGNSTUDIO</a></div>
+    <div id="credits"></div>
     <div id="social_bar">
         <div class="condividi"><div id="wrapper"><div style="float:left; display:inline; overflow:hidden; width:65px;"><g:plusone href="http://www.profoffice.it" size="medium"></g:plusone></div><div style="float:left; display:inline; overflow:hidden; width:115px;"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.profoffice.it&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></div><div style="float:left; display:inline; overflow:hidden; width:70px;"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Guarda il video del nuovo showroom di Prof office" data-via="Prof_office" data-count="none">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
 </div><!-- /condividi --></div>
     </div>
+    <div id="cont_video" style="margin-top:25px;">
+            <div>
+                <div id="testoInfo" style="text-align:center;">
+                    <span id="testo_bold"><strong>PROF srl </strong></span><span>Via Cao de Villa 6/A </span><span>31020 Falz&egrave; di Piave, TV / Italy </span><span>Tel. <a class="tel_num" href="tel:390438903190">+39 0438 903190 </a></span><span><br />Fax. <a class="tel_num" href="tel:390438903228">+39 0438 903228 </a></span><a class="email_link" href="mailto:info@profoffice.it">Mail: info@profoffice.it </a><span>p.iva IT03134570260</span>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

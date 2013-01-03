@@ -54,7 +54,7 @@ body {
 #main_contenitore {
   padding: 0;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 30px;
   width: 970px;
   height: 100%;
   background-color: #fff;
@@ -67,20 +67,47 @@ body {
   margin: 0;
   margin-top: 0px;
   width: 770px;
+  border-top: 1px solid #d7d7d7;
+  margin-top: 10px;
 }
-#spalladestra {
+#logoNatele {
   display: inline;
   float: left;
   padding: 0;
   width: 200px;
   height: 433px;
 }
+#contLogo {
+  display: inline;
+  float: left;
+  width: 510px;
+  height: 78px;
+  margin-left: 20px;
+  margin-top: 100px;
+  text-align: left;
+}
 #imgLogo {
   display: inline;
   float: left;
-  width: 80px;
-  height: 78px;
+  width: 70px;
+  height: 70px;
+  margin:0;
+  margin-right: 20px;
+}
+#testoChiusura {
+  display: inline;
+  float: left;
   margin-left: 10px;
+  margin-top: 0px;
+}
+#imgAlbero {
+  display: inline;
+  float: left;
+  width: 220px;
+  height: 267px;
+  margin-left: 0px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 #testoNewSite {
   display: inline;
@@ -98,15 +125,15 @@ body {
   font-family: 'liberation_sans_regular';
   display: inline;
   float: left;
-  width: 190px;
-  height: 200px;
-  margin-top: 60px;
+  width: 770px;
+  height: 40px;
+  margin-top: 10px;
   text-align: left;
   color: #000;
   text-align: left;
   text-decoration: none;
   font-size: 13px;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 #testo_bold {
   font-family: 'liberation_sans_bold';
@@ -126,17 +153,28 @@ body {
 #contVideo iframe{
   border: 0px;
   margin: 0px;
+  float:left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#contVideo iframe.last {
+  border: 0px;
+  margin: 0px;
+  float:left;
+  margin:0;
+  margin-top: 20px;
+  margin-right: 0px;
 }
 #social_bar {
   margin: 0 auto;
   display: inline;
   float: left;
   width: 270px;
-  height: 40px;
+  height: 10px;
   text-align: center;
   font-size: 16px;
   color: #000;
-  
 }
 #link_old {
   font-family: 'liberation_sans_regular';
@@ -153,7 +191,7 @@ body {
   display: inline;
   float: left;
   width: 528px;
-  height: 40px;
+  height: 10px;
   text-align: left;
   font-size: 12px;
   color: #000;

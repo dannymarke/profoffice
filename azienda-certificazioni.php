@@ -32,7 +32,7 @@
                             <?php echo(CERTIFICAZIONE_SCARICA);?>
                         </p>
                         <ul id="resources_list_certificazioni">
-                            <li><a href="./files/CertificatoISO9001.pdf" target="_blank"><strong>ISO 9001<strong></a></li>
+                            <li><a href="/files/CertificatoISO9001.pdf" target="_blank"><strong>ISO 9001<strong></a></li>
                         </ul>
                     </div>
                     <article class="content_wr" style="font-weight: normal; right: 50px; top:112px; width:450px; color: #000000; text-">

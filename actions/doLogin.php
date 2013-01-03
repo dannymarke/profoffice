@@ -27,11 +27,11 @@ if($num_rows > 0) {
     if($stato_utente != "false") {
 	if(!isset($_SESSION['loggato']))
 	    $_SESSION['loggato'] = "true";
-	header( "Location: ../login-registrati.php?action=loginok" );
+	header( "Location: /login-registrati.php?action=loginok" );
     } else {
-	header( "Location: ../login-registrati.php?action=nonattivo" );
+	header( "Location: /login-registrati.php?action=nonattivo" );
     }
 } else {
-    header( "Location: ../login-registrati.php?action=loginko" );
+    header( "Location: /login-registrati.php?action=loginko" );
 }
 ?>

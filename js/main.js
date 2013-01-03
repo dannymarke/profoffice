@@ -2,8 +2,8 @@ var po = {};
 po.functions = {};
 po.constants = {};
 
-//po.constants.sitename = 'http://profoffice.dev/';
-po.constants.sitename = 'http://www.profoffice.it/';
+po.constants.sitename = 'http://profoffice.dev/';
+//po.constants.sitename = 'http://www.profoffice.it/';
 
 
 po.functions.img_seo_placeholder_resize = function($img){
@@ -699,6 +699,16 @@ po.functions.press_preview = function(){
       event.preventDefault();
       jQuery(this).blur();
       jQuery('#press_preview_image').attr('src',jQuery(this).attr('rel'));
+    });
+  }
+};
+
+po.functions.video_preview = function(){
+  if(jQuery('.video_wr').size()){
+    jQuery('#news_scroller_list a').bind('click',function(event){
+      event.preventDefault();
+      jQuery(this).blur();
+      jQuery('#right_wr').html('<iframe src="http://player.vimeo.com/video/'+jQuery(this).attr('rel')+'?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="489" height="275" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
     });
   }
 };

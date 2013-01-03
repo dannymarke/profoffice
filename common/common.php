@@ -34,8 +34,8 @@ if($cambioLingua != "") {
 $lingua = $_SESSION['lingua'];
 
 if($lingua == "en") {
-    include ("./common/labels_en.php");
+    include ("labels_en.php");
 } else {
-    include ("./common/labels_it.php");
+    include ("labels_it.php");
 }
 ?>

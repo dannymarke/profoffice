@@ -1,6 +1,6 @@
 <?php
 include ("../common/common.php");
-include ('../common/mailSender/htmlMimeMail.php');
+include ('../mailSender/htmlMimeMail.php');
 
 $conn = mysql_pconnect(HOSTNAME, USERNAME, PASSWORD);
 mysql_select_db(DATABASE);
@@ -101,9 +101,9 @@ if($email != "") {
 	  //$mail->setBcc($email . ", paolino.m@gmail.com");
 	  $mail->send(array(''));
 	}
-	header( "Location: ../login.php?actionregister=ok" );
+	 header( "Location: /login-registrati.php?actionregister=ok" );
     } else {
-      header( "Location: ../login.php?actionregister=ko" );
+      header( "Location: /login-registrati.php?actionregister=ko" );
     }
 }
 ?>
